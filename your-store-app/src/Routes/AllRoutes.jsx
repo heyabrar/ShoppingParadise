@@ -5,8 +5,8 @@ export default function AllRoutes ( ) {
         <>
         <Routes>
             <Route path="/" element={<h1>HomePage</h1>}/>                
-            <Route path= '/signup' element={<h1>SignUpPage</h1>}/>
-            <Route path="login" element={<h1>Login</h1>}/>
+            <Route path= "/signup" element={<h1>SignUpPage</h1>}/>
+            <Route path="/login" element={<h1>Login</h1>}/>
             <Route path="/hair" element={<h1>Hair Page</h1>}/>
             <Route path="/fragrance" element={<h1>Fragrance Page</h1>}/>
             <Route path="/skin" element={<h1>Skin Page</h1>}/>
