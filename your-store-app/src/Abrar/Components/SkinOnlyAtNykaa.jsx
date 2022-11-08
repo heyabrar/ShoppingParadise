@@ -25,7 +25,7 @@ export default function SkinOnlyAtNykaa ( ) {
       const images =  [
         {
             id : 1,
-            image : 'https://images-static.nykaa.com/uploads/0a4c683f-ef6b-4d94-9795-c20381b8858c.jpg?tr=w-600,cm-pad_resize'
+            image : 'https://images-static.nykaa.com/uploads/e07800a3-c92e-4d83-b115-10703a6fcd8f.jpg?tr=w-600,cm-pad_resize'
         },
         {
             id : 2,
@@ -33,7 +33,7 @@ export default function SkinOnlyAtNykaa ( ) {
         },
         {
             id : 3,
-            image : 'https://images-static.nykaa.com/uploads/e07800a3-c92e-4d83-b115-10703a6fcd8f.jpg?tr=w-600,cm-pad_resize'
+            image : 'https://images-static.nykaa.com/uploads/0a4c683f-ef6b-4d94-9795-c20381b8858c.jpg?tr=w-600,cm-pad_resize'
         },
         {
             id : 4,
@@ -68,6 +68,10 @@ export default function SkinOnlyAtNykaa ( ) {
                     </Box>
                 })}
             </Carousel>
+        </Box>
+
+        <Box width={{base : '90%', md : '75%', lg : '75%'}} m='auto' mt={{base : '20px', md : '30px', lg : '45px'}}>
+          <Image src="https://images-static.nykaa.com/uploads/3df85e95-5d80-46b7-a8fb-75fd485c35ba.jpg?tr=w-1200,cm-pad_resize"/>
         </Box>
         </>
     )
