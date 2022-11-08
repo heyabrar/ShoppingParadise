@@ -1,2 +1,2 @@
-# YourStore.COM
+# YOURSTORE.COM
 Work In Progress.....
