@@ -16,7 +16,6 @@ import { useNavigate } from "react-router-dom";
 const SignUp = () => {
   const navigate = useNavigate();
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  console.log(users);
   const formik = useFormik({
     initialValues: { name: "", email: "", password: "" },
     onSubmit: (values) => {
