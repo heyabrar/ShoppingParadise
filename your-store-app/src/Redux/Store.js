@@ -1,5 +1,5 @@
 import { combineReducers, legacy_createStore } from "redux";
-import SkinDotKeyReducer  from "./SkinPageReducer/SkinPageReducer";
+import MyReducer from "./AppReducer/AKReducer";
 
-const MainReducer = combineReducers({SkinDotKeyReducer})
+const MainReducer = combineReducers({MyReducer})
 export const MainStore = legacy_createStore(MainReducer);
