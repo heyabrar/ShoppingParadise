@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import DropDownComponent from "./Links/DropDownContent"
 
 const DipyanshuLinks = () => (
     <div class="links_container flex ">
     <ul class="navbar  wx_80">
         <li class="sub_menu_1">
-            <a href="">Makeup</a>
+            <Link>Make Up</Link>
             <DropDownComponent />
         </li>
         <li>
-            <a href="">Skin</a>
+            <Link to='/skin'>Skin</Link>
             <DropDownComponent />
         </li>
         <li><a href="">Hair</a>
