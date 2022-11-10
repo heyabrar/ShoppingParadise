@@ -2,6 +2,8 @@ import { Box, Container, Flex, Heading, HStack, Icon } from "@chakra-ui/react";
 import React from "react";
 import ProfileNavigation from "../components/ProfileNavigation";
 import { IoMdArrowBack } from "react-icons/io";
+import ProfileCard from "../components/ProfileCard";
+import ProfileAlert from "../components/ProfileAlert";
 
 const Profile = () => {
   return (
@@ -11,7 +13,10 @@ const Profile = () => {
           <Box bg={"white"} p={4}>
             <ProfileNavigation />
           </Box>
-          <Box></Box>
+          <Box w={"100%"}>
+            <ProfileAlert />
+            <ProfileCard />
+          </Box>
         </Flex>
       </Container>
     </Flex>

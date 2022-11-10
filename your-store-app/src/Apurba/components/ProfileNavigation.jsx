@@ -5,42 +5,108 @@ import { IoWalletOutline } from "react-icons/io5";
 import { FiTruck } from "react-icons/fi";
 import { AiFillCreditCard, AiFillHeart } from "react-icons/ai";
 import { CiLogout } from "react-icons/ci";
-import { Box, Button, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Link, VStack } from "@chakra-ui/react";
 
 const ProfileNavigation = () => {
   return (
     <Box bg={"white"} p={4}>
-      <VStack alignItems={"flex-start"}>
-        <NavLink>
-          <Button leftIcon={<CgProfile />} variant={"ghost"}>
+      <VStack alignItems={"flex-start"} gap={4} w={"200px"}>
+        <Link
+          as={NavLink}
+          to={"/profile"}
+          _activeLink={{
+            color: "#fc2779",
+            fontWeight: "bold",
+          }}
+          _hover={{
+            color: "#fc2779",
+          }}
+        >
+          <Flex alignItems={"center"} gap={2}>
+            <Icon as={CgProfile} />
             My Profile
-          </Button>
-        </NavLink>
-        <NavLink>
-          <Button leftIcon={<IoWalletOutline />} variant={"ghost"}>
+          </Flex>
+        </Link>
+        <Link
+          as={NavLink}
+          to={"/wallet"}
+          _activeLink={{
+            color: "#fc2779",
+            fontWeight: "bold",
+          }}
+          _hover={{
+            color: "#fc2779",
+          }}
+        >
+          <Flex alignItems={"center"} gap={2}>
+            <Icon as={IoWalletOutline} />
             My Wallet
-          </Button>
-        </NavLink>
-        <NavLink>
-          <Button leftIcon={<FiTruck />} variant={"ghost"}>
+          </Flex>
+        </Link>
+        <Link
+          as={NavLink}
+          to={"/orders"}
+          _activeLink={{
+            color: "#fc2779",
+            fontWeight: "bold",
+          }}
+          _hover={{
+            color: "#fc2779",
+          }}
+        >
+          <Flex alignItems={"center"} gap={2}>
+            <Icon as={FiTruck} />
             My Orders
-          </Button>
-        </NavLink>
-        <NavLink>
-          <Button leftIcon={<AiFillHeart />} variant={"ghost"}>
+          </Flex>
+        </Link>
+        <Link
+          as={NavLink}
+          to={"/wishlist"}
+          _activeLink={{
+            color: "#fc2779",
+            fontWeight: "bold",
+          }}
+          _hover={{
+            color: "#fc2779",
+          }}
+        >
+          <Flex alignItems={"center"} gap={2}>
+            <Icon as={AiFillHeart} />
             My Wishlist
-          </Button>
-        </NavLink>
-        <NavLink>
-          <Button leftIcon={<AiFillCreditCard />} variant={"ghost"}>
+          </Flex>
+        </Link>
+        <Link
+          as={NavLink}
+          to={"/payments"}
+          _activeLink={{
+            color: "#fc2779",
+            fontWeight: "bold",
+          }}
+          _hover={{
+            color: "#fc2779",
+          }}
+        >
+          <Flex alignItems={"center"} gap={2}>
+            <Icon as={AiFillCreditCard} />
             My Saved Payment
-          </Button>
-        </NavLink>
-        <NavLink>
-          <Button leftIcon={<CiLogout />} variant={"ghost"}>
+          </Flex>
+        </Link>
+        <Link
+          as={NavLink}
+          to={"/logout"}
+          _activeLink={{
+            color: "#fc2779",
+            fontWeight: "bold",
+          }}
+          _hover={{
+            color: "#fc2779",
+          }}
+        >
+          <Flex alignItems={"center"} gap={2}>
+            <Icon as={CiLogout} />
             Log Out
-          </Button>
-        </NavLink>
+          </Flex>
+        </Link>
       </VStack>
     </Box>
   );
