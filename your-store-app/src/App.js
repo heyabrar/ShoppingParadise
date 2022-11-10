@@ -1,10 +1,5 @@
-
-
-import SkinPage from "./Abrar/Pages/SkinPage";
 import "./App.css";
 import AllRoutes from "./Routes/AllRoutes";
-
-
 
 
 function App() {

@@ -5,6 +5,7 @@ import { FetchDotKeyData } from "../Fetch/Fetch";
 import { useEffect } from "react";
 import { SkinDotKeyGetFailure, SkinDotKeyGetRequest, SkinDotKeyGetSuccess } from "../../Redux/SkinPageReducer/Action";
 import SkinDotKeyProducts from "../Components/SkinDotKeyProducts";
+import Navbar from "../Components/Navbar";
 const SlideShowBanner = [
     {
         id :1, 
@@ -44,6 +45,7 @@ export default function SkinDotKeyPage ( ) {
     }, [ ]);
     return (
         <>
+        <Navbar/>
         <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Dot & Key (80)</Text>
         <Slideshow data={SlideShowBanner}/>
 
