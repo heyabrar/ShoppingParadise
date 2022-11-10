@@ -1,10 +1,12 @@
 import SkinPage from './Abrar/Pages/SkinPage';
 import './App.css';
+import HairPage from './Sonali/Pages/Hair';
 
 function App() {
   return (
     <div className="App">
-      <SkinPage/>
+      {/* <SkinPage/> */}
+      <HairPage/>
     </div>
   );
 }
