@@ -6,7 +6,7 @@ const HeaderMenu = () => (
     <div class="header_container">
 
         <div class="header_logo">
-            <img src="https://www.linkpicture.com/q/2_733.png" alt="nykaa logo" srcset="" />
+            <img src="https://www.linkpicture.com/q/1_813.png" alt="nykaa logo" srcset="" />
         </div>
 
         <div class="header_nav">
