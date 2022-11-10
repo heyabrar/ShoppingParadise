@@ -1,3 +1,5 @@
+import Footer from "../../Abrar/Components/Footer";
+import Navbar from "../../Abrar/Components/Navbar";
 import HairBrand from "../Components/HairBrands";
 import HairCarosal from "../Components/HairCarosal";
 import HairCancern from "../Components/HairConcern";
@@ -9,6 +11,7 @@ import ShopByHairType from "../Components/ShopByHairType";
 export default function HairPage ()  {
    return(
     <>
+    <Navbar/>
     <HairCarosal/>
      <HairCancern/>
      <HairBrand/>
@@ -16,6 +19,7 @@ export default function HairPage ()  {
      <ShopByHairType/>
      <HairLuxe/>
      <HairTrending/>
+     <Footer/>
     </>
     
    )

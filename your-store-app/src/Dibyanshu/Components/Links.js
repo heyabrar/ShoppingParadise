@@ -12,7 +12,7 @@ const DipyanshuLinks = () => (
             <Link to='/skin'>Skin</Link>
             <DropDownComponent />
         </li>
-        <li><a href="">Hair</a>
+        <li><Link to={"/hair"}>Hair</Link>
             <DropDownComponent />    
         </li>
         <li><a href="">Appliances</a>
@@ -33,7 +33,7 @@ const DipyanshuLinks = () => (
         <li><a href="">Men</a>
         <DropDownComponent />    
         </li>
-        <li><a href="">Fragrance</a>
+        <li><Link to={"/fragrance"}>Fragrance</Link>
         <DropDownComponent />   
         </li>
         <li><a href="">LUXE</a>

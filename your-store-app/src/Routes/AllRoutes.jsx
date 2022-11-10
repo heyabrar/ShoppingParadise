@@ -4,6 +4,8 @@ import SkinDotKeyPage from "../Abrar/Pages/SkinDotKeyPage";
 import SkinPage from "../Abrar/Pages/SkinPage";
 import Login from "../Apurba/Pages/Login";
 import SignUp from "../Apurba/Pages/SignUp";
+import Fragrance from "../Sonali/Pages/Fragrance";
+import HairPage from "../Sonali/Pages/Hair";
 
 export default function AllRoutes() {
   return (
@@ -12,8 +14,8 @@ export default function AllRoutes() {
         <Route path='/' element={<HomePage/>} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/hair' element={<h1>Hair Page</h1>} />
-        <Route path='/fragrance' element={<h1>Fragrance Page</h1>} />
+        <Route path='/hair' element={<HairPage/>} />
+        <Route path='/fragrance' element={<Fragrance/>} />
         <Route path='/skin' element={<SkinPage/>} />
         <Route path='/skindotkey' element={<SkinDotKeyPage/>} />
         <Route path='/men' element={<h1>Men Page</h1>} />
