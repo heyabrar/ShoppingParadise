@@ -1,6 +1,6 @@
 import DropDownComponent from "./Links/DropDownContent"
 
-const Links = () => (
+const DipyanshuLinks = () => (
     <div class="links_container flex ">
     <ul class="navbar  wx_80">
         <li class="sub_menu_1">
@@ -42,4 +42,4 @@ const Links = () => (
 </div>
 )
 
-export default Links;
+export default DipyanshuLinks;

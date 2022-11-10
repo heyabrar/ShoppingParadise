@@ -1,3 +1,5 @@
+import { Route, Routes } from "react-router-dom";
+import HomePage from "../Abrar/Pages/Home";
 import Login from "../Apurba/Pages/Login";
 import SignUp from "../Apurba/Pages/SignUp";
 
@@ -5,7 +7,7 @@ export default function AllRoutes() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<h1>HomePage</h1>} />
+        <Route path='/' element={<HomePage/>} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
         <Route path='/hair' element={<h1>Hair Page</h1>} />
