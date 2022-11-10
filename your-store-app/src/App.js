@@ -1,12 +1,14 @@
-import SkinPage from './Abrar/Pages/SkinPage';
-import './App.css';
-import HairPage from './Sonali/Pages/Hair';
+
+import SkinPage from "./Abrar/Pages/SkinPage";
+import "./App.css";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       {/* <SkinPage/> */}
-      <HairPage/>
+      <AllRoutes />
+
     </div>
   );
 }
