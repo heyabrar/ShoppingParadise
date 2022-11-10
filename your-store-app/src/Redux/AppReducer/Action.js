@@ -39,17 +39,6 @@ export const DotKeySingleGetFailure = ( ) =>{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 export const SkinLorealGetRequest = ( ) =>{
     return {
         type : types.SKIN_LOREAL_PAGE_GET_REQUEST,
@@ -85,5 +74,43 @@ export const SkinLorealGetSingleDataSuccess= (payload) =>{
 export const SkinLorealGetSingleDataFailure= ( ) =>{
     return {
         type : types.LOREAL_GET_SINGLE_DATA_FAILURE,
+    }
+}
+
+export const EsteeGetProductsRequest = ( ) =>{
+    return {
+        type : types.GET_ESTEE_PAGE_DATA_REQUEST
+    }
+}
+
+export const EsteeGetProductsSuccess= (payload) =>{
+    return {
+        type : types.GET_ESTEE_PAGE_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const EsteeGetProductsFailure = ( ) =>{
+    return {
+        type : types.GET_ESTEE_PAGE_DATA_FAILURE
+    }
+}
+
+export const EsteeGetSingleRequest = ( ) =>{
+    return {
+        type : types.GET_ESTEE_SINGLE_REQUEST
+    }
+}
+
+export const EsteeGetSingleSuccess = (payload) =>{
+    return {
+        type : types.GET_ESTEE_SINGLE_SUCCESS,
+        payload,
+    }
+}
+
+export const EsteeGetSingleFailure= ( ) =>{
+    return {
+        type : types.GET_ESTEE_SINGLE_FAILURE
     }
 }

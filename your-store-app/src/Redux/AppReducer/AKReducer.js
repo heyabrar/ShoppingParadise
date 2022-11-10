@@ -4,6 +4,8 @@ const initalData = {
     DotKeySingleProduct : [ ],
     LorealProducts : [ ],
     LorealSingleProduct : [ ],
+    EsteeProducts : [ ],
+    EsteeSingleProduct : [ ],
     isLoading : false,
     isError : false
 };
@@ -90,7 +92,6 @@ export default function MyReducer (state=initalData,action) {
             }
         }
 
-
         case types.LOREAL_GET_SINGLE_DATA_REQUEST : {
             return {
                 ...state,
@@ -112,6 +113,58 @@ export default function MyReducer (state=initalData,action) {
             return {
                 ...state,
                 LorealSingleProduct  : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case types.GET_ESTEE_PAGE_DATA_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_ESTEE_PAGE_DATA_SUCCESS : {
+            return {
+                ...state,
+                EsteeProducts : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_ESTEE_PAGE_DATA_FAILURE : {
+            return {
+                ...state,
+                EsteeProducts : [ ],
+                isLoading : false,
+                isError : true
+            }
+        };
+
+        case types.GET_ESTEE_SINGLE_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_ESTEE_SINGLE_SUCCESS : {
+            return {
+                ...state,
+                EsteeSingleProduct : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_ESTEE_SINGLE_FAILURE : {
+            return {
+                ...state,
+                EsteeSingleProduct : [ ],
                 isLoading : false,
                 isError : true
             }

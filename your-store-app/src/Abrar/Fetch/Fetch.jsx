@@ -24,3 +24,16 @@ export const FetchLorealData = (page=1,setTotalPage) =>{
 export const FetchSingleLorealData = (id) =>{
     return axios.get(`https://yourstore-com-backend-server.onrender.com/skinloreal/${id}`)
 };
+
+
+export const FetchEsteeData = (page,setTotalPage) =>{
+    return fetch(`https://yourstore-com-backend-server.onrender.com/skinEsteeLauder?_page=${page}&_limit=6`)
+    .then((res)=>{
+        setTotalPage(Number(res.headers.get('X-Total-Count')))
+        return res.json( )
+    })
+}
+
+export const FetchEsteeSingleData = (id) =>{
+    return axios.get(`https://yourstore-com-backend-server.onrender.com/skinEsteeLauder/${id}`)
+}

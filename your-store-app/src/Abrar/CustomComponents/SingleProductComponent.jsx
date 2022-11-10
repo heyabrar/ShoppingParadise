@@ -1,6 +1,7 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import ProgressCompo from "./Progress";
 import SpinnerCompo from "./Spinner";
 
 export default function SingleProductComponent ({data,isLoading,isError}) {
@@ -8,6 +9,8 @@ export default function SingleProductComponent ({data,isLoading,isError}) {
         <>
         <Navbar/>
         <Text textAlign='center'>{isLoading && <SpinnerCompo color='#fc2779'/>}</Text>
+        <Text>{isError && <ProgressCompo/>} </Text>
+        <Text textAlign='center'>{isError && 'Something Went Wrong !!!!!'} </Text>
         <Flex  w={{base : '100%', md: '90%', lg : '60%'}} m='auto' direction={{base : 'column', md : 'row'}} bg='white' padding='20px' mt='10px' shadow='sm'>
             <Box  m='auto'> 
                 <Image m='auto' w={{base : '180px', md : '220px', lg : '280px'}} src={data.image || data.images} />
