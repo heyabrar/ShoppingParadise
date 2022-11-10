@@ -10,6 +10,7 @@ import Footer from "../Components/Footer";
 import { useState } from "react";
 import Pagination from "../Components/Pagination";
 import { useSearchParams } from "react-router-dom";
+import ProductsListing from "../CustomComponents/ProductsListing";
 const SlideShowBanner = [
     {
         id :1, 
@@ -98,7 +99,7 @@ export default function SkinDotKeyPage ( ) {
 
         <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && 'LOADING.............'}</Text>
 
-        <SkinDotKeyProducts data={DotKeyProducts}/>
+        <ProductsListing data={DotKeyProducts}/>
         <Box>
             <Pagination current={page} onChange={(page) => setPage(page)} totalPage={totalPage}/>
         </Box>
