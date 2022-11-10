@@ -108,7 +108,7 @@ li {
 
 .search_box {
   transition: all 0.15s ease 0s;
-  border :1px solid grey;
+  border :1px solid rgb(128,128,128);
   background: rgb(243, 243, 244);
   position: relative;
   display: block;
@@ -159,6 +159,21 @@ li {
 .media_query {
   display: none;
 }
+.accounts{
+ display: flex;
+ width: 170px;
+ justify-content: space-between;
+/* border: 1px solid green;  */
+}
+.accounts>div{
+ /* border: 1px solid red; */
+}
+
+#accountsa{
+  display: flex;
+  justify-content: space-around;
+}
+
 
 
 

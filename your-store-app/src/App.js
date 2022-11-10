@@ -3,7 +3,9 @@ import './App.css';
 import ApurbhaTest from './Apurba/Componets/Test';
 import Header from './Dibyanshu/Components/Header';
 import Links from './Dibyanshu/Components/Links';
+import Slider from './Dibyanshu/Components/Slider';
 import SonaliTest from './Sonali/Components/Test';
+
 
 
 
@@ -13,7 +15,8 @@ function App() {
     
         <Header/>
         <Links/>
-
+        <Slider/>
+   
 
 
       <AbrarTest/>
@@ -22,5 +25,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

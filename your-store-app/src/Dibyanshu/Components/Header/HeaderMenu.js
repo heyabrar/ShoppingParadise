@@ -25,11 +25,13 @@ const HeaderMenu = () => (
         </div>
 
         <div class="accounts">
-            <a href=""> <PersonIcon />
-             <span>Account</span></a>
-            
-            <a href=""> <HttpsIcon /> </a>
+            <div id='accountsa'>
+               <div><a href=""> <PersonIcon /></a></div>
+               <div> <a href="">Account</a></div>
+            </div>
+            <div><a href=""> <HttpsIcon /> </a></div>
         </div>
+        
     </div>
 )
 export default HeaderMenu;    
