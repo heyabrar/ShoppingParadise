@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import ShopBySkinConcern from "../Components/ShopBySkinConcern";
 import ShopBySkinType from "../Components/ShopBySkinType";
@@ -19,6 +20,7 @@ export default function SkinPage ( ) {
         <SkinLuxiIndulgies/>
         <SkinOnlyAtNykaa/>
         <SkinTrendingNow/>
+        <Footer/>
         </>
     )
 }

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { SkinDotKeyGetFailure, SkinDotKeyGetRequest, SkinDotKeyGetSuccess } from "../../Redux/SkinPageReducer/Action";
 import SkinDotKeyProducts from "../Components/SkinDotKeyProducts";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 const SlideShowBanner = [
     {
         id :1, 
@@ -74,6 +75,7 @@ export default function SkinDotKeyPage ( ) {
         <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && 'LOADING.............'}</Text>
 
         <SkinDotKeyProducts data={DotKeyProducts}/>
+        <Footer/>
         </>
     )
 }
