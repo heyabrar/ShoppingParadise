@@ -1,24 +1,20 @@
-import AbrarTest from './Abrar/Components/Test';
-import './App.css';
-import ApurbhaTest from './Apurba/Componets/Test';
-import Header from './Dibyanshu/Components/Header';
-import Links from './Dibyanshu/Components/Links';
-import SonaliTest from './Sonali/Components/Test';
+
+
+import SkinPage from "./Abrar/Pages/SkinPage";
+import "./App.css";
+import AllRoutes from "./Routes/AllRoutes";
+
 
 
 
 function App() {
   return (
-    <div className="App">
-    
-        <Header/>
-        <Links/>
+
+    <div className='App'>
+      {/* <SkinPage/> */}
+      <AllRoutes />
 
 
-
-      <AbrarTest/>
-      <ApurbhaTest/>
-      <SonaliTest/>
     </div>
   );
 }
