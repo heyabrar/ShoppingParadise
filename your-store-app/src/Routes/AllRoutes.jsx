@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import Login from "../Apurba/Pages/Login";
 import SignUp from "../Apurba/Pages/SignUp";
 
