@@ -1,12 +1,12 @@
-import Footer from './Abrar/Components/Footer';
-import SkinDotKeyPage from './Abrar/Pages/SkinDotKeyPage';
-import SkinDotKey from './Abrar/Pages/SkinDotKeyPage';
+import SkinPage from "./Abrar/Pages/SkinPage";
+import "./App.css";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <SkinDotKeyPage/>
-      <Footer/>
+    <div className='App'>
+      {/* <SkinPage/> */}
+      <AllRoutes />
     </div>
   );
 }
