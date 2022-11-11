@@ -61,7 +61,7 @@ const ProfileNavigation = () => {
         </Link>
         <Link
           as={NavLink}
-          to={"/wishlist"}
+          to={"/profile/wishlist"}
           _activeLink={{
             color: "#fc2779",
             fontWeight: "bold",
@@ -77,7 +77,7 @@ const ProfileNavigation = () => {
         </Link>
         <Link
           as={NavLink}
-          to={"/payments"}
+          to={"/profile/payments"}
           _activeLink={{
             color: "#fc2779",
             fontWeight: "bold",
