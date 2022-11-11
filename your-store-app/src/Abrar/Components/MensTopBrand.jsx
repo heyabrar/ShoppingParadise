@@ -1,5 +1,6 @@
 import { GridItem, Image, SimpleGrid, Text } from "@chakra-ui/react"
 import { Box } from "@mui/system"
+import { Link } from "react-router-dom"
 import StaticCarousel from "../CustomComponents/StaticCarousel"
 
 export default function MensTopBrand ( ) {
@@ -109,7 +110,7 @@ export default function MensTopBrand ( ) {
             <SimpleGrid columns={[3,4,3,4]}  w={{base : '95%', md :'90%' ,lg : '80%'}} m='auto' mt={{base : '20px', lg: '30px'}} rowGap={{base :'15px', lg :'30px'}}> 
                 {MensBrand.length > 0 && MensBrand.map((e)=>{
                     return <GridItem  textAlign='center'>
-                        <Image w={{base :'100px',md : '150px' , lg: '200px'}} m='auto' src={e.image} alt={e.description}/>
+                       <Link to={e.id === 3 ? '/mensgarnier' : '/'}><Image w={{base :'100px',md : '150px' , lg: '200px'}} m='auto' src={e.image} alt={e.description}/></Link> 
                         <Text fontSize={{base : '12px', lg: '14px'}} fontWeight='580' mt='5px'>{e.title}</Text>
                         <Text fontSize={{base  :'12px', lg : '15px'}} color='gray' fontWeight='550'>{e.description}</Text>
                     </GridItem>

@@ -153,3 +153,41 @@ export const RasGetSingleProductFailure = ( ) =>{
         type : types.GET_RAS_SINGLE_FAILURE
     }
 }
+
+export const MensGarnierPageRequest = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_PAGE_REQUEST
+    }
+}
+
+export const MensGarnierPageSuccess = (payload) =>{
+    return {
+        type : types.GET_MENS_GARNIER_PAGE_SUCCESS,
+        payload
+    }
+}
+
+export const MensGarnierPageFailure = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_PAGE_FAILURE
+    }
+}
+
+export const MensGarnierSingleRequest = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_SINGLE_PAGE_REQUEST
+    }
+}
+
+export const MensGarnierSingleSuccess = (payload) =>{
+    return {
+        type : types.GET_MENS_GARNIER_SINGLE_PAGE_SUCCESS,
+        payload
+    }
+}
+
+export const MensGarnierSingleFailure = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_SINGLE_PAGE_FAILURE
+    }
+}

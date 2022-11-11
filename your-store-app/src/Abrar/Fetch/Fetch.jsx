@@ -49,3 +49,15 @@ export const FetchRasPageData = (page=1,setTotalPage) =>{
 export const FetchRasSingleData = (id) =>{
     return axios.get(`https://adminside-yourstore.onrender.com/Products/${id}?category=skin&brand=skinras`)
 }
+
+export const FetchMensGarnierData = (page=1,setTotalPage) =>{
+    return fetch(`https://adminside-yourstore.onrender.com/Products?_page=${page}&_limit=6&category=men&brand=garnier`)
+    .then((res)=>{
+        setTotalPage(Number(res.headers.get('X-Total-Count')))
+        return res.json( )
+    })
+};
+
+export const FetchMensGarnierSingleData = (id) =>{
+    return axios.get(`https://adminside-yourstore.onrender.com/Products/${id}?category=men&brand=garnier`)
+}

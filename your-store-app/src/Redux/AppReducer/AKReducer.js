@@ -8,6 +8,8 @@ const initalData = {
     EsteeSingleProduct : [ ],
     RasProducts : [ ],
     RasSingleProduct : [ ],
+    MensGarnierProducts : [ ],
+    MensGarnierSingleProduct : [ ],
     isLoading : false,
     isError : false
 };
@@ -215,10 +217,62 @@ export default function MyReducer (state=initalData,action) {
             }
         }
 
-        case types.GET_RAS_SINGLE_SUCCESS : {
+        case types.GET_RAS_SINGLE_FAILURE : {
             return {
                 ...state,
                 RasSingleProduct : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case types.GET_MENS_GARNIER_PAGE_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_PAGE_SUCCESS : {
+            return {
+                ...state,
+                MensGarnierProducts : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_PAGE_FAILURE : {
+            return {
+                ...state,
+                MensGarnierProducts : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case types.GET_MENS_GARNIER_SINGLE_PAGE_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_SINGLE_PAGE_SUCCESS : {
+            return {
+                ...state,
+                MensGarnierSingleProduct : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_SINGLE_PAGE_FAILURE : {
+            return {
+                ...state,
+                MensGarnierSingleProduct : [ ],
                 isLoading : false,
                 isError : true
             }
