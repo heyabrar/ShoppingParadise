@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { MensGarnierPageFailure, MensGarnierPageRequest, MensGarnierPageSuccess } from "../../Redux/AppReducer/Action";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import Pagination from "../CustomComponents/Pagination";
 import ProductsListing from "../CustomComponents/ProductsListing";
 import ProgressCompo from "../CustomComponents/Progress";
 import Slideshow from "../CustomComponents/SlideShow";
@@ -40,11 +41,11 @@ export default function MensGarnierPage ( ) {
     const [searchParams,setSearchParams] = useSearchParams( );
     const initalPage = getCurrentPage(searchParams.get('page'));
     const [page,setPage] = useState(initalPage);
-    const [totalPage,SetTotalPage] = useState(0);
+    const [totalPage,setTotalPage] = useState(0);
 
     const handleGetData = ( ) =>{
         Dispatch(MensGarnierPageRequest( ))
-        FetchMensGarnierData(page,SetTotalPage).then((res)=>{
+        FetchMensGarnierData(page,setTotalPage).then((res)=>{
             Dispatch(MensGarnierPageSuccess(res))
         })
         .catch((err)=> Dispatch(MensGarnierPageFailure(err)))
@@ -87,6 +88,7 @@ export default function MensGarnierPage ( ) {
 
         <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products</Text>
         <ProductsListing data={MensGarnierProducts} direct='/mensgarnier'/>
+        <Pagination current={page} onChange={(page)=>setPage(page)} limit={6} totalPage={totalPage}/>
 
             <Footer/>
             </Box>

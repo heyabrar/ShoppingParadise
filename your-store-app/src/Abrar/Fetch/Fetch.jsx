@@ -61,3 +61,11 @@ export const FetchMensGarnierData = (page=1,setTotalPage) =>{
 export const FetchMensGarnierSingleData = (id) =>{
     return axios.get(`https://adminside-yourstore.onrender.com/Products/${id}?category=men&brand=garnier`)
 }
+
+export const FetchCartData = ( ) =>{
+    return axios.get(`https://adminside-yourstore.onrender.com/cart`)
+}
+
+export const DeleteFromCart = (id) =>{
+    return axios.delete(`https://adminside-yourstore.onrender.com/cart/${id}`)
+}

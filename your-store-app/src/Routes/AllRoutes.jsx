@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import AdminSide from "../Abrar/AdminSide/AdminSide";
+import CartPage from "../Abrar/Pages/CartPage";
 import DotKeySingleProductPage from "../Abrar/Pages/DotSkinSPPage";
 import EsteeSinglePage from "../Abrar/Pages/EsteeSinglePage";
 import HomePage from "../Abrar/Pages/Home";
@@ -42,7 +43,7 @@ export default function AllRoutes() {
         <Route path='/men' element={<MensPage/>} />
         <Route path="/mensgarnier" element={<MensGarnierPage/>}/>
         <Route path="/mensgarnier/:id" element={<MensGarnierSinglePage/>}/>
-        <Route path='/cart' element={<h1>Cart Page</h1>} />
+        <Route path='/cart' element={<CartPage/>} />
         <Route path='/payment' element={<h1>Payment Page</h1>} />
       </Routes>
     </>

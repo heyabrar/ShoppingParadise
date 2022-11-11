@@ -191,3 +191,22 @@ export const MensGarnierSingleFailure = ( ) =>{
         type : types.GET_MENS_GARNIER_SINGLE_PAGE_FAILURE
     }
 }
+
+export const AddToCartRequest = ( ) =>{
+    return {
+        type : types.ADD_TO_CART_REQUEST
+    }
+}
+
+export const AddToCartSuccess= (payload) =>{
+    return {
+        type : types.ADD_TO_CART_SUCCESS,
+        payload
+    }
+}
+
+export const AddToCartFailure = ( ) =>{
+    return {
+        type : types.ADD_TO_CART_FAILURE
+    }
+}

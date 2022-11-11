@@ -10,6 +10,7 @@ const initalData = {
     RasSingleProduct : [ ],
     MensGarnierProducts : [ ],
     MensGarnierSingleProduct : [ ],
+    CartData : [ ],
     isLoading : false,
     isError : false
 };
@@ -273,6 +274,32 @@ export default function MyReducer (state=initalData,action) {
             return {
                 ...state,
                 MensGarnierSingleProduct : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+        
+        case types.ADD_TO_CART_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.ADD_TO_CART_SUCCESS : {
+            return {
+                ...state,
+                CartData : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.ADD_TO_CART_FAILURE : {
+            return {
+                ...state,
+                CartData : [ ],
                 isLoading : false,
                 isError : true
             }

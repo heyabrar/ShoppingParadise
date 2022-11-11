@@ -8,6 +8,7 @@ function App() {
 
     <div className='App'>
       {/* <SkinPage/> */} <Link to='/adminside'>Admin Side</Link>
+      <Link to='/cart'>CART TEST</Link>
       <AllRoutes />
 
 
