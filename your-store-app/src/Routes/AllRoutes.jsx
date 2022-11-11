@@ -3,6 +3,7 @@ import DotKeySingleProductPage from "../Abrar/Pages/DotSkinSPPage";
 import EsteeSinglePage from "../Abrar/Pages/EsteeSinglePage";
 import HomePage from "../Abrar/Pages/Home";
 import LorealSinglePage from "../Abrar/Pages/LorealSinglePage";
+import MensPage from "../Abrar/Pages/MensPage";
 import RasSinglePage from "../Abrar/Pages/RasSinglePage";
 import SkinDotKeyPage from "../Abrar/Pages/SkinDotKeyPage";
 import SkinEsteePage from "../Abrar/Pages/SkinEsteePage";
@@ -34,7 +35,7 @@ export default function AllRoutes() {
         <Route path="/skinEsteeLauder/:id" element={<EsteeSinglePage/>}/>
         <Route path='/skinras' element={<SkinRasPage/>}/>
         <Route path="/skinras/:id" element={<RasSinglePage/>}/>
-        <Route path='/men' element={<h1>Men Page</h1>} />
+        <Route path='/men' element={<MensPage/>} />
         <Route path='/menproducts' element={<h1>Men Products Page</h1>} /> 
         <Route path='/cart' element={<h1>Cart Page</h1>} />
         <Route path='/payment' element={<h1>Payment Page</h1>} />
