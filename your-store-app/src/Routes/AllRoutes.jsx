@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import AdminBrandsPage from "../Abrar/AdminSide/AdminBrandsPage";
+import AdminCategoriesPage from "../Abrar/AdminSide/AdminCategories";
 import AdminSide from "../Abrar/AdminSide/AdminSide";
 import CartPage from "../Abrar/Pages/CartPage";
 import DotKeySingleProductPage from "../Abrar/Pages/DotSkinSPPage";
@@ -23,8 +25,10 @@ import HairPage from '../Sonali/Pages/Hair'
 export default function AllRoutes() {
   return (
     <>
-      <Routes>
-        <Route path="/adminside" element={<AdminSide/>}/>
+      <Routes> 
+        <Route path="/adminside" element={<AdminSide/>}/>                                     {/*Need to be Protected*/}
+        <Route path="/adminbrands" element={<AdminBrandsPage/>}/>                     {/*Need to be Protected*/}
+        <Route path="/admincategories" element={<AdminCategoriesPage/>}/>         {/*Need to be Protected*/}
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
@@ -32,19 +36,19 @@ export default function AllRoutes() {
         <Route path='/hair' element={<HairPage/>} />
         <Route path='/fragrance' element={<h1>Fragrance Page</h1>} />
         <Route path='/skin' element={<SkinPage/>} />
-        <Route path='/skindotkey' element={<SkinDotKeyPage/>} />
-        <Route path="/skin/:id" element={<DotKeySingleProductPage/>}/>
-        <Route path="/skinloreal" element={<SkinLorealPage/>}/>
-        <Route path="/skinloreal/:id" element={<LorealSinglePage/>}/>
-        <Route path="/skinEstee" element={<SkinEsteePage/>}/>
-        <Route path="/skinEsteeLauder/:id" element={<EsteeSinglePage/>}/>
-        <Route path='/skinras' element={<SkinRasPage/>}/>
-        <Route path="/skinras/:id" element={<RasSinglePage/>}/>
-        <Route path='/men' element={<MensPage/>} />
-        <Route path="/mensgarnier" element={<MensGarnierPage/>}/>
-        <Route path="/mensgarnier/:id" element={<MensGarnierSinglePage/>}/>
-        <Route path='/cart' element={<CartPage/>} />
-        <Route path='/payment' element={<h1>Payment Page</h1>} />
+        <Route path='/skindotkey' element={<SkinDotKeyPage/>} />                             {/*Need to be Protected*/}
+        <Route path="/skin/:id" element={<DotKeySingleProductPage/>}/>                   {/*Need to be Protected*/}
+        <Route path="/skinloreal" element={<SkinLorealPage/>}/>                                 {/*Need to be Protected*/}
+        <Route path="/skinloreal/:id" element={<LorealSinglePage/>}/>                        {/*Need to be Protected*/}
+        <Route path="/skinEstee" element={<SkinEsteePage/>}/>                                   {/*Need to be Protected*/}
+        <Route path="/skinEsteeLauder/:id" element={<EsteeSinglePage/>}/>               {/*Need to be Protected*/}
+        <Route path='/skinras' element={<SkinRasPage/>}/>                                           {/*Need to be Protected*/}
+        <Route path="/skinras/:id" element={<RasSinglePage/>}/>                                  {/*Need to be Protected*/}
+        <Route path='/men' element={<MensPage/>} />                          
+        <Route path="/mensgarnier" element={<MensGarnierPage/>}/>                          {/*Need to be Protected*/}
+        <Route path="/mensgarnier/:id" element={<MensGarnierSinglePage/>}/>            {/*Need to be Protected*/}
+        <Route path='/cart' element={<CartPage/>} />                                                       {/*Need to be Protected*/}
+        <Route path='/payment' element={<h1>Payment Page</h1>} />                          {/*Need to be Protected*/}
       </Routes>
     </>
   );
