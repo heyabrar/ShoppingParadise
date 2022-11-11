@@ -1,6 +1,8 @@
+import MensShopByConcern from "../Components/MensShopByConcern";
 import MensTopBrand from "../Components/MensTopBrand";
 import Navbar from "../Components/Navbar";
 import SlideShow from '../CustomComponents/SlideShow'
+import Footer from '../Components/Footer'
 export default function MensPage ( ) {
     const Images =  [
         {
@@ -33,6 +35,8 @@ export default function MensPage ( ) {
         <Navbar/>
         <SlideShow data={Images}/>
         <MensTopBrand/>
+        <MensShopByConcern/>
+        <Footer/>
         </>
     )
 }

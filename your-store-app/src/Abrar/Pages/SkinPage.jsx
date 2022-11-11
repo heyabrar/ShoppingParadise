@@ -8,13 +8,11 @@ import SkinOnlyAtNykaa from "../Components/SkinOnlyAtNykaa";
 import SkinShopByCategory from "../Components/SkinShopByCategory";
 import SkinTopBanner from "../Components/SkinTopBanner";
 import SkinTrendingNow from "../Components/SkinTrendingNow";
-import { Link } from "react-router-dom";
 
 export default function SkinPage ( ) {
     
     return(
         <>
-        <Link to='/adminside'>Admin Side</Link>
         <Navbar/>
         <Slider/>
         <SkinTopBanner/>    
