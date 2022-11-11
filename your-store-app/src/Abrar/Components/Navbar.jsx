@@ -1,12 +1,13 @@
-import Header from "../../Dibyanshu/Components/Header";
-import DipyanshuLinks from "../../Dibyanshu/Components/Links";
-import Slider from "../../Dibyanshu/Components/Slider";
+
+import MainNavbar from "../../Dibyanshu/Components/Navbar/MainNavbar";
+import Slider from "../../Dibyanshu/Components/Slider/Slider";
+
+
 
 export default function Navbar ( ){
     return(
         <>
-          <Header/>
-          <DipyanshuLinks/>
+          <MainNavbar/>
           <Slider/>
         </>
     )
