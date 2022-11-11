@@ -1,4 +1,6 @@
+import { Box, Heading, HStack, Icon } from "@chakra-ui/react";
 import React from "react";
+import { IoMdArrowBack } from "react-icons/io";
 
 const Order = () => {
   return (

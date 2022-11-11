@@ -13,7 +13,7 @@ const ProfileNavigation = () => {
       <VStack alignItems={"flex-start"} gap={4} w={"200px"}>
         <Link
           as={NavLink}
-          to={"/profile"}
+          to={"/profile/myprofile"}
           _activeLink={{
             color: "#fc2779",
             fontWeight: "bold",
@@ -29,7 +29,7 @@ const ProfileNavigation = () => {
         </Link>
         <Link
           as={NavLink}
-          to={"/wallet"}
+          to={"/profile/wallet"}
           _activeLink={{
             color: "#fc2779",
             fontWeight: "bold",
@@ -45,7 +45,7 @@ const ProfileNavigation = () => {
         </Link>
         <Link
           as={NavLink}
-          to={"/orders"}
+          to={"/profile/orders"}
           _activeLink={{
             color: "#fc2779",
             fontWeight: "bold",
