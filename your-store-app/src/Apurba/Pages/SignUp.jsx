@@ -18,23 +18,10 @@ const SignUp = () => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   const formik = useFormik({
     initialValues: { name: "", email: "", password: "" },
-    validate: (data) => {
-      let errors = {};
-      if (!data.name) {
-        errors.name = "Name is required.";
-      }
-      if (!data.email) {
-        errors.email = "Email is required.";
-      } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)
-      ) {
-        errors.email = "Invalid email address. E.g. example@email.com";
-      }
 
-      return errors;
-    },
     onSubmit: (values) => {
       //   alert(JSON.stringify(values, null, 2));
+
       users.push(values);
       localStorage.setItem("users", JSON.stringify(users));
       navigate("/login");
@@ -57,7 +44,7 @@ const SignUp = () => {
             <Text pb={"15px"} mb={"15px"}>
               Register and earn 2000 reward points
             </Text>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='name'>Full Name</FormLabel>
               <Input
                 id='name'
@@ -68,7 +55,7 @@ const SignUp = () => {
                 value={formik.values.name}
               />
             </FormControl>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='email'>Email Address</FormLabel>
               <Input
                 id='email'
@@ -79,7 +66,7 @@ const SignUp = () => {
                 value={formik.values.email}
               />
             </FormControl>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='password'>Password</FormLabel>
               <Input
                 id='password'

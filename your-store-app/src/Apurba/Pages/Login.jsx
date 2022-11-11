@@ -23,13 +23,20 @@ const Login = () => {
       //   alert(JSON.stringify(values, null, 2));
       const { email, password } = values;
       if (email) {
-        console.log(email, password);
+        // console.log(email, password);
+        let isAdmin = false;
+
+        email.split("@")[1] === "yourstore.com" && (isAdmin = true);
+
         const validate = users.filter(
           (user) => user.email == email && user.password == password
         );
-        console.log(validate);
-        if (validate.length == 0) alert("Invalid Username or Password");
-        else navigate("/");
+        // console.log(validate);
+        validate.length == 0
+          ? alert("Invalid Username or Password")
+          : isAdmin
+          ? navigate("/admin")
+          : navigate("/profile");
       }
     },
   });
@@ -48,7 +55,7 @@ const Login = () => {
               payments.
             </Text>
 
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='email'>Email Address</FormLabel>
               <Input
                 id='email'
@@ -59,7 +66,7 @@ const Login = () => {
                 value={formik.values.email}
               />
             </FormControl>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='password'>Password</FormLabel>
               <Input
                 id='password'
