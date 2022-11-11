@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import AdminSide from "../Abrar/AdminSide/AdminSide";
 import DotKeySingleProductPage from "../Abrar/Pages/DotSkinSPPage";
 import EsteeSinglePage from "../Abrar/Pages/EsteeSinglePage";
 import HomePage from "../Abrar/Pages/Home";
@@ -20,6 +21,7 @@ export default function AllRoutes() {
   return (
     <>
       <Routes>
+        <Route path="/adminside" element={<AdminSide/>}/>
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
