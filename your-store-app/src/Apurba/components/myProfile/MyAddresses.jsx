@@ -32,7 +32,12 @@ const MyAddresses = () => {
   return (
     <Flex bg={"white"} p={"4"} alignItems={"center"} gap={5}>
       <VStack align={"flex-start"} w={"full"}>
-        <Flex align={"center"} justify={"space-between"} w={"full"}>
+        <Flex
+          align={"center"}
+          justify={"space-between"}
+          w={"full"}
+          direction={["column", "row"]}
+        >
           <Flex gap={2} align={"center"}>
             <Icon as={AiFillHome} h={7} w={7} />
             <Heading size={"md"}>My Addresses</Heading>

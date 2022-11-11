@@ -15,13 +15,19 @@ const MyWallet = () => {
   return (
     <Flex bg={"white"} p={"8"} alignItems={"center"} gap={5} mb={4}>
       <VStack w={"full"} align={"flex-start"}>
-        <HStack lineHeight={".69"} mb={8}>
-          <Icon as={RiWallet3Fill} color={"#fc2779"} w={10} h={10} mt={2} />
+        <HStack lineHeight={["1", ".69"]} mb={8}>
+          <Icon
+            as={RiWallet3Fill}
+            color={"#fc2779"}
+            w={[8, 10]}
+            h={[8, 10]}
+            mt={2}
+          />
           <Flex flexDir={"column"}>
-            <Heading size={"lg"} fontWeight={"medium"}>
+            <Heading size={["md", "lg"]} fontWeight={"medium"}>
               YourStore Wallet
             </Heading>
-            <Text>A purse you carry to shop Beauty</Text>
+            <Text size={["xm", "sm"]}>A purse you carry to shop Beauty</Text>
           </Flex>
         </HStack>
         <VStack

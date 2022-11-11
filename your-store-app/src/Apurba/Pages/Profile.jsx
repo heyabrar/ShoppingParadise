@@ -22,7 +22,7 @@ const Profile = () => {
         minH={"100vh"}
       >
         <Container maxW={"container.lg"} mx={"20"}>
-          <Flex gap={"8"}>
+          <Flex gap={"8"} direction={["column", "column", "column", "row"]}>
             <Box bg={"white"} p={4} h={"min-content"}>
               <ProfileNavigation />
             </Box>

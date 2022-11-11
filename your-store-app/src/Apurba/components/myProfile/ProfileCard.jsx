@@ -27,7 +27,14 @@ import { TextField } from "@mui/material";
 const ProfileCard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex bg={"white"} p={"4"} alignItems={"center"} gap={5} mb={4}>
+    <Flex
+      bg={"white"}
+      p={"4"}
+      alignItems={"center"}
+      gap={5}
+      mb={4}
+      direction={["column", "row"]}
+    >
       <Image src='https://www.nykaa.com/assets/desktop/images/my_account/default_avatar.svg' />
       <VStack alignItems={"flex-start"} w={"100%"}>
         <HStack
