@@ -1,0 +1,55 @@
+/*=== Slider Bar ===*/
+
+.slide_container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slide_container img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.slides {
+    display: none;
+}
+
+.fade {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.slide_container a img {
+    width: 3rem;
+    height: 3rem;
+    
+}
+
+
+.left_arrow,
+.right_arrow {
+    border: grey;
+    border-radius: 100%;
+    background-color:#f9fbe7;
+    font-size: 50px;
+    color: black;
+    position: absolute;
+    top: 45%;
+    font-size: 50px;
+}
+
+.left_arrow {
+    left: 3%;
+}
+
+.right_arrow {
+    right: 3%;
+}
+
+.left_arrow:hover,
+.right_arrow:hover {
+    cursor: pointer;
+}
