@@ -26,14 +26,26 @@ export const FetchSingleLorealData = (id) =>{
 };
 
 
-export const FetchEsteeData = (page,setTotalPage) =>{
+export const FetchEsteeData = (page=1,setTotalPage) =>{
     return fetch(`https://yourstore-com-backend-server.onrender.com/skinEsteeLauder?_page=${page}&_limit=6`)
+    .then((res)=>{
+        setTotalPage(Number(res.headers.get('X-Total-Count')))
+        return res.json( );
+    })
+}
+
+export const FetchEsteeSingleData = (id) =>{
+    return axios.get(`https://yourstore-com-backend-server.onrender.com/skinEsteeLauder/${id}`)
+}
+
+export const FetchRasPageData = (page=1,setTotalPage) =>{
+    return fetch(`https://yourstore-com-backend-server.onrender.com/skinras?_page=${page}&_limit=6`)
     .then((res)=>{
         setTotalPage(Number(res.headers.get('X-Total-Count')))
         return res.json( )
     })
 }
 
-export const FetchEsteeSingleData = (id) =>{
-    return axios.get(`https://yourstore-com-backend-server.onrender.com/skinEsteeLauder/${id}`)
+export const FetchRasSingleData = (id) =>{
+    return axios.get(`https://yourstore-com-backend-server.onrender.com/skinras/${id}`)
 }

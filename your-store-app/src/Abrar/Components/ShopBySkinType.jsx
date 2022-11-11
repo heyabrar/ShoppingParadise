@@ -1,4 +1,5 @@
 import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function ShopBySkinType ( ) {
     const ShopBySkinData = [
@@ -28,7 +29,7 @@ export default function ShopBySkinType ( ) {
         <SimpleGrid columns={[2,2,4,4]} width={{base :'95%', md : '90%'}} m='auto' mt={{base :'15px'}} rowGap={{base : '20px'}}>
             {ShopBySkinData.length > 0 && ShopBySkinData.map((elem)=>{
                 return <Box key={elem.id}>
-                    <Image width={{base : '160px', lg : '280px'}} src={elem.image} m='auto'/>
+                  <Link to='/skinEstee'><Image width={{base : '160px', lg : '280px'}} src={elem.image} m='auto'/></Link>
                 </Box>
             })}
         </SimpleGrid>

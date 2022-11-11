@@ -33,7 +33,7 @@ export default function SkinLuxiIndulgies ( ) {
     return (
         <>
          <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '7%'}}>LUXE INDULGENCES</Text>
-         <StaticCarousel data={images}/>
+         <StaticCarousel data={images} redirect='/skinloreal'/>
         </>
     )
 }

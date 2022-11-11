@@ -19,7 +19,7 @@ const SubNavbar = () => {
             <Subnav>
                 <p onClick={()=>navigate("/skin")} onMouseOver={() => hoverHandler('MAKEUP')}>Makeup </p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('SKIN')}>Skin</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
+                <p onClick={()=>navigate("/hair")} onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('BATH&BODY')}>Bath & Body</p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('NATURAL')}>Natural</p>

@@ -114,3 +114,42 @@ export const EsteeGetSingleFailure= ( ) =>{
         type : types.GET_ESTEE_SINGLE_FAILURE
     }
 }
+
+export const RasGetProductsRequest = ( ) =>{
+    return {
+        type : types.GET_RAS_PAGE_DATA_REQUEST
+    }
+}
+
+export const RasGetProductsSuccess = (payload) =>{
+    return {
+        type : types.GET_RAS_PAGE_DATA_SUCCESS,
+        payload,
+    }
+}
+
+
+export const RasGetProductsFailure = ( ) =>{
+    return {
+        type : types.GET_RAS_PAGE_DATA_FAILURE
+    }
+}
+
+export const RasGetSingleProductRequest = ( ) =>{
+    return {
+        type : types.GET_RAS_SINGLE_REQUEST
+    }
+}
+
+export const RasGetSingleProductSuccess = (payload) =>{
+    return {
+        type : types.GET_RAS_SINGLE_SUCCESS,
+        payload
+    }
+}
+
+export const RasGetSingleProductFailure = ( ) =>{
+    return {
+        type : types.GET_RAS_SINGLE_FAILURE
+    }
+}
