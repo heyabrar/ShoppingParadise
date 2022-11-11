@@ -61,18 +61,18 @@
 
   @media all and (min-width: 320px) and (max-width: 767px) {
      #top_headerflex{
-            font-size: 13px;
-            margin-top: -193px;
+            font-size: 16px;
+            margin-top: -165px;
             height: 60px; 
     }
-    #top_headerflex>div{
-        width:500px;
+    #top_menuflex{
+        
+        width: 94%;
         margin: auto;
-        margin-right: 200px;
-        border: 1px solid yellow;
+        /* border: 1px solid yellow; */
     }
-    /* #top_headerflex>div>a{
+    #top_headerflex>div>a{
         display: none;
-       } */
+       }
   }
   
