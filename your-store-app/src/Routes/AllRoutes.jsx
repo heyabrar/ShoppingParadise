@@ -8,15 +8,18 @@ import SkinEsteePage from "../Abrar/Pages/SkinEsteePage";
 import SkinLorealPage from "../Abrar/Pages/SkinLorealPage";
 import SkinPage from "../Abrar/Pages/SkinPage";
 import Login from "../Apurba/Pages/Login";
+import Profile from "../Apurba/Pages/Profile";
 import SignUp from "../Apurba/Pages/SignUp";
+import ProfileRoutes from "../Apurba/routes/ProfileRoutes";
 
 export default function AllRoutes() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<HomePage/>} />
+        <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/profile/*' element={<ProfileRoutes />} />
         <Route path='/hair' element={<h1>Hair Page</h1>} />
         <Route path='/fragrance' element={<h1>Fragrance Page</h1>} />
         <Route path='/skin' element={<SkinPage/>} />
