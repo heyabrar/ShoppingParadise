@@ -3,6 +3,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import "./HeaderNotification.css";
 
 const HeaderNotification = () => (
 

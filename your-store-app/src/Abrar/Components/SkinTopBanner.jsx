@@ -65,10 +65,10 @@ export default function SkinTopBanner ( ) {
         </Box>
 
         <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '5px', md : '10px'}}>BRANDS YOU WILL LOVE</Text>
-        <SimpleGrid columns={[2,2,3,4] || [1,1,1,1]} width={{base : '95%', md : '95%'}} m='auto' rowGap={{base : '20px', md :'30px', lg: '35px'}} mt={{base: '15px', md: '20px'}}>
+        <SimpleGrid columns={[2,2,3,4]} width={{base : '95%', md : '95%'}} m='auto' rowGap={{base : '20px', md :'30px', lg: '35px'}} mt={{base: '15px', md: '20px'}}>
                 {BrandsToLoveObj.length > 0 && BrandsToLoveObj.map((elem)=>{
                     return <Box width={{base : '95%'}} m='auto'  textAlign='center' key={elem.id}>
-                        <Link to={elem.id === 8 ? '/skindotkey' : elem.id === 4 ? '/skinloreal' : elem.id === 1 ? '/skinesteelauder' : '/skindotkey'}><Image width={{base : '150px', md : '150px', lg: '250px'}} m='auto' src={elem.image} alt={elem.title}/></Link>
+                        <Link  to={elem.id === 8 ? '/skindotkey' : elem.id === 4 ? '/skinloreal' : elem.id === 1 ? '/skinEstee' : elem.id===3  ? '/skinras' : '/skindotkey'}><Image width={{base : '150px', md : '150px', lg: '250px'}} m='auto' src={elem.image} alt={elem.title}/></Link>
                         <Text fontSize={{base: '14px', md: '15px', lg : '16px'}} fontWeight='600'>{elem.title}</Text>
                         <Text fontSize={{base : '12px', md : '14px'}}>{elem.price}</Text>
                     </Box>
