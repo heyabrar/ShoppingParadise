@@ -35,8 +35,6 @@ export default function MensGarnierSinglePage ( ) {
         <Box bg='RGBA(0, 0, 0, 0.06)'>
             <SingleProductComponent data={MensGarnierSingleProduct} isLoading={isLoading} isError={isError}/>
         </Box>
-
-
         </>
     )
 }

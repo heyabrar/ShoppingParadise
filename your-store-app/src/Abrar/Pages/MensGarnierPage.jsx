@@ -4,7 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { MensGarnierPageFailure, MensGarnierPageRequest, MensGarnierPageSuccess } from "../../Redux/AppReducer/Action";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 import ProductsListing from "../CustomComponents/ProductsListing";
+import ProgressCompo from "../CustomComponents/Progress";
 import Slideshow from "../CustomComponents/SlideShow";
 import { FetchMensGarnierData } from "../Fetch/Fetch";
 import { getCurrentPage } from "./SkinDotKeyPage";
@@ -57,6 +59,7 @@ export default function MensGarnierPage ( ) {
     },[page])
     return (
         <>
+            <Navbar/>
             <Box bg='RGBA(0, 0, 0, 0.06)'>
             <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Garnier</Text>
             <Slideshow data={slideShow}/>
@@ -77,6 +80,10 @@ export default function MensGarnierPage ( ) {
                 <Image width={{base : '200px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/This-Just-In-Garnier-Skin-Naturals-Serum-Masks.jpg" alt="Garnier"/>
             </Box>
         </Flex>
+
+        {isLoading && <ProgressCompo/>}
+        <Text>{isLoading && <ProgressCompo/>}</Text>
+        <Text textAlign='center'>{isError && 'Something Went Wrong !!!'}</Text>
 
         <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products</Text>
         <ProductsListing data={MensGarnierProducts} direct='/mensgarnier'/>
