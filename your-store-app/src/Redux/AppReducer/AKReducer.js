@@ -1,175 +1,231 @@
 import * as types from './ActionTypes'
 const initalData = {
-    DotKeyProducts : [],
-    DotKeySingleProduct : [ ],
-    LorealProducts : [ ],
-    LorealSingleProduct : [ ],
-    EsteeProducts : [ ],
-    EsteeSingleProduct : [ ],
-    isLoading : false,
-    isError : false
+    DotKeyProducts: [],
+    DotKeySingleProduct: [],
+    LorealProducts: [],
+    LorealSingleProduct: [],
+    EsteeProducts: [],
+    EsteeSingleProduct: [],
+    HairProducts: [],
+    HairSingleProduct:[],
+    isLoading: false,
+    isError: false
 };
 
-export default function MyReducer (state=initalData,action) {
-    const {type,payload} = action;
+export default function MyReducer(state = initalData, action) {
+    const { type, payload } = action;
 
-    switch(type){
-        case types.GET_SKIN_PAGE_DOTKEY_REQUEST : {
+    switch (type) {
+        case types.GET_SKIN_PAGE_DOTKEY_REQUEST: {
             return {
                 ...state,
-                isLoading : true,
-                isError : false
+                isLoading: true,
+                isError: false
             }
         }
 
-        case types.GET_SKIN_PAGE_DOTKEY_SUCCESS : {
+        case types.GET_SKIN_PAGE_DOTKEY_SUCCESS: {
             return {
                 ...state,
-                DotKeyProducts : payload,
-                isLoading : false,
-                isError : false
+                DotKeyProducts: payload,
+                isLoading: false,
+                isError: false
             }
         }
 
-        case types.GET_SKIN_PAGE_DOTKEY_FAILURE : {
+        case types.GET_SKIN_PAGE_DOTKEY_FAILURE: {
             return {
                 ...state,
-                DotKeyProducts : [ ],
-                isLoading : false,
-                isError : true
+                DotKeyProducts: [],
+                isLoading: false,
+                isError: true
             }
         };
 
-        case types.GET_DOTKEY_SINGLE_REQUEST : {
+        case types.GET_DOTKEY_SINGLE_REQUEST: {
             return {
                 ...state,
-                isLoading : true,
-                isError : false
+                isLoading: true,
+                isError: false
             }
         }
 
-        case types.GET_DOTKEY_SINGLE_SUCCESS : {
+        case types.GET_DOTKEY_SINGLE_SUCCESS: {
             return {
                 ...state,
-                DotKeySingleProduct : payload,
-                isLoading : false,
-                isError : false
+                DotKeySingleProduct: payload,
+                isLoading: false,
+                isError: false
             }
         }
 
-        case types.GET_DOTKEY_SINGLE_FAILURE : {
+        case types.GET_DOTKEY_SINGLE_FAILURE: {
             return {
                 ...state,
-                DotKeySingleProduct : [ ],
-                isLoading : false,
-                isError : true
+                DotKeySingleProduct: [],
+                isLoading: false,
+                isError: true
             }
         }
 
-        case types.SKIN_LOREAL_PAGE_GET_REQUEST : {
+        case types.SKIN_LOREAL_PAGE_GET_REQUEST: {
             return {
                 ...state,
-                isLoading : true,
-                isError : false
+                isLoading: true,
+                isError: false
             }
         }
 
         case types.SKIN_LOREAL_PAGE_GET_SUCCESS: {
             return {
                 ...state,
-                LorealProducts : payload,
-                isLoading : false,
-                isError : false
+                LorealProducts: payload,
+                isLoading: false,
+                isError: false
             }
         }
 
-        case types.SKIN_LOREAL_PAGE_GET_FAILURE : {
+        case types.SKIN_LOREAL_PAGE_GET_FAILURE: {
             return {
                 ...state,
-                LorealProducts  : [ ],
-                isLoading : false,
-                isError : true
+                LorealProducts: [],
+                isLoading: false,
+                isError: true
             }
         }
 
-        case types.LOREAL_GET_SINGLE_DATA_REQUEST : {
+        case types.LOREAL_GET_SINGLE_DATA_REQUEST: {
             return {
                 ...state,
-                isLoading : true,
-                isError : false
+                isLoading: true,
+                isError: false
             }
         };
 
-        case types.LOREAL_GET_SINGLE_DATA_SUCCESS : {
+        case types.LOREAL_GET_SINGLE_DATA_SUCCESS: {
             return {
                 ...state,
-                isLoading : false,
-                LorealSingleProduct : payload,
-                isError : false
+                isLoading: false,
+                LorealSingleProduct: payload,
+                isError: false
             }
         }
 
-        case types.LOREAL_GET_SINGLE_DATA_FAILURE : {
+        case types.LOREAL_GET_SINGLE_DATA_FAILURE: {
             return {
                 ...state,
-                LorealSingleProduct  : [ ],
-                isLoading : false,
-                isError : true
+                LorealSingleProduct: [],
+                isLoading: false,
+                isError: true
             }
         }
 
-        case types.GET_ESTEE_PAGE_DATA_REQUEST : {
+        case types.GET_ESTEE_PAGE_DATA_REQUEST: {
             return {
                 ...state,
-                isLoading : true,
-                isError : false
+                isLoading: true,
+                isError: false
             }
         }
 
-        case types.GET_ESTEE_PAGE_DATA_SUCCESS : {
+        case types.GET_ESTEE_PAGE_DATA_SUCCESS: {
             return {
                 ...state,
-                EsteeProducts : payload,
-                isLoading : false,
-                isError : false
+                EsteeProducts: payload,
+                isLoading: false,
+                isError: false
             }
         }
 
-        case types.GET_ESTEE_PAGE_DATA_FAILURE : {
+        case types.GET_ESTEE_PAGE_DATA_FAILURE: {
             return {
                 ...state,
-                EsteeProducts : [ ],
-                isLoading : false,
-                isError : true
+                EsteeProducts: [],
+                isLoading: false,
+                isError: true
             }
         };
 
-        case types.GET_ESTEE_SINGLE_REQUEST : {
+        case types.GET_ESTEE_SINGLE_REQUEST: {
             return {
                 ...state,
-                isLoading : true,
-                isError : false
+                isLoading: true,
+                isError: false
             }
         }
 
-        case types.GET_ESTEE_SINGLE_SUCCESS : {
+        case types.GET_ESTEE_SINGLE_SUCCESS: {
             return {
                 ...state,
-                EsteeSingleProduct : payload,
-                isLoading : false,
-                isError : false
+                EsteeSingleProduct: payload,
+                isLoading: false,
+                isError: false
             }
         }
 
-        case types.GET_ESTEE_SINGLE_FAILURE : {
+        case types.GET_ESTEE_SINGLE_FAILURE: {
             return {
                 ...state,
-                EsteeSingleProduct : [ ],
-                isLoading : false,
-                isError : true
+                EsteeSingleProduct: [],
+                isLoading: false,
+                isError: true
             }
         }
-        default :
-        return state 
+
+        case types.GET_HAIR_DATA_REQUEST: {
+            return {
+                ...state,
+                isLoading: true,
+                isError: false
+            }
+        }
+
+        case types.GET_HAIR_DATA_SUCCESS: {
+            return {
+                ...state,
+                HairProducts: payload,
+                isLoading: false,
+                isError: false
+            }
+        }
+
+        case types.GET_HAIR_DATA_FAILURE: {
+            return {
+                ...state,
+                HairProducts: [],
+                isLoading: false,
+                isError: true
+            }
+        }
+
+     
+        case types.GET_SINGAL_HAIR_DATA_REQUEST: {
+            return {
+                ...state,
+                isLoading: true,
+                isError: false
+            }
+        }
+
+        case types.GET_SINGAL_HAIR_DATA_SUCCESS: {
+            return {
+                ...state,
+                HairSingleProduct: payload,
+                isLoading: false,
+                isError: false
+            }
+        }
+
+        case types.GET_SINGAL_HAIR_DATA_FAILURE: {
+            return {
+                ...state,
+                HairSingleProduct: [],
+                isLoading: false,
+                isError: true
+            }
+        }
+
+        default:
+            return state
     }
 }
