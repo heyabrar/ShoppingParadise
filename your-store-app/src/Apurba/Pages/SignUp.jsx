@@ -17,14 +17,25 @@ const SignUp = () => {
   const navigate = useNavigate();
   const users = JSON.parse(localStorage.getItem("users")) || [];
   const formik = useFormik({
-    initialValues: { name: "", email: "", password: "" },
+    initialValues: { name: "", email: "", password: "", isAdmin: false },
+
+    validate: (values) => {
+      values.email.split("@")[1] === "yourstore.com"
+        ? (values.isAdmin = true)
+        : (values.isAdmin = false);
+
+      // console.log(values);
+    },
 
     onSubmit: (values) => {
       //   alert(JSON.stringify(values, null, 2));
+      const user = users.filter((user) => user.email === values.email);
+      user.length === 0
+        ? users.push(values) &&
+          localStorage.setItem("users", JSON.stringify(users))
+        : alert("Email already exixts");
 
-      users.push(values);
-      localStorage.setItem("users", JSON.stringify(users));
-      navigate("/login");
+      // navigate("/login");
     },
   });
   return (
