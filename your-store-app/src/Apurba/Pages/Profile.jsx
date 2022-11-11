@@ -10,8 +10,8 @@ const Profile = () => {
   return (
     <Flex bg='gray.100' align='center' justify='center' py={10} minH={"100vh"}>
       <Container maxW={"container.lg"} mx={"20"}>
-        <Flex gap={"8"} h={"min-content"}>
-          <Box bg={"white"} p={4}>
+        <Flex gap={"8"}>
+          <Box bg={"white"} p={4} h={"min-content"}>
             <ProfileNavigation />
           </Box>
           <Box w={"100%"}>

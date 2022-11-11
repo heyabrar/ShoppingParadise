@@ -30,7 +30,12 @@ const ProfileCard = () => {
     <Flex bg={"white"} p={"4"} alignItems={"center"} gap={5} mb={4}>
       <Image src='https://www.nykaa.com/assets/desktop/images/my_account/default_avatar.svg' />
       <VStack alignItems={"flex-start"} w={"100%"}>
-        <HStack alignItems={"center"} alignSelf={"flex-end"} onClick={onOpen}>
+        <HStack
+          alignItems={"center"}
+          alignSelf={"flex-end"}
+          onClick={onOpen}
+          cursor={"pointer"}
+        >
           <Icon as={BiPencil} />
           <Heading size={"sm"} fontWeight={"normal"}>
             Edit
@@ -62,11 +67,11 @@ const ProfileCard = () => {
               </VStack>
             </ModalBody>
 
-            <ModalFooter>
+            <ModalFooter gap={2}>
               <Button variant='ghost' onClick={onClose}>
                 Close
               </Button>
-              <Button colorScheme='blue' mr={3}>
+              <Button bg={"#fc2779"} mr={3} color={"white"} _hover={{}}>
                 Submit
               </Button>
             </ModalFooter>
