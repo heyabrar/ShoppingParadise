@@ -1,11 +1,17 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Profile from "../Pages/Profile";
+import Order from "../components/Order";
+import MyProfile from "../components/myProfile/MyProfile";
+import MyWallet from "../components/myWallet/MyWallet";
+import { PrivateRoute } from "./PrivateRoute";
 
 const ProfileRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<Profile />} />
+      <Route path='/' element={<MyProfile />} />
+      <Route path='/MyProfile' element={<MyProfile />} />
+      <Route path='/wallet' element={<MyWallet />} />
+      <Route path='/order' element={<Order />} />
     </Routes>
   );
 };
