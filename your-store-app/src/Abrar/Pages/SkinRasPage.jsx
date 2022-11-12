@@ -42,6 +42,7 @@ export default function SkinRasPage ( ) {
     const initalPage = getCurrentPage(searchParams.get('page'));
     const [page,setPage] = useState(initalPage);
     const [totalPage,setTotalPage] = useState(0);
+    const count = RasProducts.length;
 
     const handleFetchData = ( ) =>{
         Dispatch(RasGetProductsRequest( ))
@@ -63,11 +64,11 @@ export default function SkinRasPage ( ) {
         <>
         <Navbar/>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}} >Dot & Key (80)</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}} >Skin Ras</Text>
 
         <Slideshow data={Images}/>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt='20px'>All Products</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt='20px'>All Products ({count})</Text>
 
         <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
         <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && <ProgressCompo/>}</Text>
