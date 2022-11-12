@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -31,7 +32,9 @@ export default function LorealSinglePage ( ) {
 
     return (
         <>
+        <Box bg='RGBA(0, 0, 0, 0.06)'>
         <SingleProductComponent data={LorealSingleProduct} isLoading={isLoading} />
+        </Box>
 
         </>
     )

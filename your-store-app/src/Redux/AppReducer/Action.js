@@ -114,3 +114,140 @@ export const EsteeGetSingleFailure= ( ) =>{
         type : types.GET_ESTEE_SINGLE_FAILURE
     }
 }
+
+export const RasGetProductsRequest = ( ) =>{
+    return {
+        type : types.GET_RAS_PAGE_DATA_REQUEST
+    }
+}
+
+export const RasGetProductsSuccess = (payload) =>{
+    return {
+        type : types.GET_RAS_PAGE_DATA_SUCCESS,
+        payload,
+    }
+}
+
+
+export const RasGetProductsFailure = ( ) =>{
+    return {
+        type : types.GET_RAS_PAGE_DATA_FAILURE
+    }
+}
+
+export const RasGetSingleProductRequest = ( ) =>{
+    return {
+        type : types.GET_RAS_SINGLE_REQUEST
+    }
+}
+
+export const RasGetSingleProductSuccess = (payload) =>{
+    return {
+        type : types.GET_RAS_SINGLE_SUCCESS,
+    }
+}
+
+export const RasGetSingleProductFailure = ( ) =>{
+    return {
+        type : types.GET_RAS_SINGLE_FAILURE
+    }
+}
+
+
+export const HairProductsDataRequest = () =>{
+    return{
+        type: types.GET_HAIR_DATA_REQUEST
+    }
+}
+
+export const HairProductsDataSuccess = (payload) =>{
+    return{
+        type: types.GET_HAIR_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const HairProductsDataFailure = () =>{
+    return{
+        type: types.GET_HAIR_DATA_FAILURE
+    }
+}
+
+
+export const MensGarnierPageRequest = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_PAGE_REQUEST
+    }
+}
+
+export const MensGarnierPageSuccess = (payload) =>{
+    return {
+        type : types.GET_MENS_GARNIER_PAGE_SUCCESS,
+        payload
+    }
+}
+
+export const MensGarnierPageFailure = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_PAGE_FAILURE
+    }
+}
+
+
+export const HairSingalProductsDataRequest = () =>{
+    return{
+        type: types.GET_SINGAL_HAIR_DATA_REQUEST
+    }
+}
+
+export const HairSingalProductsDataSuccess = (payload) =>{
+    return{
+        type: types.GET_SINGAL_HAIR_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const HairSingalProductsDataFailure = () =>{
+    return{
+        type: types.GET_SINGAL_HAIR_DATA_FAILURE
+    }
+}
+
+
+export const MensGarnierSingleRequest = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_SINGLE_PAGE_REQUEST
+    }
+}
+
+export const MensGarnierSingleSuccess = (payload) =>{
+    return {
+        type : types.GET_MENS_GARNIER_SINGLE_PAGE_SUCCESS,
+        payload
+    }
+}
+
+export const MensGarnierSingleFailure = ( ) =>{
+    return {
+        type : types.GET_MENS_GARNIER_SINGLE_PAGE_FAILURE
+    }
+}
+
+export const AddToCartRequest = ( ) =>{
+    return {
+        type : types.ADD_TO_CART_REQUEST
+    }
+}
+
+export const AddToCartSuccess= (payload) =>{
+    return {
+        type : types.ADD_TO_CART_SUCCESS,
+        payload
+    }
+}
+
+export const AddToCartFailure = ( ) =>{
+    return {
+        type : types.ADD_TO_CART_FAILURE
+    }
+}

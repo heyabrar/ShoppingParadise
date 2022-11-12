@@ -103,7 +103,7 @@ export default function SkinDotKeyPage ( ) {
    
         <Box mt='2%'><ProductsListing data={DotKeyProducts} direct='/skin'/></Box>
         <Box>
-            <Pagination current={page} onChange={(page) => setPage(page)} totalPage={totalPage} limit={12}/>
+            <Pagination current={page} onChange={(page) => setPage(page)} totalPage={totalPage} limit={9}/>
         </Box>
         </Box>
         <Footer/>
