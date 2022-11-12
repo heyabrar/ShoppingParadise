@@ -1,23 +1,24 @@
 import { Box, Image } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 
-export default function StaticCarousel ({data}) {
+export default function StaticCarousel ({data,redirect,mobile,tab,laptop}) {
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 3,
+          items: laptop,
           slidesToSlide: 3 // optional, default to 1.
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2,
+          items: tab,
           slidesToSlide: 2 // optional, default to 1.
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1,
+          items: mobile,
           slidesToSlide: 1 // optional, default to 1.
         }
       };
@@ -44,7 +45,7 @@ export default function StaticCarousel ({data}) {
                 >
                 {data.length > 0 && data.map((elem)=>{
                     return <Box key={elem.id} w={{base : '95%'}} m='auto'>
-                        <Image src={elem.image} m='auto'/>
+                        <Link to={redirect}><Image src={elem.image} m='auto'/></Link>
                     </Box>
                 })}
             </Carousel>

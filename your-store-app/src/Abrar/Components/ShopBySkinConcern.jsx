@@ -18,10 +18,7 @@ export default function ShopBySkinConcern ( ) {
             id : 3,
             image : 'https://images-static.nykaa.com/uploads/2ae6668a-5e4d-4b13-a2bd-29f8e5aa8f2a.jpg?tr=w-400,cm-pad_resize'
         },
-        {
-            id : 4,
-            image : 'https://images-static.nykaa.com/uploads/eca5dd45-8c78-475f-9f32-bf56253d02ae.jpg?tr=w-400,cm-pad_resize'
-        },
+      
         {
             id : 5,
             image : 'https://images-static.nykaa.com/uploads/eca5dd45-8c78-475f-9f32-bf56253d02ae.jpg?tr=w-400,cm-pad_resize'
@@ -30,11 +27,15 @@ export default function ShopBySkinConcern ( ) {
             id : 7,
             image : 'https://images-static.nykaa.com/uploads/4a101340-2025-46ba-8d73-ffb84e83c146.jpg?tr=w-400,cm-pad_resize'
         },
+        {
+            id : 4,
+            image : 'https://images-static.nykaa.com/uploads/e19e260b-f2a5-4fb3-9aea-e7a5c3ce7f28.jpg?tr=w-400,cm-pad_resize'
+        },
       ]
     return (
         <>
          <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '7%'}}>SHOP BY SKIN CONCERN</Text>
-         <StaticCarousel data={images}/>
+         <StaticCarousel data={images} redirect='/skindotkey' laptop={3} tab={2} mobile={3}/>
         </>
     )
 }

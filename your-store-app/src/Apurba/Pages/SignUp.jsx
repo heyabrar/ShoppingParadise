@@ -8,6 +8,7 @@ import {
   Heading,
   Input,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import React from "react";
@@ -17,27 +18,28 @@ const SignUp = () => {
   const navigate = useNavigate();
   const users = JSON.parse(localStorage.getItem("users")) || [];
   const formik = useFormik({
-    initialValues: { name: "", email: "", password: "" },
-    validate: (data) => {
-      let errors = {};
-      if (!data.name) {
-        errors.name = "Name is required.";
-      }
-      if (!data.email) {
-        errors.email = "Email is required.";
-      } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)
-      ) {
-        errors.email = "Invalid email address. E.g. example@email.com";
-      }
+    initialValues: { name: "", email: "", password: "", isAdmin: false },
 
-      return errors;
+    validate: (values) => {
+      values.email.split("@")[1] === "yourstore.com"
+        ? (values.isAdmin = true)
+        : (values.isAdmin = false);
+
+      // console.log(values);
     },
+
     onSubmit: (values) => {
       //   alert(JSON.stringify(values, null, 2));
-      users.push(values);
-      localStorage.setItem("users", JSON.stringify(users));
-      navigate("/login");
+      const user = users.filter((user) => user.email === values.email);
+      const setData = () => {
+        localStorage.setItem("users", JSON.stringify(users));
+        return 1;
+      };
+      user.length === 0
+        ? users.push(values) && setData() && navigate("/login")
+        : alert("Email already exixts");
+
+      // navigate("/login");
     },
   });
   return (
@@ -57,7 +59,7 @@ const SignUp = () => {
             <Text pb={"15px"} mb={"15px"}>
               Register and earn 2000 reward points
             </Text>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='name'>Full Name</FormLabel>
               <Input
                 id='name'
@@ -68,7 +70,7 @@ const SignUp = () => {
                 value={formik.values.name}
               />
             </FormControl>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='email'>Email Address</FormLabel>
               <Input
                 id='email'
@@ -79,7 +81,7 @@ const SignUp = () => {
                 value={formik.values.email}
               />
             </FormControl>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel htmlFor='password'>Password</FormLabel>
               <Input
                 id='password'
@@ -103,6 +105,19 @@ const SignUp = () => {
             >
               Sign Up
             </Button>
+            <Link
+              as={Button}
+              onClick={() => navigate("/login")}
+              color={"#fc2779"}
+              variant='outline'
+              width='full'
+              _hover={{
+                bgColor: "#fc2779",
+                color: "white",
+              }}
+            >
+              Login Page
+            </Link>
             <Text opacity={"0.64"}>
               By continuing, you agree that you have read and accept our{" "}
               <span style={{ textDecoration: "underline" }}>T&Cs</span> and{" "}
