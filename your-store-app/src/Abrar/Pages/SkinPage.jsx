@@ -1,5 +1,6 @@
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import Slider from "../../Dibyanshu/Components/Slider/Slider";
 import ShopBySkinConcern from "../Components/ShopBySkinConcern";
 import ShopBySkinType from "../Components/ShopBySkinType";
 import SkinLuxiIndulgies from "../Components/SkinLuxiIndulgies";
@@ -13,6 +14,7 @@ export default function SkinPage ( ) {
     return(
         <>
         <Navbar/>
+        <Slider/>
         <SkinTopBanner/>    
         <SkinShopByCategory/>
         <ShopBySkinType/>

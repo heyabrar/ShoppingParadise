@@ -1,12 +1,18 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Spinner, Text } from "@chakra-ui/react";
 import Slideshow from "../CustomComponents/SlideShow";
 import {useDispatch, useSelector} from 'react-redux'
 import { FetchDotKeyData } from "../Fetch/Fetch";
 import { useEffect } from "react";
-import { SkinDotKeyGetFailure, SkinDotKeyGetRequest, SkinDotKeyGetSuccess } from "../../Redux/SkinPageReducer/Action";
-import SkinDotKeyProducts from "../Components/SkinDotKeyProducts";
+import { SkinDotKeyGetFailure, SkinDotKeyGetRequest, SkinDotKeyGetSuccess } from "../../Redux/AppReducer/Action";
+import SkinDotKeyProducts from "../CustomComponents/ProductsListing";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { useState } from "react";
+import Pagination from "../CustomComponents/Pagination";
+import { useSearchParams } from "react-router-dom";
+import ProductsListing from "../CustomComponents/ProductsListing";
+import SpinnerCompo from "../CustomComponents/Spinner";
+import ProgressCompo from "../CustomComponents/Progress";
 const SlideShowBanner = [
     {
         id :1, 
@@ -21,32 +27,53 @@ const SlideShowBanner = [
         image : 'https://images-static.nykaa.com/uploads/152d7cfb-db5e-4bfb-b677-2407a99ede4b.jpg?tr=w-1200,cm-pad_resize'
     }
 ]
+
+export const getCurrentPage = (value)=>{
+    value = Number(value)
+    if(value === 'number' && value <= 0) {
+        value = 1;
+    };
+    if(!value){
+        value = 1;
+    };
+    return value;
+};
+
 export default function SkinDotKeyPage ( ) {
 
     const {DotKeyProducts,isLoading,isError}  = useSelector((store)=> {
         return {
-            DotKeyProducts : store.SkinDotKeyReducer.DotKeyProducts,
-            isLoading : store.SkinDotKeyReducer.isLoading,
-            isError : store.SkinDotKeyReducer.isError
+            DotKeyProducts : store.MyReducer.DotKeyProducts,
+            isLoading : store.MyReducer.isLoading,
+            isError : store.MyReducer.isError
         }
     });
-
+    const [searchParams,setSearchParams] = useSearchParams( );
+    const initalPage = getCurrentPage(searchParams.get('page'));
+    const [page,setPage] = useState(initalPage);
+    const [totalPage,SetTotalPage] = useState(0);
+    
     const Dispatch = useDispatch( );
 
     const handleFetchData = ( ) =>{
         Dispatch(SkinDotKeyGetRequest( ))
-        FetchDotKeyData( ).then((res)=>{
-            Dispatch(SkinDotKeyGetSuccess(res.data));
+        FetchDotKeyData(page,SetTotalPage).then((res)=>{
+            Dispatch(SkinDotKeyGetSuccess(res));
         })
         .catch((err)=> Dispatch(SkinDotKeyGetFailure(err)))
     }
 
     useEffect(( ) =>{
         handleFetchData( );
-    }, [ ]);
+    }, [page]);
+
+    useEffect(( ) =>{
+        setSearchParams({page});
+    }, [page])
     return (
         <>
         <Navbar/>
+        <Box  bg='RGBA(0, 0, 0, 0.06)'>
         <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Dot & Key (80)</Text>
         <Slideshow data={SlideShowBanner}/>
 
@@ -72,9 +99,13 @@ export default function SkinDotKeyPage ( ) {
 
         <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products</Text>
 
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && 'LOADING.............'}</Text>
-
-        <SkinDotKeyProducts data={DotKeyProducts}/>
+        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
+   
+        <Box mt='2%'><ProductsListing data={DotKeyProducts} direct='/skin'/></Box>
+        <Box>
+            <Pagination current={page} onChange={(page) => setPage(page)} totalPage={totalPage} limit={9}/>
+        </Box>
+        </Box>
         <Footer/>
         </>
     )
