@@ -16,7 +16,7 @@ const initalData = {
     isLoading : false,
     isError : false,
     GetFragranceProducts:[],
-    FragranceSingleProducts:[],
+    GetFsingle:[],
 };
 
 export default function MyReducer(state = initalData, action) {
@@ -400,7 +400,7 @@ export default function MyReducer(state = initalData, action) {
         case types.GET_SINGLE_FRAGRANCE_DATA_SUCCESS:{
             return{
                 ...state,
-                FragranceSingleProducts: payload,
+                GetFsingle: payload,
                 isLoading: false,
                 isError: false
             }
@@ -409,7 +409,7 @@ export default function MyReducer(state = initalData, action) {
         case types.GET_SINGLE_FRAGRANCE_DATA_FAILURE:{
             return{
                 ...state,
-                HairSingleProduct: [],
+                GetFsingle: [],
                 isLoading: false,
                 isError: true
             }

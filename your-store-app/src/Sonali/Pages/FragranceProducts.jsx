@@ -40,7 +40,7 @@ export default function FregranceProducts (){
     },[page])
     return(
         <>
-        <ProductsListing data={GetFragranceProducts}/>
+        <ProductsListing data={GetFragranceProducts} direct="/fragrance"/>
         <Pagination current={page} onChange={(page)=> setPage(page)} limit={6} totalPage={totalPage}/>
         </>
     )
