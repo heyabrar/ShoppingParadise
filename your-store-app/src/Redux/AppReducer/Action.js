@@ -144,6 +144,7 @@ export const RasGetSingleProductRequest = ( ) =>{
 export const RasGetSingleProductSuccess = (payload) =>{
     return {
         type : types.GET_RAS_SINGLE_SUCCESS,
+        payload
     }
 }
 

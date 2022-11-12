@@ -40,6 +40,7 @@ export default function SkinEsteePage ( ) {
     const initalPage = getCurrentPage(searchParams.get('page'))
     const [page,setPage] = useState(initalPage);
     const [totalPage,setTotalPage] = useState(0);
+    const count = EsteeProducts.length;
 
     const handleData = ( ) =>{
         Dispatch(EsteeGetProductsRequest( ));
@@ -60,7 +61,7 @@ export default function SkinEsteePage ( ) {
         <>
         <Navbar/>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Estee Lauder Collection (71)</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}}>Estee Lauder Collection</Text>
         <Slideshow data={Images}/>
 
         <Flex width={{base : '100%', md : '90%', lg : '70%'}}  direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='20px'>
@@ -82,7 +83,7 @@ export default function SkinEsteePage ( ) {
             </Box>
         </Flex>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products ({count})</Text>
         {isLoading && <ProgressCompo/>}
         <Text>{isError && <ProgressCompo/>} </Text>
         <Text textAlign='center'>{isError && 'Something Went Wrong !!!!!'} </Text>

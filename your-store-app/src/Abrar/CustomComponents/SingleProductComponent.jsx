@@ -1,8 +1,6 @@
-import { Box, Button, Flex, Image, Select, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Select, Text, useToast } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { AddToCartSuccess } from "../../Redux/AppReducer/Action";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import ProgressCompo from "./Progress";
@@ -10,6 +8,7 @@ import SpinnerCompo from "./Spinner";
 
 export default function SingleProductComponent ({data,isLoading,isError}) {
     const [quantity,setQuantity]  =useState('');
+    const Toast = useToast( );
     const handleAddToCart = (image,title,price,actualPrice,discount) =>{
         const payload = {
             image,
@@ -18,6 +17,7 @@ export default function SingleProductComponent ({data,isLoading,isError}) {
             actualPrice,
             discount
         }
+        Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Added To Cart</Box>)})
         return axios.post(`https://adminside-yourstore.onrender.com/cart`, payload)
         .then((res)=>{
             // Dispatch(AddToCartSuccess(res.data))
@@ -41,17 +41,16 @@ export default function SingleProductComponent ({data,isLoading,isError}) {
                     <Text fontWeight='550'>{'MRP:  ' +'₹'+Number(data.price * quantity || data.price)}</Text>
                     <Text color='green' fontWeight='550'>{data.discount}</Text>
                    </Box>
-             
 
                 <Flex gap='10px'>
                 <Box width={{base : '40%'}}>
-                    <Select size={{base : 'sm', md :'md'}} defaultValue={quantity} onChange={(e)=>setQuantity(e.target.value)}>
+                    <Select size={{base : 'sm', md :'md'}} value={quantity} onChange={(e)=>setQuantity(e.target.value)}>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </Select>
                 </Box>
-                <Button onClick={( ) => handleAddToCart(data.image,data.title,data.price,data.actualPrice,data.discount,)} color='white' bg='#fc2779' colorScheme='#fc2779' size={{base :'sm', md : 'md', lg :'md'}}>Add To Bag</Button>
+                <Button onClick={( ) => handleAddToCart(data.image,data.title,data.price=data.price*quantity || data.price,data.actualPrice,data.discount,)} color='white' bg='#fc2779' colorScheme='#fc2779' size={{base :'sm', md : 'md', lg :'md'}}>Add To Bag</Button>
                 </Flex>
             </Box>
         </Flex>

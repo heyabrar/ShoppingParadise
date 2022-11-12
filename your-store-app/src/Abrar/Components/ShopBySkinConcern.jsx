@@ -35,7 +35,7 @@ export default function ShopBySkinConcern ( ) {
     return (
         <>
          <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '7%'}}>SHOP BY SKIN CONCERN</Text>
-         <StaticCarousel data={images} redirect='/skindotkey'/>
+         <StaticCarousel data={images} redirect='/skindotkey' laptop={3} tab={2} mobile={3}/>
         </>
     )
 }
