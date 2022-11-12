@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Order from "../components/Order";
 import MyProfile from "../components/myProfile/MyProfile";
 import MyWallet from "../components/myWallet/MyWallet";
+import { PrivateRoute } from "./PrivateRoute";
 
 const ProfileRoutes = () => {
   return (

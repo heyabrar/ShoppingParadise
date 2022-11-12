@@ -10,13 +10,16 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  //   console.log(users);
+
+  const { setCurrentUser } = useContext(AuthContext);
+
   const formik = useFormik({
     initialValues: { email: "", password: "" },
     onSubmit: (values) => {
@@ -31,16 +34,12 @@ const Login = () => {
         const validate = users.filter(
           (user) => user.email == email && user.password == password
         );
-        const setData = () => {
-          console.log(validate);
-          localStorage.setItem("currentUser", JSON.stringify(validate));
-          return 1;
-        };
+
         validate.length == 0
           ? alert("Invalid Username or Password")
           : isAdmin
-          ? setData() && navigate("/admin")
-          : setData() && navigate("/profile");
+          ? setCurrentUser(validate) && navigate("/admin")
+          : setCurrentUser(validate) && navigate("/profile");
       }
     },
   });
