@@ -8,9 +8,7 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 
 ![image](https://user-images.githubusercontent.com/103938174/201488742-1dfa1fb3-3682-4b86-9f06-c079ac1886dc.png)
 
-
-
-
+## 
 ![image](https://user-images.githubusercontent.com/103938174/201488785-35251998-6d88-4d44-9590-8ef39e97d5ea.png)
 
 
@@ -67,9 +65,6 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 ## Our Categories 
 
 ![image](https://user-images.githubusercontent.com/103938174/201489365-a3fa993b-ce8d-4319-9a2d-83619ca577e7.png)
-
-
-
 
 
 ## Tech Stack 
