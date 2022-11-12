@@ -140,8 +140,8 @@ export default function AdminSide ( ) {
         <Text textAlign='center' fontSize='22px' mt='3%'>Delete</Text>
         <Box border='5px solid #fc2779' width={{base : '80%' ,md : '40%', lg : '20%'}} m='auto' padding='20px' borderRadius='10px' shadow='lg'>
         <Text>Delete</Text>
-            <Input placeholder='Enter Product Id To Delete' value={Delete} onChange={(e) => SetDelete(e.target.value)} border='1px solid black'/>
-            <br /><br />
+            <Box><Input placeholder='Enter Product Id To Delete' value={Delete} onChange={(e) => SetDelete(e.target.value)}/></Box>
+            <br />
             <Button onClick={( ) => handleDelete(Delete)} color='white' bg='#fc2779' colorScheme='#fc2779'>Delete</Button>
         </Box>
         </>
