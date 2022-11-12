@@ -1,4 +1,4 @@
-import { Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text, useToast } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AddToCartFailure, AddToCartRequest, AddToCartSuccess } from "../../Redux/AppReducer/Action";
@@ -18,6 +18,7 @@ export default function CartPage ( ) {
         }
     })
     const count = CartData.length;
+    const Toast = useToast( );
 
     const Dispatch = useDispatch( );
 
@@ -36,6 +37,7 @@ export default function CartPage ( ) {
     const handleDeleteFromCart = (id) =>{
         DeleteFromCart(id).then((res)=>{
             handleCartData( );
+            Toast({position : 'bottom', render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Deleted From Cart</Box>)})
         })
     }
     return (

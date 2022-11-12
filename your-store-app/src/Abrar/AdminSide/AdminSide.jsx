@@ -1,4 +1,4 @@
-import { Alert, Box, Button, Flex, Input, Select, Text, Toast} from "@chakra-ui/react";
+import { Alert, Box, Button, Flex, Input, Select, Text, Toast, useToast} from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -20,8 +20,9 @@ export default function AdminSide ( ) {
     const [pdiscount,psetDiscount] = useState('')
     const [pcategory,psetCategory] = useState('')
     const [pbrand,psetBrand] = useState('')
-
     const [Delete,SetDelete] = useState('')
+    const Toast  = useToast( );
+
 
  
     const handleAdd = (t,u,p,ap,d,c,b) =>{
@@ -41,7 +42,7 @@ export default function AdminSide ( ) {
         setCategory('');
         setDiscount('')
         setBrand('');
-        <Toast/>
+        Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Post Successful</Box>)})
         return axios.post(`https://adminside-yourstore.onrender.com/Products`, payload)
         .then((res)=>{
 
@@ -51,6 +52,7 @@ export default function AdminSide ( ) {
 
     const handleDelete = (D) =>{
         SetDelete('')
+        Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Deleted Successfully</Box>)})
         return axios.delete(`https://adminside-yourstore.onrender.com/Products/${D}`)
         .then((res)=>{
 
@@ -67,9 +69,8 @@ export default function AdminSide ( ) {
             category : c,
             brand : b
         }
-        const newPayload = {...payload};
-        console.log(newPayload)
-        return axios.patch(`https://adminside-yourstore.onrender.com/Products/${patchid}`, newPayload)
+        Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Patch Successful</Box>)})
+        return axios.patch(`https://adminside-yourstore.onrender.com/Products/${patchid}`, payload)
         .then((res)=>{
         })
     }
@@ -118,7 +119,10 @@ export default function AdminSide ( ) {
                 <option value="nykaa">Nykaa</option>
             </Select>
             <br /> <br />
-            <Button onClick={( ) => handleAdd(title,url,price,Aprice,discount,category,brand)} color='white' bg={'#fc2779'} colorScheme='#fc2779'>Post</Button>
+            <Text fontSize='12px'>(Make Sure Category Matches The Brand)</Text>
+            <Button onClick={( ) => handleAdd(title,url,price,Aprice,discount,category,brand)} 
+            disabled={title==='' || url=== '' || price === '' || Aprice === '' || discount === '' || category === '' || brand === ''}
+                color='white' bg={'#fc2779'} colorScheme='#fc2779'>Post</Button>
         </Box>
         </Flex>
 

@@ -1,8 +1,9 @@
-import { Box, Button, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, SimpleGrid, Text, useToast } from "@chakra-ui/react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function ProductsListing ({data,direct}) {
+    const Toast = useToast( );
 
     const handleAddToCartData = (title,image,price,actualPrice,discount) =>{
         const payload = {
@@ -12,6 +13,7 @@ export default function ProductsListing ({data,direct}) {
             actualPrice,
             discount
         }
+        Toast({position : 'bottom', render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Added To Cart</Box>)})
         return axios.post(`https://adminside-yourstore.onrender.com/cart`, payload)
         .then((res)=>{
            
