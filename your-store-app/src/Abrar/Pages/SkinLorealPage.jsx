@@ -24,7 +24,8 @@ export default function SkinLorealPage ( ) {
     const [searchParams,SetSearchParams] = useSearchParams( );
     const initalPage  = getCurrentPage(searchParams.get('page'));
     const [page,setPage]  = useState(initalPage);
-    const [totalPage,setTotalPage] = useState(0)
+    const [totalPage,setTotalPage] = useState(0);
+    const count = LorealProducts.length;
 
     const handleLorealData = ( ) =>{
       Dispatch(SkinLorealGetRequest( ))
@@ -45,12 +46,12 @@ export default function SkinLorealPage ( ) {
         <>
         <Navbar/>
         <Box bg='RGBA(0, 0, 0, 0.06)' padding={{base :'10px', md :'20px', lg :'30px'}}>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>L'Oreal Paris Skin (82)</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>L'Oreal Paris Skin</Text>
         <Box width={{base: '95%', md : '90%', lg :'80%'}} m='auto' mt={{base : '10px'}} > 
             <Image w='100%' src='https://images-static.nykaa.com/uploads/7904c5bd-23f1-4ca6-9040-1c8b3059de8b.jpg?tr=w-1200,cm-pad_resize'/>
         </Box>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt={{base : '10px', md :'15px', lg :'20px'}}>All Products</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt={{base : '10px', md :'15px', lg :'20px'}}>All Products ({count})</Text>
         {isLoading && <ProgressCompo/>}
        <Box mt='2%'><ProductsListing data={LorealProducts} direct='/skinloreal'/></Box>
 

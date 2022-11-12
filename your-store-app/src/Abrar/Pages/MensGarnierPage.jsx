@@ -42,6 +42,7 @@ export default function MensGarnierPage ( ) {
     const initalPage = getCurrentPage(searchParams.get('page'));
     const [page,setPage] = useState(initalPage);
     const [totalPage,setTotalPage] = useState(0);
+    const count = MensGarnierProducts.length;
 
     const handleGetData = ( ) =>{
         Dispatch(MensGarnierPageRequest( ))
@@ -86,7 +87,7 @@ export default function MensGarnierPage ( ) {
         <Text>{isLoading && <ProgressCompo/>}</Text>
         <Text textAlign='center'>{isError && 'Something Went Wrong !!!'}</Text>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products ({count})</Text>
         <ProductsListing data={MensGarnierProducts} direct='/mensgarnier'/>
         <Pagination current={page} onChange={(page)=>setPage(page)} limit={6} totalPage={totalPage}/>
 

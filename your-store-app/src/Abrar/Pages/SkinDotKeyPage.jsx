@@ -52,6 +52,7 @@ export default function SkinDotKeyPage ( ) {
     const initalPage = getCurrentPage(searchParams.get('page'));
     const [page,setPage] = useState(initalPage);
     const [totalPage,SetTotalPage] = useState(0);
+    const count = DotKeyProducts.length;
     
     const Dispatch = useDispatch( );
 
@@ -74,7 +75,7 @@ export default function SkinDotKeyPage ( ) {
         <>
         <Navbar/>
         <Box  bg='RGBA(0, 0, 0, 0.06)'>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Dot & Key (80)</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}}>Dot & Key</Text>
         <Slideshow data={SlideShowBanner}/>
 
 
@@ -97,9 +98,11 @@ export default function SkinDotKeyPage ( ) {
             </Box>
         </Flex>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products</Text>
+        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products  ({count})</Text>
 
         <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
+        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && <ProgressCompo/>}</Text>
+        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && 'Something Went Wrong!!!!'}</Text>
    
         <Box mt='2%'><ProductsListing data={DotKeyProducts} direct='/skin'/></Box>
         <Box>
