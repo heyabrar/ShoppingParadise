@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect, useContext } from 'react'
 import style from './Navbar.module.css'
 import { IoIosSearch } from 'react-icons/io';
 import { FaRegUser } from 'react-icons/fa';
@@ -6,9 +6,15 @@ import { RiGift2Line } from 'react-icons/ri';
 import { BsHandbag } from 'react-icons/bs';
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
 import {useNavigate} from 'react-router-dom'
+import { Link } from '@chakra-ui/react';
 
 
 const Navbar = () => {
+  // const {user} =useContext(Authcontext)
+
+
+
+  
   const navigate = useNavigate();
   const [howerState, setHowerState] = useState("");
   const [login, setLogin] = useState(false);
@@ -60,7 +66,7 @@ const Navbar = () => {
                 <p>
                 <FaRegUser fontSize="2.5vh" cursor="pointer" />
                 </p>
-                <a href="">Account</a>
+                <Link>Account</Link>
                </div>
           
             </div>
