@@ -7,8 +7,6 @@ function App() {
   return (
 
     <div className='App'>
-      {/* <SkinPage/> */} <Link to='/adminside'>Admin Side</Link>
-      <Link to='/cart'>Cart</Link>
       <AllRoutes />
 
 

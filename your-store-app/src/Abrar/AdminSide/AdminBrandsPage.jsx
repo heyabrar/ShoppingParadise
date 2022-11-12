@@ -1,4 +1,5 @@
-import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function AdminBrandsPage ( ) {
     const Brands = [
@@ -48,8 +49,11 @@ export default function AdminBrandsPage ( ) {
                     <Text fontWeight={'550'}>{elem.title}</Text>
                 </Box>
             })}
-
         </SimpleGrid>
+
+        <Flex width={{base  : '40%'}} m='auto'  justifyContent='center' mt='30px'>
+        <Link to='/adminside'><Button size='sm' color='white' bg='#fc2779' colorScheme='#fc2779'>Admin Panel</Button></Link>
+        </Flex>
         </>
     )
 }
