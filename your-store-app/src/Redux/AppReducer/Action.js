@@ -183,6 +183,7 @@ export const MensGarnierPageRequest = ( ) =>{
 export const MensGarnierPageSuccess = (payload) =>{
     return {
         type : types.GET_MENS_GARNIER_PAGE_SUCCESS,
+        payload
     }
 }
 
