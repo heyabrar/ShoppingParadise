@@ -1,8 +1,6 @@
 import { Box, Button, Flex, Image, Select, Text, useToast } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { AddToCartSuccess } from "../../Redux/AppReducer/Action";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import ProgressCompo from "./Progress";
