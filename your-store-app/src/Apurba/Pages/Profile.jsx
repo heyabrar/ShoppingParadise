@@ -4,12 +4,10 @@ import React, { useContext, useEffect } from "react";
 import ProfileRoutes from "../routes/ProfileRoutes";
 import { useLocation, useNavigate } from "react-router-dom";
 import ProfileNavigation from "../components/myProfile/ProfileNavigation";
-import { AuthContext } from "../context/AuthContext";
 
 const Profile = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isAuth } = useContext(AuthContext);
 
   useEffect(() => {
     location.pathname == "/profile" && navigate("/profile/myprofile");
