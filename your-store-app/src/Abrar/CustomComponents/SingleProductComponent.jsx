@@ -50,7 +50,6 @@ export default function SingleProductComponent ({data,isLoading,isError}) {
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="4">4</option>
                     </Select>
                 </Box>
                 <Button onClick={( ) => handleAddToCart(data.image,data.title,data.price=data.price*quantity || data.price,data.actualPrice,data.discount,)} color='white' bg='#fc2779' colorScheme='#fc2779' size={{base :'sm', md : 'md', lg :'md'}}>Add To Bag</Button>
