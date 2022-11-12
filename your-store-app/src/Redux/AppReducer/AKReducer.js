@@ -1,15 +1,18 @@
 import * as types from './ActionTypes'
 const initalData = {
-    DotKeyProducts: [],
-    DotKeySingleProduct: [],
-    LorealProducts: [],
-    LorealSingleProduct: [],
-    EsteeProducts: [],
-    EsteeSingleProduct: [],
-    HairProducts: [],
-    HairSingleProduct:[],
-    isLoading: false,
-    isError: false
+    DotKeyProducts : [],
+    DotKeySingleProduct : [ ],
+    LorealProducts : [ ],
+    LorealSingleProduct : [ ],
+    EsteeProducts : [ ],
+    EsteeSingleProduct : [ ],
+    RasProducts : [ ],
+    RasSingleProduct : [ ],
+    MensGarnierProducts : [ ],
+    MensGarnierSingleProduct : [ ],
+    CartData : [ ],
+    isLoading : false,
+    isError : false
 };
 
 export default function MyReducer(state = initalData, action) {
@@ -40,7 +43,7 @@ export default function MyReducer(state = initalData, action) {
                 isLoading: false,
                 isError: true
             }
-        };
+        }
 
         case types.GET_DOTKEY_SINGLE_REQUEST: {
             return {
@@ -100,7 +103,7 @@ export default function MyReducer(state = initalData, action) {
                 isLoading: true,
                 isError: false
             }
-        };
+        }
 
         case types.LOREAL_GET_SINGLE_DATA_SUCCESS: {
             return {
@@ -146,7 +149,7 @@ export default function MyReducer(state = initalData, action) {
             }
         };
 
-        case types.GET_ESTEE_SINGLE_REQUEST: {
+        case types.GET_ESTEE_SINGLE_REQUEST : {
             return {
                 ...state,
                 isLoading: true,
@@ -154,56 +157,151 @@ export default function MyReducer(state = initalData, action) {
             }
         }
 
-        case types.GET_ESTEE_SINGLE_SUCCESS: {
+        case types.GET_ESTEE_SINGLE_SUCCESS : {
             return {
                 ...state,
-                EsteeSingleProduct: payload,
-                isLoading: false,
-                isError: false
+                EsteeSingleProduct : payload,
+                isLoading : false,
+                isError : false
             }
         }
 
-        case types.GET_ESTEE_SINGLE_FAILURE: {
+        case types.GET_ESTEE_SINGLE_FAILURE : {
             return {
                 ...state,
-                EsteeSingleProduct: [],
-                isLoading: false,
-                isError: true
+                EsteeSingleProduct : [ ],
+                isLoading : false,
+                isError : true
             }
         }
 
-        case types.GET_HAIR_DATA_REQUEST: {
+        case types.GET_RAS_PAGE_DATA_REQUEST : {
             return {
                 ...state,
-                isLoading: true,
-                isError: false
+                isLoading : true,
+                isError : false
             }
         }
 
-        case types.GET_HAIR_DATA_SUCCESS: {
+        case types.GET_RAS_PAGE_DATA_SUCCESS: {
             return {
                 ...state,
-                HairProducts: payload,
-                isLoading: false,
-                isError: false
+                RasProducts : payload,
+                isLoading : false,
+                isError : false
             }
         }
 
-        case types.GET_HAIR_DATA_FAILURE: {
+        case types.GET_RAS_PAGE_DATA_FAILURE : {
             return {
                 ...state,
-                HairProducts: [],
-                isLoading: false,
-                isError: true
+                RasProducts : [ ],
+                isLoading : false,
+                isError : true
             }
         }
 
-     
-        case types.GET_SINGAL_HAIR_DATA_REQUEST: {
+        case types.GET_RAS_SINGLE_REQUEST : {
             return {
                 ...state,
-                isLoading: true,
-                isError: false
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_RAS_SINGLE_SUCCESS : {
+            return {
+                ...state,
+                RasSingleProduct : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_RAS_SINGLE_FAILURE : {
+            return {
+                ...state,
+                RasSingleProduct : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case types.GET_MENS_GARNIER_PAGE_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_PAGE_SUCCESS : {
+            return {
+                ...state,
+                MensGarnierProducts : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_PAGE_FAILURE : {
+            return {
+                ...state,
+                MensGarnierProducts : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case types.GET_MENS_GARNIER_SINGLE_PAGE_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_SINGLE_PAGE_SUCCESS : {
+            return {
+                ...state,
+                MensGarnierSingleProduct : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_MENS_GARNIER_SINGLE_PAGE_FAILURE : {
+            return {
+                ...state,
+                MensGarnierSingleProduct : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+        
+        case types.ADD_TO_CART_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.ADD_TO_CART_SUCCESS : {
+            return {
+                ...state,
+                CartData : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.ADD_TO_CART_FAILURE : {
+            return {
+                ...state,
+                CartData : [ ],
+                isLoading : false,
+                isError : true
             }
         }
 
@@ -224,8 +322,7 @@ export default function MyReducer(state = initalData, action) {
                 isError: true
             }
         }
-
-        default:
-            return state
+        default :
+        return state 
     }
 }

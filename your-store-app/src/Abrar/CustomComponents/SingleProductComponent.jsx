@@ -1,10 +1,28 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Select, Text } from "@chakra-ui/react";
+import axios from "axios";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { AddToCartSuccess } from "../../Redux/AppReducer/Action";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import ProgressCompo from "./Progress";
 import SpinnerCompo from "./Spinner";
 
 export default function SingleProductComponent ({data,isLoading,isError}) {
+    const [quantity,setQuantity]  =useState('');
+    const handleAddToCart = (image,title,price,actualPrice,discount) =>{
+        const payload = {
+            image,
+            title,
+            price,
+            actualPrice,
+            discount
+        }
+        return axios.post(`https://adminside-yourstore.onrender.com/cart`, payload)
+        .then((res)=>{
+            // Dispatch(AddToCartSuccess(res.data))
+        })
+    }
     return (
         <>
         <Navbar/>
@@ -17,20 +35,27 @@ export default function SingleProductComponent ({data,isLoading,isError}) {
             </Box>
            
             <Box  width={{base : '85%', md: '60%', lg : '60%'}} m='auto' lineHeight={{base : '30px'}}>
-                <Text fontSize={{base : '18px'}} fontWeight='550'>{data.title}</Text>
-                <Text fontSize={{base : '14px'}}>reviews : {data.review}</Text>
-                <Flex gap='5px' fontSize={{base : '14px'}} fontWeight='550'>
-                    <Text textDecoration='line-through' color='gray'>{data.actualPrice}</Text>
-                    
-                    <Text>{'MRP:  ' + data.price}</Text>
-                    <Text color='green'>{data.discount}</Text>
+                <Text fontSize={{base : '18px'}} fontWeight='550'>{data.title} ({data.id})</Text>
+                   <Box>
+                   <Text textDecoration='line-through' color='gray'>₹{data.actualPrice}</Text>
+                    <Text fontWeight='550'>{'MRP:  ' +'₹'+Number(data.price * quantity || data.price)}</Text>
+                    <Text color='green' fontWeight='550'>{data.discount}</Text>
+                   </Box>
+             
+
+                <Flex gap='10px'>
+                <Box width={{base : '40%'}}>
+                    <Select size={{base : 'sm', md :'md'}} defaultValue={quantity} onChange={(e)=>setQuantity(e.target.value)}>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </Select>
+                </Box>
+                <Button onClick={( ) => handleAddToCart(data.image,data.title,data.price,data.actualPrice,data.discount,)} color='white' bg='#fc2779' colorScheme='#fc2779' size={{base :'sm', md : 'md', lg :'md'}}>Add To Bag</Button>
                 </Flex>
-                <Text color='#fc2779' fontWeight='600'>{data.freeGift}</Text>
-                <Text>{data['css-asphnc']}</Text>
             </Box>
         </Flex>
         <Footer/>
-        
         </>
     )
 }

@@ -1,7 +1,6 @@
 import { Container, Image } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 
-
     const delay = 2500;  
     export default function Slideshow({data}) {
       const [index, setIndex] = useState(0);
