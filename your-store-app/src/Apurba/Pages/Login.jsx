@@ -31,12 +31,16 @@ const Login = () => {
         const validate = users.filter(
           (user) => user.email == email && user.password == password
         );
-        // console.log(validate);
+        const setData = () => {
+          console.log(validate);
+          localStorage.setItem("currentUser", JSON.stringify(validate));
+          return 1;
+        };
         validate.length == 0
           ? alert("Invalid Username or Password")
           : isAdmin
-          ? navigate("/admin")
-          : navigate("/profile");
+          ? setData() && navigate("/admin")
+          : setData() && navigate("/profile");
       }
     },
   });

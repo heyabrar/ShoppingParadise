@@ -30,9 +30,12 @@ const SignUp = () => {
     onSubmit: (values) => {
       //   alert(JSON.stringify(values, null, 2));
       const user = users.filter((user) => user.email === values.email);
+      const setData = () => {
+        localStorage.setItem("users", JSON.stringify(users));
+        return 1;
+      };
       user.length === 0
-        ? users.push(values) &&
-          localStorage.setItem("users", JSON.stringify(users))
+        ? users.push(values) && setData() && navigate("/login")
         : alert("Email already exixts");
 
       // navigate("/login");
