@@ -1,4 +1,5 @@
 import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function ShopByCategory ( ) {
     const ShopByCatData = [ 
@@ -42,7 +43,7 @@ export default function ShopByCategory ( ) {
             <SimpleGrid columns={[2,2,3,4]} width={{base : '95%', lg: '90%'}} m='auto' rowGap={{base : '20px', md :'30px', lg: '35px'}}mt={{base : '10px' ,md : '25px'}}>
                 {ShopByCatData.length > 0 && ShopByCatData.map((elem)=>{
                     return <Box key={elem.id}  width={{base : '95%', md : '90%'}} m='auto' >
-                        <Image width={{base : '160px', md : '170px', lg: '300px'}} src={elem.image} m='auto'/>
+                        <Link to={"/hairproducts"}><Image width={{base : '160px', md : '170px', lg: '300px'}} border="5px solid red" src={elem.image} m='auto'/></Link>
                     </Box>
                 })}
             </SimpleGrid>

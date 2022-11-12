@@ -69,3 +69,21 @@ export const FetchCartData = ( ) =>{
 export const DeleteFromCart = (id) =>{
     return axios.delete(`https://adminside-yourstore.onrender.com/cart/${id}`)
 }
+
+export const FetchHairData = (page=1,setTotalPage) =>{
+    return fetch(`https://adminside-yourstore.onrender.com/Products?_page=${page}&_limit=6&category=hair&brand=loreal`)
+    .then((res)=> {
+       setTotalPage(Number(res.headers.get('X-Total-Count')))
+       return res.json( );
+    })
+};
+
+export const FetchSingleHairData = (id) =>{
+    return axios.get(`https://adminside-yourstore.onrender.com/Products/${id}?category=hair&brand=loreal`)
+};
+
+
+
+
+
+
