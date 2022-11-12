@@ -17,13 +17,7 @@ const Profile = () => {
   return (
     <>
       <Navbar />
-      <Flex
-        bg='gray.100'
-        align='center'
-        justify='center'
-        py={10}
-        minH={"100vh"}
-      >
+      <Flex bg='gray.100' align='center' justify='center' py={10}>
         <Container maxW={"container.lg"} mx={"20"}>
           <Flex gap={"8"} direction={["column", "column", "column", "row"]}>
             <Box bg={"white"} p={4} h={"min-content"}>

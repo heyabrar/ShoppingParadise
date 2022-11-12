@@ -1,9 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Order from "../components/Order";
 import MyProfile from "../components/myProfile/MyProfile";
 import MyWallet from "../components/myWallet/MyWallet";
-import { PrivateRoute } from "./PrivateRoute";
+import MyOrders from "../components/myOrders/MyOrders";
 
 const ProfileRoutes = () => {
   return (
@@ -11,7 +10,7 @@ const ProfileRoutes = () => {
       <Route path='/' element={<MyProfile />} />
       <Route path='/MyProfile' element={<MyProfile />} />
       <Route path='/wallet' element={<MyWallet />} />
-      <Route path='/order' element={<Order />} />
+      <Route path='/orders' element={<MyOrders />} />
     </Routes>
   );
 };
