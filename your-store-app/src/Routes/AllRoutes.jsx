@@ -20,8 +20,10 @@ import Login from "../Apurba/Pages/Login";
 import Profile from "../Apurba/Pages/Profile";
 import SignUp from "../Apurba/Pages/SignUp";
 import { PrivateRoute } from "../Apurba/routes/PrivateRoute";
+import Fragrance from "../Sonali/Pages/Fragrance";
 import HairPage from "../Sonali/Pages/Hair";
 import HairProducts from "../Sonali/Pages/HairProducts";
+import HairSinglePage from "../Sonali/Pages/HairSingalPage";
 
 export default function AllRoutes() {
   return (
@@ -46,7 +48,8 @@ export default function AllRoutes() {
         />
         <Route path='/hair' element={<HairPage />} />
         <Route path='/hairproducts' element={<HairProducts />} />
-        <Route path='/fragrance' element={<h1>Fragrance Page</h1>} />
+        <Route path="/hairproducts/:id" element={<HairSinglePage/>}/>
+        <Route path='/fragrance' element={<Fragrance/>} />
         <Route path='/skin' element={<SkinPage />} />
         <Route path='/skindotkey' element={<SkinDotKeyPage />} />{" "}
         {/*Need to be Protected*/}

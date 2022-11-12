@@ -1,5 +1,6 @@
 import Footer from "../../Abrar/Components/Footer";
 import Navbar from "../../Abrar/Components/Navbar";
+import MainNavbar from "../../Dibyanshu/Components/Navbar/MainNavbar";
 import HairBrand from "../Components/HairBrands";
 import HairCarosal from "../Components/HairCarosal";
 import HairCancern from "../Components/HairConcern";
