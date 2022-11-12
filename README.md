@@ -8,6 +8,9 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 
 ![image](https://user-images.githubusercontent.com/103938174/201488742-1dfa1fb3-3682-4b86-9f06-c079ac1886dc.png)
 
+
+
+
 ![image](https://user-images.githubusercontent.com/103938174/201488785-35251998-6d88-4d44-9590-8ef39e97d5ea.png)
 
 
@@ -16,9 +19,13 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 ![image](https://user-images.githubusercontent.com/103938174/201488964-95e3b180-14d0-4652-b04c-6dfc3179c363.png)
 
 
+
+
 ## Single Product Page 
 
 ![image](https://user-images.githubusercontent.com/103938174/201489008-6bd36d39-b53c-4e5e-9002-88383f3beea9.png)
+
+
 
 
 ## SignUp Page 
@@ -26,9 +33,13 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 ![image](https://user-images.githubusercontent.com/103938174/201489047-6dc7a3af-471a-47da-8fc4-17d93721d87c.png)
 
 
+
+
 ## UserProfile Page 
 
 ![image](https://user-images.githubusercontent.com/103938174/201489088-444c4f4a-d4a6-4dcb-a277-3f44e3644724.png)
+
+
 
 
 ## Cart Page
@@ -36,29 +47,41 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 ![image](https://user-images.githubusercontent.com/103938174/201489212-32246b52-e358-41ef-99ca-c38280c22e8c.png)
 
 
+
+
 ## Admin Side 
 
 ![image](https://user-images.githubusercontent.com/103938174/201489262-0ce000a0-7dc1-498b-8f5f-90f4f354a96a.png)
 
+
+
+
 ## Our Collaborated Brands    
 
 ![image](https://user-images.githubusercontent.com/103938174/201489330-3ac9b30c-88f5-4d8b-8dbd-21a7e501b67e.png)
+
+
+
+
 
 ## Our Categories 
 
 ![image](https://user-images.githubusercontent.com/103938174/201489365-a3fa993b-ce8d-4319-9a2d-83619ca577e7.png)
 
 
+
+
+
 ## Tech Stack 
 - **React**
 - **Redux**
 - **JavaScript**
--**HTML5**
--**CSS3**
--**Chakra UI**
--**render.com**
--**Material UI**
--**Node Package Manager**
+- **HTML5**
+- **CSS3**
+- **Chakra UI**
+- **render.com**
+- **Material UI**
+- **Node Package Manager**
 
 
 A Group project build by 4 Developers, executed in 4 Days.
