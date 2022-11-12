@@ -46,7 +46,7 @@ justify-content:center;
 margin:auto;
 border:1px solid #e6dede;
 align-items: center;
-height:6.3vh;
+height:120px;
 background-color: #ffffff;
 gap:2vw;
 font-weight:400;
@@ -65,8 +65,17 @@ p:hover{
     font-size:14px;
 }
 @media all and (min-width: 320px) and (max-width: 767px) {
-    margin-top:193px;
-    font-size:14px;
+    width:100%;
+   
+    display:flex;
+    flex-wrap: wrap;
+    font-size:15px;
+    margin-top:163px;
+    font-size:15px;
+    p{
+       
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
  }
 
 `

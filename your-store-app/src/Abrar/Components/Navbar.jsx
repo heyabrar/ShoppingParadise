@@ -1,10 +1,16 @@
-import MainNavbar from "../../Dibyanshu/Components/Navbar/MainNavbar";
+
+import MidhomePage from "../../Dibyanshu/Components/Midpage/Midhome";
+
 
 export default function Navbar ( ){
     return(
         <>
-          <MainNavbar/>
-          {/* <Slider/> */}
+       
+         
+             <Slider/> 
+           <MidhomePage/>
+          
+
         </>
     )
 }

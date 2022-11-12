@@ -6,7 +6,7 @@ import { RiGift2Line } from 'react-icons/ri';
 import { BsHandbag } from 'react-icons/bs';
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
 import {useNavigate} from 'react-router-dom'
-// import {MuiDrawer} from '../../Product page/MuiDrawer'
+
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const Navbar = () => {
     <>
       <div className={style.container}>
         <div className={style.card}>
-          <div>
+          <div id="carda">
             <img
               style={{cursor:"pointer" , width:"75px" ,height:"55px"}}
               onClick={()=>navigate("/")}
@@ -51,22 +51,19 @@ const Navbar = () => {
             <p onMouseEnter={() => hoverHandler("NYKAA")}>Nykaa Fashion</p>
             <p onMouseEnter={() => hoverHandler("BEAUTY")}>Beauty Advice</p>
           </div>
-          <div>
-            <div className={style.inputContainer}>
-              <input
+          <div >
+              <div className={style.inputContainer}>
+                <input
                 style={{position: "relative"}} type="text" className={style.input} id="inp1" placeholder="Search on Nykaa"/>
-            </div>
-            <div className={style.card2}>
-              <p>
+              </div>
+               <div className={style.card2}>
+                <p>
                 <FaRegUser fontSize="2.5vh" cursor="pointer" />
-              </p>
-              <a href="">Account</a>
+                </p>
+                <a href="">Account</a>
+               </div>
+          
             </div>
-            <div className={style.card3}>
-              
-                {/* <MuiDrawer /> */}
-            </div>
-          </div>
         </div>
 
         <div className={style.content} onMouseLeave={() => setHowerState("")}>
