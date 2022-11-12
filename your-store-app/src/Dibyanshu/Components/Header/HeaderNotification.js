@@ -10,7 +10,7 @@ const HeaderNotification = () => (
     <>
        {/* ****Top nav section*** */}
         <div id="top_headerflex">
-            <div>
+            <div id="top_header">
                 <a href="">
                     BEAUTY BONANZA Get Your Daily Dose of Amazing Offers
                 </a>
