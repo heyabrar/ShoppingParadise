@@ -4,6 +4,8 @@ import React, { useContext, useEffect } from "react";
 import ProfileRoutes from "../routes/ProfileRoutes";
 import { useLocation, useNavigate } from "react-router-dom";
 import ProfileNavigation from "../components/myProfile/ProfileNavigation";
+import Navbar from "../../Abrar/Components/Navbar";
+import Footer from "../../Abrar/Components/Footer";
 
 const Profile = () => {
   const location = useLocation();
@@ -14,6 +16,7 @@ const Profile = () => {
   });
   return (
     <>
+      <Navbar />
       <Flex
         bg='gray.100'
         align='center'
@@ -32,6 +35,8 @@ const Profile = () => {
           </Flex>
         </Container>
       </Flex>
+
+      <Footer />
     </>
   );
 };

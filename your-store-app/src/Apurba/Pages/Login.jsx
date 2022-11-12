@@ -39,7 +39,7 @@ const Login = () => {
         validate.length == 0
           ? alert("Invalid Username or Password")
           : isAdmin
-          ? setCurrentUser(validate) && navigate("/admin")
+          ? setCurrentUser(validate) && navigate("/adminside")
           : setCurrentUser(validate) && navigate("/profile");
       }
     },
