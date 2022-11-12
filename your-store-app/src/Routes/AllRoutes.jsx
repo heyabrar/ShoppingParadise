@@ -20,8 +20,8 @@ export default function AllRoutes() {
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/profile/*' element={<ProfileRoutes />} />
-        <Route path='/hair' element={<h1>Hair Page</h1>} />
+        {/* <Route path='/profile/*' element={<ProfileRoutes />} /> */}
+        <Route path='/hair' element={<HairPage/>} />
         <Route path='/fragrance' element={<h1>Fragrance Page</h1>} />
         <Route path='/skin' element={<SkinPage/>} />
         <Route path='/skindotkey' element={<SkinDotKeyPage/>} />
