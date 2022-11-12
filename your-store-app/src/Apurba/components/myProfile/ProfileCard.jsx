@@ -13,7 +13,6 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalFooter,
-  ModalHeader,
   ModalOverlay,
   Text,
   useDisclosure,
@@ -21,11 +20,14 @@ import {
 } from "@chakra-ui/react";
 import { BiPencil } from "react-icons/bi";
 import { FiArrowRight } from "react-icons/fi";
-import React from "react";
-import { TextField } from "@mui/material";
+import React, { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const ProfileCard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { user } = useContext(AuthContext);
+
+  console.log(user);
   return (
     <Flex
       bg={"white"}
@@ -58,14 +60,14 @@ const ProfileCard = () => {
                 <Image src='https://www.nykaa.com/assets/desktop/images/my_account/default_avatar.svg' />
                 <FormControl>
                   <FormLabel>Full Name</FormLabel>
-                  <Input placeholder='Full Name' />
+                  <Input placeholder={user.name} />
                 </FormControl>
                 <FormControl isDisabled>
                   <Input placeholder='Phone Number' />
                 </FormControl>
                 <FormControl isDisabled>
                   <FormLabel>Email</FormLabel>
-                  <Input value={"email@email.com"} />
+                  <Input value={user.email} />
                 </FormControl>
                 <FormControl>
                   <FormLabel>DOB</FormLabel>
@@ -85,9 +87,9 @@ const ProfileCard = () => {
           </ModalContent>
         </Modal>
 
-        <Heading size={"md"}>Full Name</Heading>
+        <Heading size={"md"}>{user.name}</Heading>
         <Text>
-          <span style={{ fontWeight: "600" }}>Email:</span> email@email.com{" "}
+          <span style={{ fontWeight: "600" }}>Email:</span> {user.email}{" "}
           <span
             style={{
               fontWeight: "bold",

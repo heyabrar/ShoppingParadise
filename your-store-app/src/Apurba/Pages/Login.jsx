@@ -7,6 +7,7 @@ import {
   FormLabel,
   Heading,
   Input,
+  Link,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -93,6 +94,19 @@ const Login = () => {
             >
               Log in
             </Button>
+            <Link
+              as={Button}
+              onClick={() => navigate("/signup")}
+              color={"#fc2779"}
+              variant='outline'
+              width='full'
+              _hover={{
+                bgColor: "#fc2779",
+                color: "white",
+              }}
+            >
+              Signup Page
+            </Link>
           </VStack>
         </form>
       </Box>

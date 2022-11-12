@@ -8,6 +8,7 @@ import {
   Heading,
   Input,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import React from "react";
@@ -104,6 +105,19 @@ const SignUp = () => {
             >
               Sign Up
             </Button>
+            <Link
+              as={Button}
+              onClick={() => navigate("/login")}
+              color={"#fc2779"}
+              variant='outline'
+              width='full'
+              _hover={{
+                bgColor: "#fc2779",
+                color: "white",
+              }}
+            >
+              Login Page
+            </Link>
             <Text opacity={"0.64"}>
               By continuing, you agree that you have read and accept our{" "}
               <span style={{ textDecoration: "underline" }}>T&Cs</span> and{" "}

@@ -20,8 +20,15 @@ export const AuthContextComponent = ({ children }) => {
     return 1;
   };
 
+  const logout = () => {
+    localStorage.removeItem("currentUser");
+    setAuth(false);
+  };
+
   return (
-    <AuthContext.Provider value={{ isAuth, isAdmin, user, setCurrentUser }}>
+    <AuthContext.Provider
+      value={{ isAuth, isAdmin, user, setCurrentUser, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );

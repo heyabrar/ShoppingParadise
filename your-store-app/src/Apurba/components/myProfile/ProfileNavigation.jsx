@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IoWalletOutline } from "react-icons/io5";
@@ -6,8 +6,10 @@ import { FiTruck } from "react-icons/fi";
 import { AiFillCreditCard, AiFillHeart } from "react-icons/ai";
 import { CiLogout } from "react-icons/ci";
 import { Box, Button, Flex, Icon, Link, VStack } from "@chakra-ui/react";
+import { AuthContext } from "../../context/AuthContext";
 
 const ProfileNavigation = () => {
+  const { logout } = useContext(AuthContext);
   return (
     <Box bg={"white"} p={4}>
       <VStack alignItems={"flex-start"} gap={4} w={"200px"}>
@@ -92,8 +94,7 @@ const ProfileNavigation = () => {
           </Flex>
         </Link>
         <Link
-          as={NavLink}
-          to={"/logout"}
+          onClick={() => logout()}
           _activeLink={{
             color: "#fc2779",
             fontWeight: "bold",
