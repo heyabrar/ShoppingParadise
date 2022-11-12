@@ -1,12 +1,12 @@
 import React, { useState,useEffect, useContext } from 'react'
 import style from './Navbar.module.css'
-import { IoIosSearch } from 'react-icons/io';
-import { FaRegUser } from 'react-icons/fa';
-import { RiGift2Line } from 'react-icons/ri';
-import { BsHandbag } from 'react-icons/bs';
+
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
 import {useNavigate} from 'react-router-dom'
-import { Link } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 const Navbar = () => {
@@ -63,10 +63,13 @@ const Navbar = () => {
                 style={{position: "relative"}} type="text" className={style.input} id="inp1" placeholder="Search on Nykaa"/>
               </div>
                <div className={style.card2}>
-                <p>
-                <FaRegUser fontSize="2.5vh" cursor="pointer" />
-                </p>
-                <Link>Account</Link>
+
+                    <div style={{ color: 'rgb(252,39,121)' }}>< PersonIcon/></div>
+                    <div><Link to='/profile'> Profile</Link></div>
+                     |
+                    <div style={{ color: 'rgb(252,39,121)'  }}><ShoppingBasketIcon/></div>
+                    <div><Link to='/cart'> Cart</Link></div>
+                  
                </div>
           
             </div>
