@@ -2,6 +2,7 @@ import { Box, Button, Flex } from "@chakra-ui/react"
 import {GrPrevious, GrNext} from 'react-icons/gr'
 
 export default function Pagination ({current,onChange,totalPage,limit}){    
+    // console.log(limit)
     return (
         <>
         <Flex w={{base : '30%', md : '20%', lg : '10%'}} m='auto' justifyContent='space-between' mt={{base : '20px'}} fontSize={{base : '20px'}} color='#fc2779' paddingBottom='20px'>

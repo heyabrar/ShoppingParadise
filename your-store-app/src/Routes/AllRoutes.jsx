@@ -10,7 +10,11 @@ import SkinPage from "../Abrar/Pages/SkinPage";
 import Login from "../Apurba/Pages/Login";
 import Profile from "../Apurba/Pages/Profile";
 import SignUp from "../Apurba/Pages/SignUp";
-import ProfileRoutes from "../Apurba/routes/ProfileRoutes";
+import Fragrance from "../Sonali/Pages/Fragrance";
+import HairPage from "../Sonali/Pages/Hair";
+import ProfileRoutes from "../Apurba/routes/ProfileRoutes"
+import HairProducts from "../Sonali/Pages/HairProducts";
+import HairSinglePage from "../Sonali/Pages/HairSingalPage";
 
 export default function AllRoutes() {
   return (
@@ -20,7 +24,9 @@ export default function AllRoutes() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile/*' element={<ProfileRoutes />} />
-        <Route path='/hair' element={<h1>Hair Page</h1>} />
+        <Route path='/hair' element={<HairPage/>} />
+        <Route path="/hairproducts" element={<HairProducts/>}/>
+        <Route path="/hairproducts/:id" element={<HairSinglePage/>}/>
         <Route path='/fragrance' element={<h1>Fragrance Page</h1>} />
         <Route path='/skin' element={<SkinPage/>} />
         <Route path='/skindotkey' element={<SkinDotKeyPage/>} />

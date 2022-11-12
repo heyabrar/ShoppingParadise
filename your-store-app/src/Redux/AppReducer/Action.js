@@ -114,3 +114,41 @@ export const EsteeGetSingleFailure= ( ) =>{
         type : types.GET_ESTEE_SINGLE_FAILURE
     }
 }
+
+export const HairProductsDataRequest = () =>{
+    return{
+        type: types.GET_HAIR_DATA_REQUEST
+    }
+}
+
+export const HairProductsDataSuccess = (payload) =>{
+    return{
+        type: types.GET_HAIR_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const HairProductsDataFailure = () =>{
+    return{
+        type: types.GET_HAIR_DATA_FAILURE
+    }
+}
+
+export const HairSingalProductsDataRequest = () =>{
+    return{
+        type: types.GET_SINGAL_HAIR_DATA_REQUEST
+    }
+}
+
+export const HairSingalProductsDataSuccess = (payload) =>{
+    return{
+        type: types.GET_SINGAL_HAIR_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const HairSingalProductsDataFailure = () =>{
+    return{
+        type: types.GET_SINGAL_HAIR_DATA_FAILURE
+    }
+}
