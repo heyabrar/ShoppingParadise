@@ -15,6 +15,7 @@ export default function AdminSide ( ) {
     const [patchID,setPatchID] = useState('');
     const [Delete,SetDelete] = useState('')
     const Toast  = useToast( );
+    const [patchProduct,setPatchProduct] = useState('')
 
 
  
@@ -52,12 +53,13 @@ export default function AdminSide ( ) {
         })
     };
 
-    const handlePatch = (patchID,patch) =>{
-        const payload = patch;
+    const handlePatch = (patchID,patchProduct,patch) =>{
+        const x = patchProduct;
+        const payload ={ };
+        payload[patchProduct] = patch;
         Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Patch Successful</Box>)})
         return axios.patch(`https://adminside-yourstore.onrender.com/Products/${patchID}`, payload)
         .then((res)=>{
-            console.log(res.data)   
         })
     }
 
@@ -114,10 +116,25 @@ export default function AdminSide ( ) {
 
         <Text textAlign='center' mt='3%' fontSize='22px'>Patch</Text>
 
-        <Box>
+        <Box border='5px solid #fc2779' w={{base : '95%',md : '70%', lg: '60%'}} m='auto' borderRadius='10px' padding='20px'>
+            <Box width={{base : '90%'}} m='auto'>
+                <Text>Product ID</Text>
             <Input placeholder="Enter Product ID" value={patchID} onChange={(e) => setPatchID(e.target.value)}/>
-            <Input placeholder="Enter Data" value={patch} onChange={(e) => setPatch(e.target.value)}/>
-            <Button onClick={( ) => handlePatch(patchID,patch)}>Patch</Button>
+            <br /><br />
+            <Text>Select Key</Text>
+            <Select value={patchProduct} onChange={(e)=> setPatchProduct(e.target.value)}>
+                <option value="--">--</option>
+                <option value="title">Title</option>
+                <option value="price">Price</option>
+                <option value="actualPrice">Actual Pice</option>
+                <option value="image">Image</option>
+                <option value="discount">Discount</option>
+            </Select>
+            <br />
+            <Text>Content</Text>
+            <Input placeholder="Content" value={patch} onChange={(e) => setPatch(e.target.value)}/>
+            <Button onClick={( ) => handlePatch(patchID,patchProduct,patch)} mt='20px' color='white' bg='#fc2779' colorScheme='#fc2779'>Patch</Button>
+            </Box>
         </Box>
 
         <Text textAlign='center' fontSize='22px' mt='3%'>Delete</Text>
