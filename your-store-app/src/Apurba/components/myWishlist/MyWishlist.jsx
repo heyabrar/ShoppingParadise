@@ -146,10 +146,15 @@ const MyWishlist = () => {
             ></path>
           </g>
         </svg>
-        <Text fontSize={"xl"} fontWeight={"semibold"} pb={4}>
+        <Text fontSize={["md", "xl"]} fontWeight={"semibold"} pb={4}>
           NO ITEMS IN THE WISHLIST
         </Text>
-        <Text fontSize={"md"} fontWeight={"normal"} textAlign={"center"} pb={4}>
+        <Text
+          fontSize={["sm", "md"]}
+          fontWeight={"normal"}
+          textAlign={"center"}
+          pb={4}
+        >
           Add now, Buy Later. <br />
           Save your favourite beauty items here!
         </Text>

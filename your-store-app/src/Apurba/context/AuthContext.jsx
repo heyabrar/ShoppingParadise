@@ -1,11 +1,9 @@
 import { createContext, useState } from "react";
-import { getCurrentUser } from "../utils/utils";
+import { getCurrentUser, updateUserLocalStorage } from "../utils/utils";
 
 export const AuthContext = createContext();
 
 export const AuthContextComponent = ({ children }) => {
-  const users = JSON.parse(localStorage.getItem("users"));
-
   const [isAuth, setAuth] = useState(
     getCurrentUser().length === 0 ? false : true
   );
@@ -20,6 +18,11 @@ export const AuthContextComponent = ({ children }) => {
     return 1;
   };
 
+  const updateUser = (user) => {
+    setUser(user);
+    updateUserLocalStorage(user);
+  };
+
   const logout = () => {
     localStorage.removeItem("currentUser");
     setAuth(false);
@@ -27,7 +30,7 @@ export const AuthContextComponent = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ isAuth, isAdmin, user, setCurrentUser, logout }}
+      value={{ isAuth, isAdmin, user, setCurrentUser, logout, updateUser }}
     >
       {children}
     </AuthContext.Provider>

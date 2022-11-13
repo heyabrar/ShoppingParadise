@@ -18,10 +18,10 @@ const MyPayments = () => {
         </Heading>
         <VStack w={"full"} textAlign={"center"}>
           <Icon as={BsFillCreditCardFill} opacity={".10"} h={"44"} w={"44"} />
-          <Text fontSize={"xl"} opacity={"0.69"} pb={"4"}>
+          <Text fontSize={["sm", "xl"]} opacity={"0.69"} pb={"4"}>
             You haved not saved any of your <br /> payment modes yet.
           </Text>
-          <Text fontSize={"xl"} opacity={"0.69"} pb={"8"}>
+          <Text fontSize={["sm", "xl"]} opacity={"0.69"} pb={"8"}>
             After you make a purchase with Cards,
             <br /> UPI or PayTM they will appear here.
           </Text>
