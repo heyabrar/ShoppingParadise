@@ -45,9 +45,9 @@ const Navbar = () => {
         <div className={style.card}>
           <div id="carda">
             <img
-              style={{ cursor: "pointer", width: "70px", height: "55px" }}
+              style={{ cursor: "pointer", width: "60px", height: "55px", marginTop:'2px' }}
               onClick={() => navigate("/")}
-              src="https://www.linkpicture.com/q/Pink-Minimal-Typography-Logo_1.jpg"
+              src="https://www.linkpicture.com/q/1_295.jpg"
               className={style.card4}
               alt="nykka"
             />
@@ -60,7 +60,7 @@ const Navbar = () => {
           <div >
             <div className={style.inputContainer}>
             
-              <input type="text" className={style.input} placeholder="Search on YourStore" />
+              <input type="text" className={style.input} placeholder="Search on Shopping Paradise" />
               <div><h2>< SearchIcon /></h2></div>
             </div>
               

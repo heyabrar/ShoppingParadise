@@ -67,7 +67,7 @@ export default function AdminSide ( ) {
         <>
         <Flex justifyContent='space-around' color='#fc2779' alignItems='center'>
             <Link to='/adminbrands'><Text fontSize='18px' fontWeight='550'>Brands</Text></Link>
-            <Text textAlign='center' fontSize={{base: '18px', md: '20px', lg : '26px'}} color='#fc2779' fontWeight='600'>YourStore.com</Text>
+            <Text textAlign='center' fontSize={{base: '18px', md: '20px', lg : '26px'}} color='#fc2779' fontWeight='600'>ShoppingParadise.com</Text>
             <Link to='/admincategories'><Text fontSize='18px' fontWeight='550'>Categories</Text></Link>
         </Flex>
 
@@ -133,7 +133,7 @@ export default function AdminSide ( ) {
             <br />
             <Text>Content</Text>
             <Input placeholder="Content" value={patch} onChange={(e) => setPatch(e.target.value)}/>
-            <Button onClick={( ) => handlePatch(patchID,patchProduct,patch)} mt='20px' color='white' bg='#fc2779' colorScheme='#fc2779'>Patch</Button>
+            <Button onClick={( ) => handlePatch(patchID,patchProduct,patch)} mt='20px' color='white' bg='#fc2779' colorScheme='#fc2779' disabled={patch === '' || patchID==='' || patchProduct === ''}>Patch</Button>
             </Box>
         </Box>
 

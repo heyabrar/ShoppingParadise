@@ -125,7 +125,7 @@ export default function HomeTopBrands ( ) {
         <StaticCarousel data={data} laptop={6} tab={5} mobile={5} redirect='/skinloreal'/>
         </Box>
 
-        <Text textAlign='center' fontSize={{base : '18px', md: '20px', lg: '26px'}} mt={{base : '45px', md: '50px', lg : '7%'}} fontWeight='550' letterSpacing='2px'>ONLY AT YOURSTORE</Text>
+        <Text textAlign='center' fontSize={{base : '18px', md: '20px', lg: '26px'}} mt={{base : '45px', md: '50px', lg : '7%'}} fontWeight='550' letterSpacing='2px'>ONLY AT SHOPPING PARADISE</Text>
         <SimpleGrid columns={[2,2,2,2]} width={{base:  '95%', md :'90%', lg : '80%'}} m='auto' mt={{base : '20px', md : '30px'}} rowGap={{base : '20px', md : '25px', lg: '35px'}}>
             {onlyNyka.length > 0 && onlyNyka.map((elem)=>{
                 return <Box key={elem.id} width={{base : '95%', lg: '80%'}} m='auto'>

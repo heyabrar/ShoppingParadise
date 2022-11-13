@@ -2,6 +2,7 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 
 export default function HairCancern ( ) {
@@ -73,7 +74,7 @@ export default function HairCancern ( ) {
                 >
                 {images.length > 0 && images.map((elem)=>{
                     return <Box key={elem.id} w={{base : '95%'}} m='auto'>
-                        <Image src={elem.image} m='auto'/>
+                        <Link to='/hairproducts'><Image src={elem.image} m='auto'/></Link>
                     </Box>
                 })}
             </Carousel>
