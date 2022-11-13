@@ -60,7 +60,7 @@ export default function AllRoutes() {
         {/*Need to be Protected*/}
         <Route path='/skin/:id' element={<PrivateRoute><DotKeySingleProductPage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
-        <Route path='/skinloreal' element={<SkinLorealPage />} />{" "}
+        <Route path='/skinloreal' element={<PrivateRoute><SkinLorealPage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
         <Route path='/skinloreal/:id' element={<PrivateRoute><LorealSinglePage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
