@@ -17,6 +17,8 @@ const initalData = {
     isError : false,
     GetFragranceProducts:[],
     GetFsingle:[],
+    ApplianceAllProducts : [ ],
+    ApplianceSingleProducts : [ ],
 };
 
 export default function MyReducer(state = initalData, action) {
@@ -412,6 +414,60 @@ export default function MyReducer(state = initalData, action) {
                 GetFsingle: [],
                 isLoading: false,
                 isError: true
+            }
+        }
+
+
+        case types.GET_APPLIANCE_DATA_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_APPLIANCE_DATA_SUCCESS : {
+            return {
+                ...state,
+                ApplianceAllProducts : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+
+        case types.GET_APPLIANCE_DATA_FAILURE : {
+            return {
+                ...state,
+                ApplianceAllProducts : [ ],
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case types.GET_SINGLE_APPLIANCE_DATA_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_SINGLE_APPLIANCE_DATA_SUCCESS: {
+            return {
+                ...state,
+                ApplianceSingleProducts : payload,
+                isLoading : false,
+                isError : false
+            }
+        }
+
+        case types.GET_SINGLE_APPLIANCE_DATA_FAILURE : {
+            return {
+                ...state,
+                ApplianceSingleProducts : [ ],
+                isLoading : false,
+                isError : true
             }
         }
         default :
