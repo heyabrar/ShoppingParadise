@@ -95,6 +95,7 @@ export default function AdminSide ( ) {
                 <option value="hair">Hair</option>
                 <option value="men">Men</option>
                 <option value="fragrance">Fragrance</option>
+                <option value="appliance">Appliance</option>
             </Select>
             <Text mt='10px'>Brand</Text>
             <Select defaultValue={'--'} onChange={(e)=> setBrand(e.target.value)} value={brand}>
@@ -105,6 +106,7 @@ export default function AdminSide ( ) {
                 <option value="estee">Estee Lauder</option>
                 <option value="garnier">Garnier</option>
                 <option value="nykaa">Nykaa</option>
+                <option value="agaro">Agaro</option>
             </Select>
             <br /> <br />
             <Text fontSize='12px'>(Make Sure Category Matches The Brand)</Text>

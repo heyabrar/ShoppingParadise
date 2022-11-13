@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import AdminBrandsPage from "../Abrar/AdminSide/AdminBrandsPage";
 import AdminCategoriesPage from "../Abrar/AdminSide/AdminCategories";
 import AdminSide from "../Abrar/AdminSide/AdminSide";
+import AppliancePage from "../Abrar/Pages/Appliance";
+import ApplianceSinglePage from "../Abrar/Pages/ApplianceSinglePage";
 import CartPage from "../Abrar/Pages/CartPage";
 import DotKeySingleProductPage from "../Abrar/Pages/DotSkinSPPage";
 import EsteeSinglePage from "../Abrar/Pages/EsteeSinglePage";
@@ -79,6 +81,8 @@ export default function AllRoutes() {
         {/*Need to be Protected*/}
         <Route path='/cart' element={<PrivateRoute><CartPage /></PrivateRoute>} /> {/*Need to be Protected*/}
         <Route path='/payment' element={<h1>Payment Page</h1>} />{" "}
+        <Route path="/appliance" element={<AppliancePage/>}/>
+        <Route path="/appliance/:id" element={<ApplianceSinglePage/>}/>
         {/*Need to be Protected*/}
       </Routes>
     </>
