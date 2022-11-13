@@ -22,9 +22,9 @@ import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
 
                 <p onClick={()=>navigate("/hair")} onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
 
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
+                <p onClick={()=>navigate("/appliance")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
               
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('MOM&BABY')}>Mom & Baby</p>
+                <p onClick={()=>navigate("/mombaby  ")} onMouseEnter={() => hoverHandler('MOM&BABY')}>Mom & Baby</p>
     
                 <p onClick={()=>navigate("/men")} onMouseEnter={() => hoverHandler('MEN')}>Men</p>
                 
