@@ -82,7 +82,7 @@ p:hover{
 const Content = styled.div`
 .content{
     position: absolute;
-    z-index: 100000;
+    z-index: 1;
     width: 100vw;
    
 }
