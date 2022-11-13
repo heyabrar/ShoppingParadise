@@ -90,7 +90,7 @@ export default function BrandsYouCantMiss ( ) {
 
          <SimpleGrid width={{base  : '95%', md :'90%', lg : '80%'}} m='auto' columns={[2,2,4,4]}>
             {Influeners.map((elem)=>{
-                return <Box textAlign='center'>
+                return <Box textAlign='center' key={elem.id}>
                     <Image width={{base : '200px', md : '250px'}} m='auto' src={elem.image} />
                     <Text>{elem.des}</Text>
                 </Box>

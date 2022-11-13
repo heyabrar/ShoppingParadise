@@ -4,13 +4,17 @@ import MomBaby from "../../Dibyanshu/Components/Navbar/NavComponent/MomBaby";
 import MomBabyByCategory from "../Components/MomBabyCategory";
 import MomBabyLast from "../Components/MomBabyLat";
 import MomBabayTop from "../Components/MomBabyTop";
+import MomBabyTrending from "../Components/MomBabyTrending";
+import MomBrandsLov from "../Components/MomBransLov";
 
-export default function MomAndBaby(){
+export default function MomAndBabyPage(){
     return(
         <>
         <Navbar/>
         <MomBabayTop/>
-        <MomBaby/>
+        {/* <MomBaby/> */}
+        <MomBabyTrending/>
+        <MomBrandsLov/>
         <MomBabyByCategory/>
         <MomBabyLast/>
         <Footer/>

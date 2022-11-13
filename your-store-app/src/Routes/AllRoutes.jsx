@@ -27,6 +27,7 @@ import FragranceSingleProduct from "../Sonali/Pages/FragranceSingleProduct";
 import HairPage from "../Sonali/Pages/Hair";
 import HairProducts from "../Sonali/Pages/HairProducts";
 import HairSinglePage from "../Sonali/Pages/HairSingalPage";
+import MomAndBabyPage from "../Sonali/Pages/MomBaby";
 
 export default function AllRoutes() {
   return (
@@ -82,7 +83,8 @@ export default function AllRoutes() {
         <Route path='/cart' element={<PrivateRoute><CartPage /></PrivateRoute>} /> {/*Need to be Protected*/}
         <Route path='/payment' element={<h1>Payment Page</h1>} />{" "}
         <Route path="/appliance" element={<AppliancePage/>}/>
-        <Route path="/appliance/:id" element={<ApplianceSinglePage/>}/>
+        <Route path="/appliance/:id" element={<PrivateRoute><ApplianceSinglePage/></PrivateRoute>}/>
+        <Route path='/mombaby' element={<MomAndBabyPage/>}/>
         {/*Need to be Protected*/}
       </Routes>
     </>

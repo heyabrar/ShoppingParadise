@@ -37,6 +37,11 @@ export default function AdminBrandsPage ( ) {
             id : 6,
             title : "Nykaa",
             image : 'https://images-static.nykaa.com/uploads/6302e35c-6413-45ef-93b1-e6354c26914e.jpg?tr=w-300,cm-pad_resize'
+        },
+        {
+            id : 7,
+            title : 'Agaro',
+            image : 'https://images-static.nykaa.com/uploads/cc9bdcb4-2b59-4bb5-b7ec-d8c9396d262f.jpg?tr=w-300,cm-pad_resize'
         }
     ]
     return (

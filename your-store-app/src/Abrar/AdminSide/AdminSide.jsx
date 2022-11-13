@@ -18,6 +18,7 @@ export default function AdminSide ( ) {
     const Toast  = useToast( );
     const [patchProduct,setPatchProduct] = useState('')
     const {user,isAdmin} = useContext(AuthContext)
+    console.log(isAdmin)
 
     const handleAdd = (t,u,p,ap,d,c,b) =>{
         const payload = {
@@ -46,10 +47,10 @@ export default function AdminSide ( ) {
 
     const handleDelete = (D) =>{
         SetDelete('')
-        Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Deleted Successfully</Box>)})
+      
         return axios.delete(`https://adminside-yourstore.onrender.com/Products/${D}`)
         .then((res)=>{
-
+            Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Deleted Successfully</Box>)})
         })
     };
 
@@ -57,10 +58,13 @@ export default function AdminSide ( ) {
         const x = patchProduct;
         const payload ={ };
         payload[patchProduct] = patch;
-        Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Patch Successful</Box>)})
+      
         return axios.patch(`https://adminside-yourstore.onrender.com/Products/${patchID}`, payload)
+       
         .then((res)=>{
+            Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Patch Successful</Box>)})
         })
+        
     }
 
     return (

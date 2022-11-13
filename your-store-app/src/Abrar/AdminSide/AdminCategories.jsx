@@ -25,6 +25,11 @@ export default function AdminCategoriesPage ( ) {
             id : 4, 
             title : 'FRAGRANCE',
             image : 'https://media.istockphoto.com/id/1321710678/photo/design-advertising-poster-for-cosmetic-product-with-rose-petals-for-catalog-magazine-osmetic.jpg?s=612x612&w=0&k=20&c=evRvGauwmqKkv3KOKXfW1YfjICNWeGt3R5J26JXzwVI='
+        },
+        {
+            id : 5,
+            title : 'Appliance',
+            image : 'https://images-static.nykaa.com/uploads/c9b126e0-1266-4f82-aa65-de8ec8292dcc.jpg?tr=w-300,cm-pad_resize    '
         }
     ]
     return (
