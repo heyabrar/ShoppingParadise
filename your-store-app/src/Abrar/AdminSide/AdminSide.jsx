@@ -71,7 +71,7 @@ export default function AdminSide ( ) {
         <>
         <Flex justifyContent='space-around' color='#fc2779' alignItems='center'>
             <Link to='/adminbrands'><Text fontSize='18px' fontWeight='550'>Brands</Text></Link>
-            <Text textAlign='center' fontSize={{base: '18px', md: '20px', lg : '26px'}} color='#fc2779' fontWeight='600'>ShoppingParadise.com</Text>
+            <Link to='/'><Text textAlign='center' fontSize={{base: '18px', md: '20px', lg : '26px'}} color='#fc2779' fontWeight='600'>ShoppingParadise.com</Text></Link>
             <Link to='/admincategories'><Text fontSize='18px' fontWeight='550'>Categories</Text></Link>
         </Flex>
 
