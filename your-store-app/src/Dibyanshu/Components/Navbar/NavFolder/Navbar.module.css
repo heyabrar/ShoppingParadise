@@ -26,7 +26,8 @@
 .inputContainer>div{
     border:1px solid rgb(212,212,212);
     width: 40px;
-    height: 32px;
+    height: 29px;
+    height: auto;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     text-align: center;
@@ -51,7 +52,7 @@
 }
 .input{
     width: 15vw;
-    height: 4.5vh;
+    height: 38px;
     padding-left: 30px;
     font-size: 15px;
     outline: none;
@@ -65,7 +66,7 @@
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
     .input{
-        width: auto;
+        width: 8vw;
         text-align: center;
         padding-left: 20px;
        
@@ -73,7 +74,7 @@
     .inputContainer>div{
        
         width: 40px;
-        height: 42px;
+        height: 38px;
         
     }
     .inputContainer>div>h2{
@@ -109,7 +110,7 @@
      }
      .inputContainer>div{
         width: 40px;
-        height: 42px;   
+        height: 38px;   
     }
     .inputContainer>div>h2{
         margin-top: 4px;
