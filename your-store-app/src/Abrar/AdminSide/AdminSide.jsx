@@ -1,7 +1,8 @@
 import { Alert, Box, Button, Flex, Input, Select, Text, Toast, useToast} from "@chakra-ui/react";
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Apurba/context/AuthContext";
 
 export default function AdminSide ( ) {
     const [title,setTitle] = useState('')
@@ -16,9 +17,8 @@ export default function AdminSide ( ) {
     const [Delete,SetDelete] = useState('')
     const Toast  = useToast( );
     const [patchProduct,setPatchProduct] = useState('')
+    const {user,isAdmin} = useContext(AuthContext)
 
-
- 
     const handleAdd = (t,u,p,ap,d,c,b) =>{
         const payload = {
             title : t,

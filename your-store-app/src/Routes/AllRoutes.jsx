@@ -49,35 +49,35 @@ export default function AllRoutes() {
         />
         <Route path='/hair' element={<HairPage />} />
         <Route path='/hairproducts' element={<PrivateRoute><HairProducts /></PrivateRoute>} />
-        <Route path="/hairproducts/:id" element={<HairSinglePage/>}/>
+        <Route path="/hairproducts/:id" element={<PrivateRoute><HairSinglePage/></PrivateRoute>}/>
         <Route path='/fragrance' element={<Fragrance/>} />
-        <Route path="/fragrance/:id" element={<FragranceSingleProduct/>}/>
+        <Route path="/fragrance/:id" element={<PrivateRoute><FragranceSingleProduct/></PrivateRoute>}/>
         <Route path='/skin' element={<SkinPage />} />
-        <Route path='/skindotkey' element={<SkinDotKeyPage />} />{" "}
+        <Route path='/skindotkey' element={<PrivateRoute><SkinDotKeyPage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
-        <Route path='/skin/:id' element={<DotKeySingleProductPage />} />{" "}
+        <Route path='/skin/:id' element={<PrivateRoute><DotKeySingleProductPage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
         <Route path='/skinloreal' element={<SkinLorealPage />} />{" "}
         {/*Need to be Protected*/}
-        <Route path='/skinloreal/:id' element={<LorealSinglePage />} />{" "}
+        <Route path='/skinloreal/:id' element={<PrivateRoute><LorealSinglePage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
-        <Route path='/skinEstee' element={<SkinEsteePage />} />{" "}
+        <Route path='/skinEstee' element={<PrivateRoute><SkinEsteePage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
-        <Route path='/skinEsteeLauder/:id' element={<EsteeSinglePage />} />{" "}
+        <Route path='/skinEsteeLauder/:id' element={<PrivateRoute><EsteeSinglePage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
         <Route path='/skinras' element={<SkinRasPage />} />{" "}
         {/*Need to be Protected*/}
-        <Route path='/skinras/:id' element={<RasSinglePage />} />{" "}
+        <Route path='/skinras/:id' element={<PrivateRoute><RasSinglePage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
         <Route path='/men' element={<MensPage />} />
-        <Route path='/mensgarnier' element={<MensGarnierPage />} />{" "}
+        <Route path='/mensgarnier' element={<PrivateRoute><MensGarnierPage /></PrivateRoute>} />{" "}
         {/*Need to be Protected*/}
         <Route
           path='/mensgarnier/:id'
-          element={<MensGarnierSinglePage />}
+          element={<PrivateRoute><MensGarnierSinglePage /></PrivateRoute>}
         />{" "}
         {/*Need to be Protected*/}
-        <Route path='/cart' element={<CartPage />} /> {/*Need to be Protected*/}
+        <Route path='/cart' element={<PrivateRoute><CartPage /></PrivateRoute>} /> {/*Need to be Protected*/}
         <Route path='/payment' element={<h1>Payment Page</h1>} />{" "}
         {/*Need to be Protected*/}
       </Routes>
