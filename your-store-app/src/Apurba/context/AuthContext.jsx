@@ -13,7 +13,7 @@ export const AuthContextComponent = ({ children }) => {
   const setCurrentUser = (user) => {
     localStorage.setItem("currentUser", JSON.stringify(user));
     setAuth(true);
-    setAdmin(getCurrentUser()?.isAdmin);
+    setAdmin(getCurrentUser()[0]?.isAdmin);
     setUser(getCurrentUser()[0]);
     return 1;
   };
@@ -27,6 +27,7 @@ export const AuthContextComponent = ({ children }) => {
     localStorage.removeItem("currentUser");
     setAuth(false);
   };
+  console.log(isAdmin, isAuth, user);
   return (
     <AuthContext.Provider
       value={{ isAuth, isAdmin, user, setCurrentUser, logout, updateUser }}
