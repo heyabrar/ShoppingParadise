@@ -59,20 +59,22 @@ const Navbar = () => {
           </div>
           <div >
             <div className={style.inputContainer}>
-              <div><h2>< SearchIcon /></h2></div>
+            
               <input type="text" className={style.input} placeholder="Search on YourStore" />
+              <div><h2>< SearchIcon /></h2></div>
             </div>
               
 
             
 
             <div className={style.card2}>
-              <div style={{ color: 'rgb(252,39,121)' }}>< PersonIcon /></div>
+            <Link to='/profile'><div style={{ color: 'rgb(252,39,121)' }}>< PersonIcon /></div></Link>
+              
               <div><Link to='/profile'> Profile</Link></div>
 
               |
-
-              <div style={{ color: 'rgb(252,39,121)' }}><ShoppingBasketIcon /></div>
+              <Link to='/cart'> <div style={{ color: 'rgb(252,39,121)' }}><ShoppingBasketIcon /></div></Link>
+             
               <div><Link to='/cart'> Cart</Link></div>
 
 
