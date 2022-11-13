@@ -37,13 +37,13 @@ export default function HomePage ( ){
         <Box width={{base : '90%', lg: '95%'}} m='auto' mt='20px'>
             <Image w='100%' m='auto' src="https://images-static.nykaa.com/uploads/3787128a-d099-482a-8d92-cef013554343.gif?tr=w-1200,cm-pad_resize"/>
         </Box>
-
+        
         <Box width={{base : '80%', lg: '70%'}} m='auto' mt={{base : '20px', lg :'30px'}}>
             <Image m='auto' src="https://images-static.nykaa.com/uploads/a47a4ec4-140c-4035-8b85-629db661a638.jpg?tr=w-1200,cm-pad_resize"/>
         </Box>
-
+        {/* <Slider/> */}
         <HomeTopBrands/>
-
+        
         <Footer/>
         </>
     )

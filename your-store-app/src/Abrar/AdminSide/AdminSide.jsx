@@ -1,7 +1,8 @@
 import { Alert, Box, Button, Flex, Input, Select, Text, Toast, useToast} from "@chakra-ui/react";
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Apurba/context/AuthContext";
 
 export default function AdminSide ( ) {
     const [title,setTitle] = useState('')
@@ -10,21 +11,14 @@ export default function AdminSide ( ) {
     const [Aprice,setAPrice] = useState('')
     const [discount,setDiscount] = useState('')
     const [category,setCategory] = useState('')
-    const [brand,setBrand] = useState('')
-
-    const [patchid,setPatchid] = useState('')
-    const [ptitle,psetTitle] = useState('')
-    const [purl,psetUrl] = useState('')
-    const [pprice,psetPrice] = useState('')
-    const [pAprice,psetAPrice] = useState('')
-    const [pdiscount,psetDiscount] = useState('')
-    const [pcategory,psetCategory] = useState('')
-    const [pbrand,psetBrand] = useState('')
+    const [brand,setBrand] = useState('');
+    const [patch,setPatch] = useState('');
+    const [patchID,setPatchID] = useState('');
     const [Delete,SetDelete] = useState('')
     const Toast  = useToast( );
+    const [patchProduct,setPatchProduct] = useState('')
+    const {user,isAdmin} = useContext(AuthContext)
 
-
- 
     const handleAdd = (t,u,p,ap,d,c,b) =>{
         const payload = {
             title : t,
@@ -59,18 +53,12 @@ export default function AdminSide ( ) {
         })
     };
 
-    const handlePatch = (t,u,p,ap,d,c,b,patchid) =>{
-        const payload = {
-            title : t,
-            image : u,
-            price : p,
-            actualPrice : ap,
-            discount : d,
-            category : c,
-            brand : b
-        }
+    const handlePatch = (patchID,patchProduct,patch) =>{
+        const x = patchProduct;
+        const payload ={ };
+        payload[patchProduct] = patch;
         Toast({position : 'bottom',duration: 2000 ,render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Patch Successful</Box>)})
-        return axios.patch(`https://adminside-yourstore.onrender.com/Products/${patchid}`, payload)
+        return axios.patch(`https://adminside-yourstore.onrender.com/Products/${patchID}`, payload)
         .then((res)=>{
         })
     }
@@ -79,7 +67,7 @@ export default function AdminSide ( ) {
         <>
         <Flex justifyContent='space-around' color='#fc2779' alignItems='center'>
             <Link to='/adminbrands'><Text fontSize='18px' fontWeight='550'>Brands</Text></Link>
-            <Text textAlign='center' fontSize={{base: '18px', md: '20px', lg : '26px'}} color='#fc2779' fontWeight='600'>YourStore.com</Text>
+            <Text textAlign='center' fontSize={{base: '18px', md: '20px', lg : '26px'}} color='#fc2779' fontWeight='600'>ShoppingParadise.com</Text>
             <Link to='/admincategories'><Text fontSize='18px' fontWeight='550'>Categories</Text></Link>
         </Flex>
 
@@ -107,6 +95,7 @@ export default function AdminSide ( ) {
                 <option value="hair">Hair</option>
                 <option value="men">Men</option>
                 <option value="fragrance">Fragrance</option>
+                <option value="appliance">Appliance</option>
             </Select>
             <Text mt='10px'>Brand</Text>
             <Select defaultValue={'--'} onChange={(e)=> setBrand(e.target.value)} value={brand}>
@@ -117,6 +106,7 @@ export default function AdminSide ( ) {
                 <option value="estee">Estee Lauder</option>
                 <option value="garnier">Garnier</option>
                 <option value="nykaa">Nykaa</option>
+                <option value="agaro">Agaro</option>
             </Select>
             <br /> <br />
             <Text fontSize='12px'>(Make Sure Category Matches The Brand)</Text>
@@ -127,51 +117,33 @@ export default function AdminSide ( ) {
         </Flex>
 
         <Text textAlign='center' mt='3%' fontSize='22px'>Patch</Text>
-        <Flex border='5px solid #fc2779' width={{base : '95%', md : '90%', lg : '85%'}} m='auto' gap={{base : '5px', md :'20px' , lg : '40px'}} direction={{base : 'column', md: 'row'}} padding='20px' borderRadius='10px' shadow='md'>
-        <Box  w={{base : '90%', md : '80%', lg : '50%'}} m='auto'>
-            <Text>Product ID</Text>
-            <Input placeholder="Enter ID" value={patchid} onChange={(e)=>setPatchid(e.target.value)}/>
-            <Text mt='10px'>Title</Text>
-            <Input placeholder="Enter Title" value={ptitle} onChange={(e)=>psetTitle(e.target.value)}/>
-            <Text mt='10px'>Image URL</Text>
-            <Input placeholder="Enter Image URL" value={purl} onChange={(e)=>psetUrl(e.target.value)}/>
-            <Text mt='10px'>Price</Text>
-            <Input placeholder="Enter Price" value={pprice} onChange={(e)=>psetPrice(e.target.value)}/>
-            <Text mt='10px'>Actual Price</Text>
-            <Input placeholder="Enter Actual Price" value={pAprice} onChange={(e)=>psetAPrice(e.target.value)}/>
-           </Box>
 
-           <Box w={{base : '90%', md : '80%', lg : '50%'}} m='auto' >
-            <Text mt='10px'>Discount</Text>
-            <Input placeholder="Enter Discount" value={pdiscount} onChange={(e)=>psetDiscount(e.target.value)}/>
-            <Text mt='10px'>Category</Text>
-            <Select defaultValue={'-'} value={pcategory} onChange={(e) => psetCategory(e.target.value)}>
+        <Box border='5px solid #fc2779' w={{base : '95%',md : '70%', lg: '60%'}} m='auto' borderRadius='10px' padding='20px'>
+            <Box width={{base : '90%'}} m='auto'>
+                <Text>Product ID</Text>
+            <Input placeholder="Enter Product ID" value={patchID} onChange={(e) => setPatchID(e.target.value)}/>
+            <br /><br />
+            <Text>Select Key</Text>
+            <Select value={patchProduct} onChange={(e)=> setPatchProduct(e.target.value)}>
                 <option value="--">--</option>
-                <option value="skin">Skin</option>
-                <option value="hair">Hair</option>
-                <option value="men">Men</option>
-                <option value="fragrance">Fragrance</option>
+                <option value="title">Title</option>
+                <option value="price">Price</option>
+                <option value="actualPrice">Actual Pice</option>
+                <option value="image">Image</option>
+                <option value="discount">Discount</option>
             </Select>
-
-            <Text mt='10px'>Brand</Text>
-            <Select value={pbrand} onChange={(e)=>psetBrand(e.target.value)} defaultValue={'--'}>
-                <option value="--">--</option>
-                <option value="dotkey">Dot & Key</option>
-                <option value="skinras">Skin Ras</option>
-                <option value="loreal">Loreal</option>
-                <option value="estee">Estee Lauder</option>
-                <option value="garnier">Garnier</option>
-            </Select>
-            <br /> <br />
-            <Button onClick={( ) => handlePatch(ptitle,purl,pprice,pAprice,pdiscount,pcategory,pbrand,patchid)} color='white' bg='#fc2779' colorScheme='#fc2779'>Patch</Button>
+            <br />
+            <Text>Content</Text>
+            <Input placeholder="Content" value={patch} onChange={(e) => setPatch(e.target.value)}/>
+            <Button onClick={( ) => handlePatch(patchID,patchProduct,patch)} mt='20px' color='white' bg='#fc2779' colorScheme='#fc2779' disabled={patch === '' || patchID==='' || patchProduct === ''}>Patch</Button>
+            </Box>
         </Box>
-        </Flex>
 
         <Text textAlign='center' fontSize='22px' mt='3%'>Delete</Text>
         <Box border='5px solid #fc2779' width={{base : '80%' ,md : '40%', lg : '20%'}} m='auto' padding='20px' borderRadius='10px' shadow='lg'>
         <Text>Delete</Text>
-            <Input placeholder='Enter Product Id To Delete' value={Delete} onChange={(e) => SetDelete(e.target.value)} border='1px solid black'/>
-            <br /><br />
+            <Box><Input placeholder='Enter Product Id To Delete' value={Delete} onChange={(e) => SetDelete(e.target.value)}/></Box>
+            <br />
             <Button onClick={( ) => handleDelete(Delete)} color='white' bg='#fc2779' colorScheme='#fc2779'>Delete</Button>
         </Box>
         </>

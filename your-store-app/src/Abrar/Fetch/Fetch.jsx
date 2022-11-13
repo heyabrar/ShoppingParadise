@@ -95,5 +95,17 @@ export const FetchSingleFregranceData = (id) =>{
     return axios.get(`https://adminside-yourstore.onrender.com/Products/${id}?category=fragrance&brand=nykaa`)
 };
 
+export const FetchApplianceData = (page=1,setTotalPage) =>{
+    return fetch(`https://adminside-yourstore.onrender.com/Products?_page=${page}&_limit=6&category=appliance&brand=agaro`)
+    .then((res)=> {
+       setTotalPage(Number(res.headers.get('X-Total-Count')))
+       return res.json( );
+    })
+};
+
+export const FetchSingleApplianceData = (id) =>{
+    return axios.get(`https://adminside-yourstore.onrender.com/Products/${id}?category=appliance&brand=agaro`)
+};
+
 
 

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
  import {useNavigate} from 'react-router-dom'
 
-const SubNavbar = () => {
+    const SubNavbar = () => {
     const navigate= useNavigate()
-   const [howerState, setHowerState] = useState("");
+    const [howerState, setHowerState] = useState("");
 
     const hoverHandler = (type) => {
         setHowerState(type)
@@ -17,17 +17,19 @@ const SubNavbar = () => {
     return (
         <>
             <Subnav>
-                <p onClick={()=>navigate("/skin")} onMouseOver={() => hoverHandler('MAKEUP')}>Makeup </p>
+               
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('SKIN')}>Skin</p>
+
                 <p onClick={()=>navigate("/hair")} onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
+
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('BATH&BODY')}>Bath & Body</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('NATURAL')}>Natural</p>
+              
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('MOM&BABY')}>Mom & Baby</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('HEALTH')}>Health & Wellness</p>
+    
                 <p onClick={()=>navigate("/men")} onMouseEnter={() => hoverHandler('MEN')}>Men</p>
+                
                 <p onClick={()=>navigate("/fragrance")} onMouseEnter={() => hoverHandler('FRAGRENCE')}>Fragrance</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('POPUPS')}>Pop Ups</p>
+               
             </Subnav>
             <Content>
                 <div className='content' onMouseLeave={handleNoHover}>
@@ -42,17 +44,17 @@ export default SubNavbar
 
 const Subnav = styled.div`
 display:flex;
-justify-content:center;
+justify-content:space-evenly;
 margin:auto;
 border:1px solid #e6dede;
 align-items: center;
-height:120px;
+height:50px;
 background-color: #ffffff;
 gap:2vw;
 font-weight:400;
 color:gray;
 font-size:15px;
-margin-top:133px;
+margin-top:110px;
 p:hover{
     border-bottom:3px solid #fc3581;
     cursor:pointer;
@@ -61,20 +63,20 @@ p:hover{
     font-weight:600;
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    margin-top:183px;
+    margin-top:153px;
     font-size:14px;
 }
 @media all and (min-width: 320px) and (max-width: 767px) {
     width:100%;
-   
+    height:67px;
     display:flex;
     flex-wrap: wrap;
     font-size:15px;
-    margin-top:163px;
+    margin-top:133px;
     font-size:15px;
     p{
        
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
  }
 
@@ -82,7 +84,7 @@ p:hover{
 const Content = styled.div`
 .content{
     position: absolute;
-    z-index: 100000;
+    z-index: 1;
     width: 100vw;
    
 }

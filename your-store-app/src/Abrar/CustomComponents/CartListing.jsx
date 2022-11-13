@@ -17,7 +17,7 @@ export default function CartListing ({data,handleDeleteFromCart}){
                     <Text color='green' fontWeight='620'>{e.discount}</Text>
                     </Flex>
                     <Box mt={{base : '5px'}}>
-                    <Button onClick={( ) => handleDeleteFromCart(e.id)} size={{base : 'sm'}} m='auto' bg='white' _hover={{bgColor : '#fc2779', color : 'white'}} w='100%' fontSize={{base : '12px', md : '14px'}}>Delete</Button>
+                    <Button onClick={( ) => handleDeleteFromCart(e.id)} size={{base : 'sm'}} m='auto' bg='white' _hover={{bgColor : '#fc2779', color : 'white'}} w='100%' fontSize={{base : '12px', md : '14px'}}>Remove From Cart</Button>
                     </Box>
                 </Box>
             })}

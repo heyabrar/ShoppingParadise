@@ -33,7 +33,7 @@ export default function Footer ( ) {
             <SimpleGrid columns={[3,3,3,5]} fontSize={{base : '12px', md : '13px'}} fontWeight='500' w={{base : '95%', md : '90%'}} m='auto' rowGap='15px'>
                 <Box width={{base : '95%', lg : '70%'}} >
                         <UnorderedList lineHeight={{base  : '20px', md : '28px', lg : '30px'}}>
-                            <List fontWeight='600'><Text >YOURSTORE.COM</Text></List>
+                            <List fontWeight='600'><Text >SHOPPINGPARADISE.COM</Text></List>
                             <List><Text>Who are we?</Text></List>
                             <List><Text>Careers</Text></List>
                             <List><Text>Authenticity</Text></List>
@@ -53,7 +53,7 @@ export default function Footer ( ) {
                             <List><Text>Store Locator</Text></List>
                             <List><Text>Cancellation & Return</Text></List>
                             <List><Text>Shipping & Delivery</Text></List>
-                            <List><Text>Sell on YourStore</Text></List>
+                            <List><Text>Sell on ShoppingParadise</Text></List>
                         </UnorderedList>
                 </Box>
 
@@ -61,8 +61,8 @@ export default function Footer ( ) {
                         <UnorderedList lineHeight={{base  : '20px', md : '28px', lg : '30px'}}>
                             <List fontWeight='600'><Text>Inspire Me</Text></List>
                             <List><Text>Beauty Book</Text></List>
-                            <List><Text>YourStore TV</Text></List>
-                            <List><Text>YourStore Network</Text></List>
+                            <List><Text>ShoppingParadise TV</Text></List>
+                            <List><Text>ShoppingParadise Network</Text></List>
                             <List><Text>Buying Guides</Text></List>
                         </UnorderedList>
                 </Box>
@@ -73,10 +73,10 @@ export default function Footer ( ) {
                             <List fontWeight='600'><Text>Quick Links</Text></List>
                             <List><Text _hover={{color :'pink'}}>Offer Zone</Text></List>
                             <List><Text>New Launches</Text></List>
-                            <List><Text>YourStore Man</Text></List>
-                            <List><Text>YourStore Fashion</Text></List>
-                            <List><Text>YourStore Pro</Text></List>
-                            <List><Text>YourStore femina beauty awards winners 2019</Text></List>
+                            <List><Text>ShoppingParadise Man</Text></List>
+                            <List><Text>ShoppingParadise Fashion</Text></List>
+                            <List><Text>ShoppingParadise Pro</Text></List>
+                            <List><Text>ShoppingParadise femina beauty awards winners 2019</Text></List>
                             <List><Text>Sitemape</Text></List>
                         </UnorderedList>
                 </Box>
@@ -155,7 +155,7 @@ export default function Footer ( ) {
                 <Text>Cancelation Policy</Text>
                 <Text>Privacy Policy</Text>
             </Flex>
-            <Text textAlign='center' fontSize={{base : '12px', md: '14px'}} fontWeight='550'>© 2022 YourStore E-Retail Pvt. Ltd. All Rights Reserved.</Text>
+            <Text textAlign='center' fontSize={{base : '12px', md: '14px'}} fontWeight='550'>© 2022 ShoppingParadise E-Retail Pvt. Ltd. All Rights Reserved.</Text>
         </Box>
     
         </>
