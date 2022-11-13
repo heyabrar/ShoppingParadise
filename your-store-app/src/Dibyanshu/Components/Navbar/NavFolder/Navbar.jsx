@@ -1,14 +1,20 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import style from './Navbar.module.css'
-import { IoIosSearch } from 'react-icons/io';
-import { FaRegUser } from 'react-icons/fa';
-import { RiGift2Line } from 'react-icons/ri';
-import { BsHandbag } from 'react-icons/bs';
+
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import SearchIcon from '@mui/icons-material/Search';
+import { FaSistrix } from "react-icons/fa";
+
+
 
 
 const Navbar = () => {
+
+
   const navigate = useNavigate();
   const [howerState, setHowerState] = useState("");
   const [login, setLogin] = useState(false);
@@ -39,9 +45,9 @@ const Navbar = () => {
         <div className={style.card}>
           <div id="carda">
             <img
-              style={{cursor:"pointer" , width:"75px" ,height:"55px"}}
-              onClick={()=>navigate("/")}
-              src="https://www.linkpicture.com/q/1_813.png"
+              style={{ cursor: "pointer", width: "70px", height: "55px" }}
+              onClick={() => navigate("/")}
+              src="https://www.linkpicture.com/q/Pink-Minimal-Typography-Logo_1.jpg"
               className={style.card4}
               alt="nykka"
             />
@@ -52,18 +58,29 @@ const Navbar = () => {
             <p onMouseEnter={() => hoverHandler("BEAUTY")}>Beauty Advice</p>
           </div>
           <div >
-              <div className={style.inputContainer}>
-                <input
-                style={{position: "relative"}} type="text" className={style.input} id="inp1" placeholder="Search on Nykaa"/>
-              </div>
-               <div className={style.card2}>
-                <p>
-                <FaRegUser fontSize="2.5vh" cursor="pointer" />
-                </p>
-                <a href="">Account</a>
-               </div>
-          
+            <div className={style.inputContainer}>
+            
+              <input type="text" className={style.input} placeholder="Search on YourStore" />
+              <div><h2>< SearchIcon /></h2></div>
             </div>
+              
+
+            
+
+            <div className={style.card2}>
+            <Link to='/profile'><div style={{ color: 'rgb(252,39,121)' }}>< PersonIcon /></div></Link>
+              
+              <div><Link to='/profile'> Profile</Link></div>
+
+              |
+              <Link to='/cart'> <div style={{ color: 'rgb(252,39,121)' }}><ShoppingBasketIcon /></div></Link>
+             
+              <div><Link to='/cart'> Cart</Link></div>
+
+
+            </div>
+
+          </div>
         </div>
 
         <div className={style.content} onMouseLeave={() => setHowerState("")}>
@@ -75,6 +92,5 @@ const Navbar = () => {
 }
 
 export default Navbar
- 
 
- 
+
