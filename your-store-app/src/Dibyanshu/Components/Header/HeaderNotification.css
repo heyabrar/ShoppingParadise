@@ -13,9 +13,13 @@
   /* #top_headerflex>div{
     border: 2px solid green;
   } */
-  #top_headerflex>div>a{
+  #top_header{
+
+    position: relative;
+    animation: mymove 5s infinite;
     font-weight: bold;
-  }
+}
+  
   #top_headerflex>div>a:hover{
     color: white;
     cursor: pointer;

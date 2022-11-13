@@ -2,11 +2,11 @@
 
 YourStore is an E-Commerce Indian based web application which sells products related to Makeup, Skin Care, Hair, Mom & Baby Care, Fragrance, Appliances and much more. We Collaborate with the bests brands to give you the best online purchace services ever. 
 
-## [Deployed URL]( )
+## [Deployed URL](https://yourstore.vercel.app/)
 
 ## Landing Page 
 
-![image](https://user-images.githubusercontent.com/103938174/201488742-1dfa1fb3-3682-4b86-9f06-c079ac1886dc.png)
+![image](https://www.linkpicture.com/q/Screenshot-2022-11-13-023122_2.png)
 
 ## 
 ![image](https://user-images.githubusercontent.com/103938174/201488785-35251998-6d88-4d44-9590-8ef39e97d5ea.png)
