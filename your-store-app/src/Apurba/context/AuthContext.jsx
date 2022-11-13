@@ -7,9 +7,7 @@ export const AuthContextComponent = ({ children }) => {
   const [isAuth, setAuth] = useState(
     getCurrentUser().length === 0 ? false : true
   );
-  const [isAdmin, setAdmin] = useState((getCurrentUser()?.isAdmin === 0 || getCurrentUser()?.isAdmin === null)  ? false : true);
-=======
-  const [isAdmin, setAdmin] = useState(getCurrentUser()[0]?.isAdmin)
+  const [isAdmin, setAdmin] = useState(getCurrentUser()[0]?.isAdmin || false);
   const [user, setUser] = useState(getCurrentUser()[0]);
 
   const setCurrentUser = (user) => {
