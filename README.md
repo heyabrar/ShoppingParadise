@@ -6,7 +6,7 @@ ShoppingParadise is an E-Commerce Indian based web application which sells produ
 
 ## Landing Page 
 
-![image](https://user-images.githubusercontent.com/103938174/201505566-fe164aba-e573-4c04-8d1a-6e303abbcc6a.png)
+![image](https://user-images.githubusercontent.com/103938174/201518169-68c77bdd-06c2-44cc-80d4-f4cf0a5981b7.png)
 
 ## 
 ![image](https://user-images.githubusercontent.com/103938174/201505966-0ffa2c22-c2fe-4507-abd3-fc54f39b2d17.png)
