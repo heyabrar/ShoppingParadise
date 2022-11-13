@@ -6,7 +6,7 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 
 ## Landing Page 
 
-![image](https://www.linkpicture.com/q/Screenshot-2022-11-13-023122_2.png)
+![image](https://user-images.githubusercontent.com/103938174/201505566-fe164aba-e573-4c04-8d1a-6e303abbcc6a.png)
 
 ## 
 ![image](https://user-images.githubusercontent.com/103938174/201488785-35251998-6d88-4d44-9590-8ef39e97d5ea.png)
