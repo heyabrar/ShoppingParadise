@@ -31,6 +31,13 @@ background-color:#fafafa;
     color:#fc3581;
     cursor:pointer;
 }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+   
+}
+@media all and (min-width: 320px) and (max-width: 767px) {
+    display:none;
+ }
 `
 
 const Appliances = () => {

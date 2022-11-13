@@ -31,6 +31,9 @@ const SkinPopup = styled.div`
     color: #fc3581;
     cursor: pointer;
   }
+  @media all and (min-width: 320px) and (max-width: 767px) {
+    display:none;
+ }
 `;
 
 const Skin = () => {
