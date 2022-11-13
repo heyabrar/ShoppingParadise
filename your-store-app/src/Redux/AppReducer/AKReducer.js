@@ -2,8 +2,10 @@ import * as types from './ActionTypes'
 const initalData = {
     DotKeyProducts : [],
     DotKeySingleProduct : [ ],
+    HairProducts:[],
     LorealProducts : [ ],
     LorealSingleProduct : [ ],
+    HairSingleProduct:[],
     EsteeProducts : [ ],
     EsteeSingleProduct : [ ],
     RasProducts : [ ],
@@ -12,7 +14,9 @@ const initalData = {
     MensGarnierSingleProduct : [ ],
     CartData : [ ],
     isLoading : false,
-    isError : false
+    isError : false,
+    GetFragranceProducts:[],
+    GetFsingle:[],
 };
 
 export default function MyReducer(state = initalData, action) {
@@ -305,6 +309,14 @@ export default function MyReducer(state = initalData, action) {
             }
         }
 
+        case types.GET_SINGAL_HAIR_DATA_REQUEST: {
+            return {
+                ...state,
+                isLoading: true,
+                isError: false
+            }
+        }
+
         case types.GET_SINGAL_HAIR_DATA_SUCCESS: {
             return {
                 ...state,
@@ -318,6 +330,86 @@ export default function MyReducer(state = initalData, action) {
             return {
                 ...state,
                 HairSingleProduct: [],
+                isLoading: false,
+                isError: true
+            }
+        }
+
+        case types.GET_HAIR_DATA_REQUEST:{
+            return{
+                ...state,
+                isLoading:true,
+                isError:false
+            }
+        }
+
+        case types.GET_HAIR_DATA_SUCCESS:{
+            return{
+                ...state,
+                HairProducts:payload,
+                isLoading:false,
+                isError:false
+            }
+        }
+
+        case types.GET_HAIR_DATA_FAILURE:{
+            return{
+                ...state,
+                HairProducts:[],
+                isLoading:false,
+                isError:true
+            }
+        }
+
+
+        case types.GET_FRAGANCE_DATA_REQUEST:{
+            return{
+                ...state,
+                isLoading:true,
+                isError:false
+            }
+        }
+
+        case types.GET_FRAGANCE_DATA_SUCCESS:{
+            return{
+                ...state,
+                GetFragranceProducts:payload,
+                isLoading:false,
+                isError:false
+            }
+        }
+
+        case types.GET_FRAGANCE_DATA_FAILURE:{
+            return{
+                ...state,
+                GetFragranceProducts:[],
+                isLoading:false,
+                isError:true
+            }
+        }
+
+        case types.GET_SINGLE_FRAGRANCE_DATA_REQUEST:{
+            return{
+                ...state,
+                isLoading: true,
+                isError: false
+            }
+        }
+
+
+        case types.GET_SINGLE_FRAGRANCE_DATA_SUCCESS:{
+            return{
+                ...state,
+                GetFsingle: payload,
+                isLoading: false,
+                isError: false
+            }
+        }
+
+        case types.GET_SINGLE_FRAGRANCE_DATA_FAILURE:{
+            return{
+                ...state,
+                GetFsingle: [],
                 isLoading: false,
                 isError: true
             }

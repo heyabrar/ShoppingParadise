@@ -16,11 +16,11 @@ const AddressCard = () => {
     <Flex boxShadow={"lg"} p={4} maxW={"300px"}>
       <VStack align={"flex-start"}>
         <Box bg={"gray.700"} color={"white"} p={2} fontSize={"md"}>
-          CityName
+          Vadodara
         </Box>
-        <Text fontWeight={"semibold"}>Name</Text>
-        <Text>Full Address, City - Pincode, State Name</Text>
-        <Text fontWeight={"semibold"}>+91-9062344454</Text>
+        <Text fontWeight={"semibold"}>Home 🏠</Text>
+        <Text>Opp Mandvi Bus Stand, Vadodara - 390001, Gujarat</Text>
+        <Text fontWeight={"semibold"}>+91-906***4454</Text>
         <HStack
           alignSelf={"self-end"}
           gap={4}

@@ -252,3 +252,42 @@ export const AddToCartFailure = ( ) =>{
         type : types.ADD_TO_CART_FAILURE
     }
 }
+
+
+export const FregranceProductsDataRequest = () =>{
+    return{
+        type: types.GET_FRAGANCE_DATA_REQUEST
+    }
+}
+
+export const FregranceProductsDataSuccess = (payload) =>{
+    return{
+        type: types.GET_FRAGANCE_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const FregranceProductsDataFailure = () =>{
+    return{
+        type: types.GET_FRAGANCE_DATA_FAILURE
+    }
+}
+
+export const FregranceSingalProductsDataRequest = () =>{
+    return{
+        type: types.GET_SINGLE_FRAGRANCE_DATA_REQUEST
+    }
+}
+
+export const FregranceSingalProductsDataSuccess = (payload) =>{
+    return{
+        type: types.GET_SINGLE_FRAGRANCE_DATA_SUCCESS,
+        payload
+    }
+}
+
+export const FregranceSingalProductsDataFailure = () =>{
+    return{
+        type: types.GET_SINGLE_FRAGRANCE_DATA_FAILURE
+    }
+}

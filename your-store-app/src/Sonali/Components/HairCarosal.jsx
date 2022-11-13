@@ -65,7 +65,7 @@ export default function HairCarosal ( ) {
                 >
                 {images.length > 0 && images.map((elem)=>{
                     return <Box key={elem.id} w={{base : '95%'}} m='auto'>
-                        <Image style={{width:"100%" , height: "200px"}} src={elem.image} m='auto'/>
+                        <Image height='150px' w='850px' src={elem.image} m='auto'/>
                     </Box>
                 })}
             </Carousel>

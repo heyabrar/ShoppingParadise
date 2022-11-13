@@ -1,6 +1,6 @@
 .container{
     position: fixed;
-    z-index: 100000;
+    z-index: 1;
     width: 100vw;
     margin-top: -70px;
 } 
@@ -156,7 +156,7 @@
 }  
 .content{
     position: absolute;
-    z-index: 100000;
+    z-index: 1;
     width: 100vw;
 }
 

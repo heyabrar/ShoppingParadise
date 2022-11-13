@@ -45,7 +45,7 @@ export default function HairProducts (){
    
    <Navbar/>
    <ProductsListing data={HairProducts} direct="/hairproducts"/>
-   <Pagination current={page} onChange={(page)=>setPage(page)} limit={6}/>
+   <Pagination current={page} onChange={(page)=>setPage(page)} limit={6} totalPage={totalPage}/>
      
         
         </>

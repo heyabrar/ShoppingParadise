@@ -1,4 +1,5 @@
 import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function HairBrand() {
     const HairData = [
@@ -42,13 +43,13 @@ export default function HairBrand() {
     ]
     return (
         <>
-            <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '15px', md: '30px', lg: '7%' }}>SHOP BY HAIR TYPE</Text>
+            <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '15px', md: '30px', lg: '7%' }}>BRANDS YOU WILL LOVE</Text>
             <SimpleGrid templateRows='repeat(2, 1fr)'
                 templateColumns='repeat(4, 1fr)'
                 gap={2}>
                 {HairData.length > 0 && HairData.map((elem) => {
                     return <Box key={elem.id}>
-                        <Image width={{ base: '160px', lg: '280px' }} src={elem.image} m='auto' />
+                        <Link to={"/hairproducts"}><Image width={{ base: '160px', lg: '280px' }} src={elem.image} m='auto' /></Link>
                     </Box>
                 })}
             </SimpleGrid>
