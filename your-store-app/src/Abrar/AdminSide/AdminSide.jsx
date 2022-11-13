@@ -1,7 +1,8 @@
 import { Alert, Box, Button, Flex, Input, Select, Text, Toast, useToast} from "@chakra-ui/react";
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Apurba/context/AuthContext";
 
 export default function AdminSide ( ) {
     const [title,setTitle] = useState('')
@@ -16,9 +17,8 @@ export default function AdminSide ( ) {
     const [Delete,SetDelete] = useState('')
     const Toast  = useToast( );
     const [patchProduct,setPatchProduct] = useState('')
+    const {user,isAdmin} = useContext(AuthContext)
 
-
- 
     const handleAdd = (t,u,p,ap,d,c,b) =>{
         const payload = {
             title : t,
@@ -95,6 +95,7 @@ export default function AdminSide ( ) {
                 <option value="hair">Hair</option>
                 <option value="men">Men</option>
                 <option value="fragrance">Fragrance</option>
+                <option value="appliance">Appliance</option>
             </Select>
             <Text mt='10px'>Brand</Text>
             <Select defaultValue={'--'} onChange={(e)=> setBrand(e.target.value)} value={brand}>
@@ -105,6 +106,7 @@ export default function AdminSide ( ) {
                 <option value="estee">Estee Lauder</option>
                 <option value="garnier">Garnier</option>
                 <option value="nykaa">Nykaa</option>
+                <option value="agaro">Agaro</option>
             </Select>
             <br /> <br />
             <Text fontSize='12px'>(Make Sure Category Matches The Brand)</Text>

@@ -291,3 +291,41 @@ export const FregranceSingalProductsDataFailure = () =>{
         type: types.GET_SINGLE_FRAGRANCE_DATA_FAILURE
     }
 }
+
+export const ApplianceProductsRequest = ( ) =>{
+    return {
+        type : types.GET_APPLIANCE_DATA_REQUEST
+    }
+}
+
+export const ApplianceProductsSuccess = (payload) =>{
+    return {
+        type : types.GET_APPLIANCE_DATA_SUCCESS,
+        payload 
+    }
+}
+
+export const ApplianceProductsFailure = ( ) =>{
+    return {
+        type : types.GET_APPLIANCE_DATA_FAILURE
+    }
+}
+
+export const ApplianceSingleProductsRequest = ( ) =>{
+    return {
+        type : types.GET_SINGLE_APPLIANCE_DATA_REQUEST
+    }
+}
+
+export const ApplianceSingleProductsSuccess = (payload) =>{
+    return {
+        type : types.GET_SINGLE_APPLIANCE_DATA_SUCCESS,
+        payload 
+    }
+}
+
+export const ApplianceSingleProductsFailure = ( ) =>{
+    return {
+        type : types.GET_SINGLE_APPLIANCE_DATA_FAILURE
+    }
+}
