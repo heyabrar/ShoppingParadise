@@ -25,7 +25,7 @@ export default function SkinOnlyAtNykaa ( ) {
 
     return (
         <>
-         <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '7%'}}>ONLY AT NYKAA</Text>
+         <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '7%'}}>ONLY AT SHOPPING PARADISE</Text>
          <StaticCarousel data={images} redirect='/skinras' laptop={3} tab={2} mobile={3}/>
 
         <Box width={{base : '90%', md : '75%', lg : '75%'}} m='auto' mt={{base : '20px', md : '30px', lg : '45px'}}>

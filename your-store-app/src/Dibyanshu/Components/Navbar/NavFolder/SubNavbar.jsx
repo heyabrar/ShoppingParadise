@@ -17,12 +17,12 @@ const SubNavbar = () => {
     return (
         <>
             <Subnav>
-                <p onClick={()=>navigate("/skin")} onMouseOver={() => hoverHandler('MAKEUP')}>Makeup </p>
+                <p onClick={()=>navigate("/men")} onMouseOver={() => hoverHandler('MAKEUP')}>Makeup </p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('SKIN')}>Skin</p>
                 <p onClick={()=>navigate("/hair")} onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
+                <p onClick={()=>navigate("/fragrance")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('BATH&BODY')}>Bath & Body</p>
-                <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('NATURAL')}>Natural</p>
+                <p onClick={()=>navigate("/hair")} onMouseEnter={() => hoverHandler('NATURAL')}>Natural</p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('MOM&BABY')}>Mom & Baby</p>
                 <p onClick={()=>navigate("/skin")} onMouseEnter={() => hoverHandler('HEALTH')}>Health & Wellness</p>
                 <p onClick={()=>navigate("/men")} onMouseEnter={() => hoverHandler('MEN')}>Men</p>

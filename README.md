@@ -1,27 +1,27 @@
-## Welcome to YourStore.com
+## Welcome to ShoppingParadise.com
 
-YourStore is an E-Commerce Indian based web application which sells products related to Makeup, Skin Care, Hair, Mom & Baby Care, Fragrance, Appliances and much more. We Collaborate with the bests brands to give you the best online purchace services ever. 
+ShoppingParadise is an E-Commerce Indian based web application which sells products related to Makeup, Skin Care, Hair, Mom & Baby Care, Fragrance, Appliances and much more. We Collaborate with the bests brands to give you the best online purchace services ever. 
 
-## [Deployed URL](https://yourstore.vercel.app/)
+## [Deployed URL](https://ShoppingParadise.vercel.app/)
 
 ## Landing Page 
 
 ![image](https://user-images.githubusercontent.com/103938174/201505566-fe164aba-e573-4c04-8d1a-6e303abbcc6a.png)
 
 ## 
-![image](https://user-images.githubusercontent.com/103938174/201488785-35251998-6d88-4d44-9590-8ef39e97d5ea.png)
+![image](https://user-images.githubusercontent.com/103938174/201505966-0ffa2c22-c2fe-4507-abd3-fc54f39b2d17.png)
 
 
 ## Product Listing Page 
 
-![image](https://user-images.githubusercontent.com/103938174/201488964-95e3b180-14d0-4652-b04c-6dfc3179c363.png)
+![image](https://user-images.githubusercontent.com/103938174/201505989-2d6b4b32-e2bf-43d4-9db9-facf5a18c992.png)
 
 
 
 
 ## Single Product Page 
 
-![image](https://user-images.githubusercontent.com/103938174/201489008-6bd36d39-b53c-4e5e-9002-88383f3beea9.png)
+![image](https://user-images.githubusercontent.com/103938174/201506001-7be2b701-b6bf-49d0-8b2c-57f56d9126ce.png)
 
 
 
@@ -35,14 +35,14 @@ YourStore is an E-Commerce Indian based web application which sells products rel
 
 ## UserProfile Page 
 
-![image](https://user-images.githubusercontent.com/103938174/201489088-444c4f4a-d4a6-4dcb-a277-3f44e3644724.png)
+![image](https://user-images.githubusercontent.com/103938174/201506024-4044cc40-5881-43ca-aee9-6be3cab4d34e.png)
 
 
 
 
 ## Cart Page
 
-![image](https://user-images.githubusercontent.com/103938174/201489212-32246b52-e358-41ef-99ca-c38280c22e8c.png)
+![image](https://user-images.githubusercontent.com/103938174/201506046-54e5ed6d-9957-4432-8af9-89db3c9d9250.png)
 
 
 

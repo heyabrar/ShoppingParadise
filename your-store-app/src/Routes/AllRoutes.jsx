@@ -48,7 +48,7 @@ export default function AllRoutes() {
           }
         />
         <Route path='/hair' element={<HairPage />} />
-        <Route path='/hairproducts' element={<HairProducts />} />
+        <Route path='/hairproducts' element={<PrivateRoute><HairProducts /></PrivateRoute>} />
         <Route path="/hairproducts/:id" element={<HairSinglePage/>}/>
         <Route path='/fragrance' element={<Fragrance/>} />
         <Route path="/fragrance/:id" element={<FragranceSingleProduct/>}/>

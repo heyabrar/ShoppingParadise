@@ -28,7 +28,7 @@ export default function FragranceTopBanner ( ) {
     return (
         <>
 
-<Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '5%'}}>Fragrance Collection - Perfumes, Body Mist and More (6246)</Text>
+<Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='550' letterSpacing={{base  : '2px'}} mt={{base : '20px', md : '30px', lg: '5%'}}>Fragrance Collection - Perfumes, Body Mist and More</Text>
 <Box width={{base : '100%', md : '100%', lg : '75%'}} m='auto' mt={{base : '20px', md : '30px', lg : '45px'}}>
           <Image src="https://images-static.nykaa.com/uploads/ef260bc6-3f6a-4955-a911-08a0fa91f6b7.jpg?tr=w-1200,cm-pad_resize"/>
         </Box>
