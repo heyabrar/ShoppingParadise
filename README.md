@@ -73,6 +73,7 @@ ShoppingParadise is an E-Commerce Indian based web application which sells produ
 - User can add various products into the cart
 - Admin page
 - Cart Section 
+- Responsive 
 
 ## Tech Stack 
 - **React**
