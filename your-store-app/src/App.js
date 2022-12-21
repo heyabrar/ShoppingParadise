@@ -7,11 +7,7 @@ import SonaliTest from './Sonali/Components/Test';
 function App() {
   return (
     <div className="App">
-      <h1>Welcome To YOURSTORE.COM</h1>
-      <AbrarTest/>
-      <ApurbhaTest/>
-      <DibyanshuTest/>
-      <SonaliTest/>
+      <AllRoutes />
     </div>
   );
 }
