@@ -66,6 +66,13 @@ ShoppingParadise is an E-Commerce Indian based web application which sells produ
 
 ![image](https://user-images.githubusercontent.com/103938174/201489365-a3fa993b-ce8d-4319-9a2d-83619ca577e7.png)
 
+## Features
+
+- Collection of wide range of Products
+- Signup/Login functionality
+- User can add various products into the cart
+- Admin page
+- Cart Section 
 
 ## Tech Stack 
 - **React**
@@ -78,6 +85,11 @@ ShoppingParadise is an E-Commerce Indian based web application which sells produ
 - **Material UI**
 - **Node Package Manager**
 
+# Lessons Learned
+
+- Gain excessive knowledge on application of React Js ,Redux , JavaScript.
+- Got to know how to Complete any project with team members.
+- Enjoyed the process of learning and creating the product.
 
 A Group project build by 4 Developers, executed in 4 Days.
 
