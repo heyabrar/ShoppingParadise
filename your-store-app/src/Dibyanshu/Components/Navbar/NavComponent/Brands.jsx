@@ -6,6 +6,7 @@ width:65%;
 display:flex;
 justify-content:center;
 margin:auto;
+margin-top:330px;
 padding:3vh 0px 3vh 0px; 
 border-bottom-left-radius:5px;
 border-bottom-right-radius:5px;
