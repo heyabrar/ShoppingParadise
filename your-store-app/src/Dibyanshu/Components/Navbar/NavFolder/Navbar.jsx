@@ -138,12 +138,12 @@ export default function Navbar() {
                 </Flex>
 
                 <Flex alignItems='center' gap='10px'>
-                  <Link to='/profile'>
+                  <Link to='/profile/myprofile'>
                     <Text color='#fc2779'>
                       <FaUser />
                     </Text>
                   </Link>
-                  <Link to='/profile'>
+                  <Link to='/profile/myprofile'>
                     <Text>Profile</Text>
                   </Link>
                 </Flex>
