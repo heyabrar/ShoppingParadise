@@ -66,7 +66,6 @@ export default function AllRoutes() {
         <Route path='/mensgarnier' element={<PrivateRoute><MensGarnierPage /></PrivateRoute>} />{" "}
         <Route path='/mensgarnier/:id'element={<PrivateRoute><MensGarnierSinglePage /></PrivateRoute>}/>{" "}
         <Route path='/cart' element={<PrivateRoute><CartPage /></PrivateRoute>} />
-        <Route path='/payment' element={<h1>Payment Page</h1>} />{" "}
         <Route path="/appliance" element={<AppliancePage/>}/>
         <Route path="/appliance/:id" element={<PrivateRoute><ApplianceSinglePage/></PrivateRoute>}/>
         <Route path='/mombaby' element={<MomAndBabyPage/>}/>

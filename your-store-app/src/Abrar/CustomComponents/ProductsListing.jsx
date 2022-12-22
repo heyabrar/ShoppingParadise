@@ -13,7 +13,7 @@ export default function ProductsListing ({data,direct}) {
             actualPrice,
             discount
         }
-        Toast({position : 'bottom', render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Added To Cart</Box>)})
+        Toast({position : 'top', render: ( )  => (<Box p={5} bg='#fc2779' color='white' borderRadius='10px' fontWeight='600'>Added To Cart</Box>)})
         return axios.post(`https://adminside-yourstore.onrender.com/cart`, payload)
         .then((res)=>{
            
