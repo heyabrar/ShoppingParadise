@@ -6,18 +6,20 @@ import MomBabyLast from "../Components/MomBabyLat";
 import MomBabayTop from "../Components/MomBabyTop";
 import MomBabyTrending from "../Components/MomBabyTrending";
 import MomBrandsLov from "../Components/MomBransLov";
+import Mombrands from "../Components/MomsBrand";
 
-export default function MomAndBabyPage(){
-    return(
+export default function MomAndBabyPage() {
+    return (
         <>
-        <Navbar/>
-        <MomBabayTop/>
-        {/* <MomBaby/> */}
-        <MomBabyTrending/>
-        <MomBrandsLov/>
-        <MomBabyByCategory/>
-        <MomBabyLast/>
-        <Footer/>
+            <Navbar />
+            <MomBabayTop />
+            {/* <MomBaby/> */}
+            <MomBabyTrending />
+            <MomBrandsLov />
+            <MomBabyByCategory />
+            <Mombrands />
+            <MomBabyLast />
+            <Footer />
         </>
     )
 }
