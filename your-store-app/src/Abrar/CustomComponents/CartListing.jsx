@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react"
-import { DeleteFromCart } from "../Fetch/Fetch"
+import { Link } from "react-router-dom"
 
-export default function CartListing ({data,handleDeleteFromCart}){
+export default function CartListing ({data,handleDeleteFromCart,handleCheckout}){
     return (
         <>
           <SimpleGrid columns={[2,2,3,3]} width={{base : '95%', md : '95%'}} m='auto' rowGap={{base : '10px', md: '25px', lg: '25px'}}>
@@ -17,7 +17,8 @@ export default function CartListing ({data,handleDeleteFromCart}){
                     <Text color='green' fontWeight='620'>{e.discount}</Text>
                     </Flex>
                     <Box mt={{base : '5px'}}>
-                    <Button onClick={( ) => handleDeleteFromCart(e.id)} size={{base : 'sm'}} m='auto' bg='white' _hover={{bgColor : '#fc2779', color : 'white'}} w='100%' fontSize={{base : '12px', md : '14px'}}>Remove From Cart</Button>
+                        <Link to='/checkout'><Button onClick={( ) => handleCheckout(e)} size={{base : 'sm'}} m='auto' bg='white' _hover={{bgColor : '#fc2779', color : 'white'}} w='100%' fontSize={{base : '12px', md : '14px'}}>Checkout</Button></Link>
+                        <Button onClick={( ) => handleDeleteFromCart(e.id)} size={{base : 'sm'}} m='auto' bg='white' _hover={{bgColor : '#fc2779', color : 'white'}} w='100%' fontSize={{base : '12px', md : '14px'}}>Remove From Cart</Button>
                     </Box>
                 </Box>
             })}

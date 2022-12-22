@@ -19,6 +19,7 @@ const initalData = {
     GetFsingle:[],
     ApplianceAllProducts : [ ],
     ApplianceSingleProducts : [ ],
+    Checkout : [ ],
 };
 
 export default function MyReducer(state = initalData, action) {
@@ -470,6 +471,34 @@ export default function MyReducer(state = initalData, action) {
                 isError : true
             }
         }
+
+        case types.GET_CHECKOUT_REQUEST : {
+            return {
+                ...state,
+                isLoading : true,
+                isError : false
+            }
+        }
+
+        case types.GET_CHECKOUT_SUCCESS : {
+            return {
+                ...state,
+                isLoading : false,
+                Checkout : payload,
+                isError : false
+            }
+        }
+
+        case types.GET_CHECKOUT_FAILURE : {
+            return {
+                ...state,
+                isLoading : false,
+                isError : true,
+                Checkout : [ ],
+            }
+        }
+
+        
         default :
         return state 
     }

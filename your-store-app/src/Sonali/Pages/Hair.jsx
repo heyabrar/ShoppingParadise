@@ -9,19 +9,19 @@ import HairLuxe from "../Components/Luxe";
 import ShopByCategory from "../Components/ShopByCategory";
 import ShopByHairType from "../Components/ShopByHairType";
 
-export default function HairPage ()  {
-   return(
-    <>
-    <Navbar/>
-    <HairCarosal/>
-     <HairCancern/>
-     <HairBrand/>
-     <ShopByCategory/>
-     <ShopByHairType/>
-     <HairLuxe/>
-     <HairTrending/>
-     <Footer/>
-    </>
-    
+export default function HairPage() {
+   return (
+      <>
+         <Navbar />
+         <HairCarosal />
+         <HairCancern />
+         <HairBrand />
+         <ShopByCategory />
+         <ShopByHairType />
+         <HairLuxe />
+         <HairTrending />
+         <Footer />
+      </>
+
    )
 }
