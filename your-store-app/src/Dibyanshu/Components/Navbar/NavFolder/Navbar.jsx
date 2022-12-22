@@ -43,13 +43,18 @@ const Navbar = () => {
     <>
       <div className={style.container}>
         <div className={style.card}>
-          <div id="carda">
+          <div id='carda'>
             <img
-              style={{ cursor: "pointer", width: "60px", height: "55px", marginTop:'2px' }}
+              style={{
+                cursor: "pointer",
+                width: "60px",
+                height: "55px",
+                marginTop: "2px",
+              }}
               onClick={() => navigate("/")}
-              src="https://www.linkpicture.com/q/1_295.jpg"
+              src='https://www.linkpicture.com/q/1_295.jpg'
               className={style.card4}
-              alt="nykka"
+              alt='nykka'
             />
             <p>Categories</p>
             <p onMouseOver={() => hoverHandler("BRANDS")}>Brands</p>
@@ -57,29 +62,40 @@ const Navbar = () => {
             <p onMouseEnter={() => hoverHandler("NYKAA")}>Nykaa Fashion</p>
             <p onMouseEnter={() => hoverHandler("BEAUTY")}>Beauty Advice</p>
           </div>
-          <div >
+          <div>
             <div className={style.inputContainer}>
-            
-              <input type="text" className={style.input} placeholder="Search on Shopping Paradise" />
-              <div><h2>< SearchIcon /></h2></div>
+              <input
+                type='text'
+                className={style.input}
+                placeholder='Search on Shopping Paradise'
+              />
+              <div>
+                <h2>
+                  <SearchIcon />
+                </h2>
+              </div>
             </div>
-              
-
-            
 
             <div className={style.card2}>
-            <Link to='/profile'><div style={{ color: 'rgb(252,39,121)' }}>< PersonIcon /></div></Link>
-              
-              <div><Link to='/profile'> Profile</Link></div>
-
+              <Link to='/profile/myprofile'>
+                <div style={{ color: "rgb(252,39,121)" }}>
+                  <PersonIcon />
+                </div>
+              </Link>
+              <div>
+                <Link to='/profile/myprofile'> Profile</Link>
+              </div>
               |
-              <Link to='/cart'> <div style={{ color: 'rgb(252,39,121)' }}><ShoppingBasketIcon /></div></Link>
-             
-              <div><Link to='/cart'> Cart</Link></div>
-
-
+              <Link to='/cart'>
+                {" "}
+                <div style={{ color: "rgb(252,39,121)" }}>
+                  <ShoppingBasketIcon />
+                </div>
+              </Link>
+              <div>
+                <Link to='/cart'> Cart</Link>
+              </div>
             </div>
-
           </div>
         </div>
 
