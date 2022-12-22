@@ -329,3 +329,23 @@ export const ApplianceSingleProductsFailure = ( ) =>{
         type : types.GET_SINGLE_APPLIANCE_DATA_FAILURE
     }
 }
+
+
+export const GetCheckoutRequest = ( ) =>{
+    return {
+        type : types.GET_CHECKOUT_REQUEST
+    }
+}
+
+export const GetCheckoutSuccess = (payload) =>{
+    return {
+        type : types.GET_CHECKOUT_SUCCESS,
+        payload 
+    }
+}
+
+export const GetCheckoutFailure = ( ) =>{
+    return {
+        type : types.GET_CHECKOUT_FAILURE
+    }
+}
