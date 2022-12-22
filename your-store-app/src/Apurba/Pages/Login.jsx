@@ -46,7 +46,9 @@ const Login = () => {
   });
   return (
     <Flex bg='gray.100' align='center' justify='center' h='100vh'>
+        
       <Box bg='white' p={6} rounded='md'>
+      
         <form onSubmit={formik.handleSubmit}>
           <VStack spacing={4} align='flex-start' maxW={"300px"}>
             <Heading size={"xl"}>Log In</Heading>
@@ -109,7 +111,22 @@ const Login = () => {
             </Link>
           </VStack>
         </form>
+        <Link
+              as={Button}
+              onClick={() => navigate("/")}
+              color={"#fc2779"}
+              variant='outline'
+              width='full'
+              marginTop="15px"
+              _hover={{
+                bgColor: "#fc2779",
+                color: "white",
+              }}
+            >
+              Go To Homepage
+            </Link>
       </Box>
+      
     </Flex>
   );
 };

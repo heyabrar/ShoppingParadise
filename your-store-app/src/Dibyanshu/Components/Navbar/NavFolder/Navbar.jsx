@@ -52,7 +52,7 @@ export default function Navbar() {
                 <Link to="/appliance"><Text>Brands</Text></Link>
                 <Link to='/fragrance'><Text>Paradise Fashion</Text></Link>
                 <Link to='/men'><Text>Luxe</Text></Link>
-                <Link to='/men'><Text>Beauty Advice</Text></Link>
+                <Link to='/fragrance'><Text>Beauty Advice</Text></Link>
 
 
               </Flex>
