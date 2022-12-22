@@ -44,9 +44,9 @@ export default function MomBrandsLov() {
     return (
         <>
             <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '15px', md: '30px', lg: '7%' }}>BRANDS YOU WILL LOVE</Text>
-            <SimpleGrid templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(4, 1fr)'
-                gap={5}>
+            <SimpleGrid columns={[2, 2, 3, 4]}
+
+                gap={4}>
                 {BabyData.length > 0 && BabyData.map((elem) => {
                     return <Box key={elem.id}>
                         <Link to={"/hairproducts"}><Image width={{ base: '160px', lg: '280px' }} src={elem.image} m='auto' /></Link>
