@@ -1,7 +1,8 @@
 .ChackraNavBar{
     position: fixed;
     width: 100%;
-    /* border: 1px solid red; */
+    height: 120px;
+    border: 1px solid red;
     z-index: 99;
     /* margin-top: -90px; */
   }
@@ -43,10 +44,10 @@
     left: 5px;
 }
 .input{
-    width: 19vw;
-    height: 35px;
+    width: 17vw;
+    height: 38px;
     padding-left: 30px;
-    margin-left: 100px;
+    margin-left: 110px;
     font-size: 15px;
     outline: none;
     background:#f8f6f6;

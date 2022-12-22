@@ -59,7 +59,7 @@ gap:2vw;
 font-weight:400;
 color:gray;
 font-size:15px;
-margin-top:190px;
+margin-top:130px;
 p:hover{
     border-bottom:3px solid #fc3581;
     cursor:pointer;
