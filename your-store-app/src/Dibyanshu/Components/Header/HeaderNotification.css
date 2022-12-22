@@ -70,10 +70,11 @@
             height: 60px; 
     }
     #top_menuflex{
-        
-        width: 94%;
+        display: flex;
+        width: 90%;
         margin: auto;
-        /* border: 1px solid yellow; */
+        justify-content: space-evenly; 
+      
     }
     #top_headerflex>div>a{
         display: none;

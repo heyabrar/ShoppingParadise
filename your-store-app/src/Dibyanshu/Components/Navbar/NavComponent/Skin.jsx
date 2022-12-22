@@ -140,4 +140,4 @@ const Skin = () => {
   )
 }
 
-export default Skin
+export default Skin;
