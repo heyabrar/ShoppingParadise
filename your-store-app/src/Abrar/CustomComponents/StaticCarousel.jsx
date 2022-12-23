@@ -26,9 +26,9 @@ export default function StaticCarousel ({data,redirect,mobile,tab,laptop}) {
         <>
         <Box  width={{base : '95%', md : '90%'}} m='auto' mt={{base :'10px'}} >
             <Carousel
-                swipeable={false}
-                draggable={false}
-                showDots={true}
+                swipeable={true}
+                draggable={true}
+                showDots={false}
                 responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
@@ -45,7 +45,7 @@ export default function StaticCarousel ({data,redirect,mobile,tab,laptop}) {
                 >
                 {data.length > 0 && data.map((elem)=>{
                     return <Box key={elem.id} w={{base : '95%'}} m='auto'>
-                        <Link to={redirect}><Image src={elem.image} m='auto'/></Link>
+                        <Link to={redirect}><Image src={elem.image} m='auto' draggable='false'/></Link>
                     </Box>
                 })}
             </Carousel>

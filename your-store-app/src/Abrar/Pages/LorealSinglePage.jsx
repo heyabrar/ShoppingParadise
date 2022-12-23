@@ -33,7 +33,7 @@ export default function LorealSinglePage ( ) {
     return (
         <>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <SingleProductComponent data={LorealSingleProduct} isLoading={isLoading} />
+                <SingleProductComponent data={LorealSingleProduct} isLoading={isLoading} />
         </Box>
 
         </>

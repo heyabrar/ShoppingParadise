@@ -33,10 +33,8 @@ export default function RasSinglePage ( ) {
     return (
         <>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <SingleProductComponent data={RasSingleProduct} isLoading={isLoading} isError={isError}/>
+                <SingleProductComponent data={RasSingleProduct} isLoading={isLoading} isError={isError}/>
         </Box>
-        
-
         </>
     )
 }

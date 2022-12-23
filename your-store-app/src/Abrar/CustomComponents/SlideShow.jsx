@@ -1,5 +1,6 @@
 import { Container, Image } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
     const delay = 2500;  
     export default function Slideshow({data}) {
@@ -31,9 +32,9 @@ import { useEffect, useRef, useState } from "react";
         <>
             <Container className="slideshow" maxW={{base : '95%', md : '80%', lg : '90%'}}>
             <div className="slideshowSlider"  style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} >
-                {data.map((backgroundColor, index) => (
-                <div className="slide" key={backgroundColor.id}>
-                   <Image shadow='lg' m='auto' src={backgroundColor.image} w={{base : '90%', md :'80%'}}/>
+                {data.map((elem, index) => (
+                <div className="slide" key={elem.id}>
+                 <Link to={elem.id === 1? '/skin' : elem.id === 2 ? '/mombaby' : '/fragrance'}><Image shadow='lg' m='auto' src={elem.image} w={{base : '90%', md :'80%'}}/></Link>
                 </div>
                 ))}
             </div>

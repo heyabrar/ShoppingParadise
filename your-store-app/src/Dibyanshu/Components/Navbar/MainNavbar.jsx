@@ -8,7 +8,6 @@ const MainNavbar = () => {
   return (
     <div>
       <Navbar/>
-  
       <SubNavbar/>
     
     </div>

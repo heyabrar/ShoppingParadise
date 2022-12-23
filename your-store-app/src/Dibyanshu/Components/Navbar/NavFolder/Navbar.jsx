@@ -1,5 +1,5 @@
 import { Box, Flex, IconButton, useDisclosure, Stack, Text, Image, Input } from '@chakra-ui/react';
-import { Link, } from "react-router-dom"
+import { Link, useNavigate, } from "react-router-dom"
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { BsCartCheckFill, BsFillPhoneFill, BsSearch } from "react-icons/bs"
 import { FaUser } from "react-icons/fa"
@@ -7,11 +7,18 @@ import { MdLocationOn } from "react-icons/md"
 import { BiHelpCircle } from "react-icons/bi"
 import style from './Navbar.module.css'
 import SearchIcon from '@mui/icons-material/Search';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';;
+import SmartphoneIcon from '@mui/icons-material/Smartphone';import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
+import { useState } from 'react';
+;
 export default function Navbar() {
+
+
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
+   
+
       <Box className={style.ChackraNavBar} top={"0px"} >
         <Box bg='#fc2779'>
           <Flex width={{ base: '80%', md: '100%', lg: '70%' }} m='auto' justifyContent='space-around' bg='#fc2779' fontSize={{ base: '14px', md: '16px' }} padding='5px'>
@@ -45,7 +52,9 @@ export default function Navbar() {
                 <Link to="/appliance"><Text>Brands</Text></Link>
                 <Link to='/fragrance'><Text>Paradise Fashion</Text></Link>
                 <Link to='/men'><Text>Luxe</Text></Link>
-                <Link to='/cart'><Text>Beauty Advice</Text></Link>
+                <Link to='/fragrance'><Text>Beauty Advice</Text></Link>
+
+
               </Flex>
 
               <Flex width={{ base: "", md: '30%', lg: '50%' }} fontSize='16px' alignItems='center' justifyContent="space-around">
@@ -85,6 +94,11 @@ export default function Navbar() {
           ) : null}
         </Box>
       </Box>
+        
+
+
+        
+    
     </>
   );
 }
