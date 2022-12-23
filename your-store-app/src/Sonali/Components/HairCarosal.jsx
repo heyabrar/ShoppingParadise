@@ -1,9 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Footer from "../../Abrar/Components/Footer";
-import Navbar from "../../Abrar/Components/Navbar";
-
 
 export default function HairCarosal ( ) {
     const responsive = {
