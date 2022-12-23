@@ -27,6 +27,7 @@ export default function ShopByHairType() {
         <>
             <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '15px', md: '30px', lg: '7%' }}>SHOP BY HAIR TYPE</Text>
             <SimpleGrid columns={[2, 2, 4, 4]} width={{ base: '95%', md: '90%' }} m='auto' mt={{ base: '15px' }} rowGap={{ base: '20px' }}>
+
                 {ShopByHairData.length > 0 && ShopByHairData.map((elem) => {
                     return <Box key={elem.id}>
                         <Link to={"/hairproducts"}><Image width={{ base: '160px', lg: '280px' }} src={elem.image} m='auto' /></Link>
