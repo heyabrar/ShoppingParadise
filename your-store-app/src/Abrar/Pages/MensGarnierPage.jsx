@@ -63,35 +63,35 @@ export default function MensGarnierPage ( ) {
         <>
             <Navbar/>
             <Box bg='RGBA(0, 0, 0, 0.06)'>
-            <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Garnier</Text>
-            <Slideshow data={slideShow}/>
-            <Flex width={{base : '95%', md : '90%', lg : '70%'}} direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='30px'>
-            <Box  width={{base : '90%', md: '85%'}} margin='auto' textAlign='center' bg={{base : 'white', md : 'RGBA(0, 0, 0, 0.24)'}} padding='32px'>
-                <Box w={{base : '100%', md: '80%'}} m='auto' fontSize={{base :'14px', md :'16px', lg : '25px'}} >
-                <Text fontWeight='550' mt={{base : '10px'}} color='#2C5282'>This Just In: Garnier Skin Naturals Serum Masks</Text>
-                </Box>
+                    <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '20px'}}>Garnier</Text>
+                    <Slideshow data={slideShow}/>
+                    <Flex width={{base : '95%', md : '90%', lg : '70%'}} direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='30px'>
+                            <Box  width={{base : '90%', md: '85%'}} margin='auto' textAlign='center' bg={{base : 'white', md : 'RGBA(0, 0, 0, 0.24)'}} padding='32px'>
+                                    <Box w={{base : '100%', md: '80%'}} m='auto' fontSize={{base :'14px', md :'16px', lg : '25px'}} >
+                                            <Text fontWeight='550' mt={{base : '10px'}} color='#2C5282'>This Just In: Garnier Skin Naturals Serum Masks</Text>
+                                    </Box>
 
-                <Box width={{base : '100%', md : '65%'}} m='auto'>
-                <Text fontSize={{base : '12px', md : '14px', lg : '17px'}} mt={{base : '15px'}}>  
-                Garnier Skin Naturals dropped the newest generation of tissue masks on our work desks and they were our ticket to heaven amidst chasing deadlines on hectic workdays.
-                </Text>
-                </Box> 
-            </Box>
+                                    <Box width={{base : '100%', md : '65%'}} m='auto'>
+                                            <Text fontSize={{base : '12px', md : '14px', lg : '17px'}} mt={{base : '15px'}}>  
+                                            Garnier Skin Naturals dropped the newest generation of tissue masks on our work desks and they were our ticket to heaven amidst chasing deadlines on hectic workdays.
+                                            </Text>
+                                    </Box> 
+                            </Box>
             
-            <Box>
-                <Image width={{base : '200px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/This-Just-In-Garnier-Skin-Naturals-Serum-Masks.jpg" alt="Garnier"/>
-            </Box>
-        </Flex>
+                            <Box>
+                                <Image width={{base : '200px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/This-Just-In-Garnier-Skin-Naturals-Serum-Masks.jpg" alt="Garnier"/>
+                            </Box>
+                </Flex>
 
-        {isLoading && <ProgressCompo/>}
-        <Text>{isLoading && <ProgressCompo/>}</Text>
-        <Text textAlign='center'>{isError && 'Something Went Wrong !!!'}</Text>
+                {isLoading && <ProgressCompo/>}
+                <Text>{isLoading && <ProgressCompo/>}</Text>
+                <Text textAlign='center'>{isError && 'Something Went Wrong !!!'}</Text>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products ({count})</Text>
-        <ProductsListing data={MensGarnierProducts} direct='/mensgarnier'/>
-        <Pagination current={page} onChange={(page)=>setPage(page)} limit={6} totalPage={totalPage}/>
+                <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products ({count})</Text>
+                <ProductsListing data={MensGarnierProducts} direct='/mensgarnier'/>
+                <Pagination current={page} onChange={(page)=>setPage(page)} limit={6} totalPage={totalPage}/>
 
-            <Footer/>
+                <Footer/>
             </Box>
         </>
     )

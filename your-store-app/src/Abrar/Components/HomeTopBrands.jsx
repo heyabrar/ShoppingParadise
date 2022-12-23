@@ -129,7 +129,7 @@ export default function HomeTopBrands ( ) {
         <SimpleGrid columns={[2,2,2,2]} width={{base:  '95%', md :'90%', lg : '80%'}} m='auto' mt={{base : '20px', md : '30px'}} rowGap={{base : '20px', md : '25px', lg: '35px'}}>
             {onlyNyka.length > 0 && onlyNyka.map((elem)=>{
                 return <Box key={elem.id} width={{base : '95%', lg: '80%'}} m='auto'>
-                    <Image m='auto' width={{base :'180px', md :'300px', lg : '500px'}} src={elem.image}/>
+                    <Link to={elem.id === 1 ? '/hair' : elem.id === 4 ? '/skin' : '/fragrance'}><Image m='auto' width={{base :'180px', md :'300px', lg : '500px'}} src={elem.image}/></Link>
                 </Box>
             })}
         </SimpleGrid>

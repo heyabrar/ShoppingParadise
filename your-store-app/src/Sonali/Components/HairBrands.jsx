@@ -44,8 +44,7 @@ export default function HairBrand() {
     return (
         <>
             <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '15px', md: '30px', lg: '7%' }}>BRANDS YOU WILL LOVE</Text>
-            <SimpleGrid templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(4, 1fr)'
+            <SimpleGrid columns={[2, 2, 3, 4]}
                 gap={2}>
                 {HairData.length > 0 && HairData.map((elem) => {
                     return <Box key={elem.id}>

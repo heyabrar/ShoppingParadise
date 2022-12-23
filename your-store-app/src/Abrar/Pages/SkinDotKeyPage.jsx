@@ -75,39 +75,39 @@ export default function SkinDotKeyPage ( ) {
         <>
         <Navbar/>
         <Box  bg='RGBA(0, 0, 0, 0.06)'>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}}>Dot & Key</Text>
-        <Slideshow data={SlideShowBanner}/>
+                <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}}>Dot & Key</Text>
+                <Slideshow data={SlideShowBanner}/>
 
 
-        <Flex width={{base : '95%', md : '90%', lg : '70%'}}  direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='20px'>
-            <Box  width={{base : '90%', md: '85%'}} margin='auto' textAlign='center' bg={{base : 'white', md : 'RGBA(0, 0, 0, 0.24)'}}>
-                <Box w={{base : '100%', md: '80%'}} m='auto' fontSize={{base :'14px', md :'16px', lg : '25px'}} >
-                <Text fontWeight='550' mt={{base : '10px'}} color='#2C5282'>“If You Believe In Your Product (And Yourself) Your Dream Will Come True”— Dot & Key Co-Founder, Anisha Agarwal Saraf</Text>
+                <Flex width={{base : '95%', md : '90%', lg : '70%'}}  direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='20px'>
+                        <Box  width={{base : '90%', md: '85%'}} margin='auto' textAlign='center' bg={{base : 'white', md : 'RGBA(0, 0, 0, 0.24)'}}>
+                                <Box w={{base : '100%', md: '80%'}} m='auto' fontSize={{base :'14px', md :'16px', lg : '25px'}} >
+                                        <Text fontWeight='550' mt={{base : '10px'}} color='#2C5282'>“If You Believe In Your Product (And Yourself) Your Dream Will Come True”— Dot & Key Co-Founder, Anisha Agarwal Saraf</Text>
+                                </Box>
+
+                                <Box width={{base : '100%', md : '65%'}} m='auto'>
+                                        <Text fontSize={{base : '12px', md : '14px', lg : '17px'}} mt={{base : '15px'}}>  
+                                            We are celebrating Anisha Agarwal Saraf and her journey. She reveals the inspiration behind the brand, her beauty inspiration,
+                                            her personal favourites from her line, and her advice for budding entrepreneurs.
+                                        </Text>
+                                </Box> 
+                        </Box>
+                        
+                        <Box>
+                                <Image width={{base : '250px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/IFYOUB_4.JPG" alt="Anisha Agrwal"/>
+                        </Box>
+                </Flex>
+
+                <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products  ({count})</Text>
+
+                <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
+                <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && <ProgressCompo/>}</Text>
+                <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && 'Something Went Wrong!!!!'}</Text>
+        
+                <Box mt='2%'><ProductsListing data={DotKeyProducts} direct='/skin'/></Box>
+                <Box>
+                        <Pagination current={page} onChange={(page) => setPage(page)} totalPage={totalPage} limit={9}/>
                 </Box>
-
-                <Box width={{base : '100%', md : '65%'}} m='auto'>
-                <Text fontSize={{base : '12px', md : '14px', lg : '17px'}} mt={{base : '15px'}}>  
-                     We are celebrating Anisha Agarwal Saraf and her journey. She reveals the inspiration behind the brand, her beauty inspiration,
-                     her personal favourites from her line, and her advice for budding entrepreneurs.
-                </Text>
-                </Box> 
-            </Box>
-            
-            <Box>
-                <Image width={{base : '250px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/IFYOUB_4.JPG" alt="Anisha Agrwal"/>
-            </Box>
-        </Flex>
-
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products  ({count})</Text>
-
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && <ProgressCompo/>}</Text>
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && 'Something Went Wrong!!!!'}</Text>
-   
-        <Box mt='2%'><ProductsListing data={DotKeyProducts} direct='/skin'/></Box>
-        <Box>
-            <Pagination current={page} onChange={(page) => setPage(page)} totalPage={totalPage} limit={9}/>
-        </Box>
         </Box>
         <Footer/>
         </>

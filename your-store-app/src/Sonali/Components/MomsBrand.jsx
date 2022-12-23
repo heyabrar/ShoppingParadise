@@ -43,7 +43,9 @@ export default function Mombrands() {
     return (
         <>
             <Box mt={{ base: '10px', md: '25px' }}>
-                <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '5px', md: '30px', lg: '7%' }}>SHOP BY CATEGORY</Text>
+
+                <Text textAlign='center' fontSize={{ base: '16px', md: '24px', lg: '26px' }} fontWeight='650' letterSpacing={{ base: '2px' }} mt={{ base: '5px', md: '30px', lg: '7%' }}>FEATURED BRANDS</Text>
+
                 <SimpleGrid columns={[2, 2, 3, 4]} width={{ base: '95%', lg: '90%' }} m='auto' rowGap={{ base: '20px', md: '30px', lg: '35px' }} mt={{ base: '10px', md: '25px' }}>
                     {MomData.length > 0 && MomData.map((elem) => {
                         return <Box key={elem.id} width={{ base: '95%', md: '90%' }} m='auto' >
