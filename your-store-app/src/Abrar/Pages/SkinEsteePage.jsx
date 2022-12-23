@@ -61,37 +61,37 @@ export default function SkinEsteePage ( ) {
         <>
         <Navbar/>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}}>Estee Lauder Collection</Text>
-        <Slideshow data={Images}/>
+            <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}}>Estee Lauder Collection</Text>
+            <Slideshow data={Images}/>
 
-        <Flex width={{base : '100%', md : '90%', lg : '70%'}}  direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='20px'>
-            <Box  width={{base : '100%', md: '85%'}} margin='auto' textAlign='center' bg={{base : 'white', md : 'RGBA(0, 0, 0, 0.24)'}} padding='20px'>
-                <Box w={{base : '100%', md: '80%'}} m='auto' fontSize={{base :'14px', md :'16px', lg : '25px'}} >
-                <Text fontWeight='550' mt={{base : '10px'}} color='#2C5282'>We Tried The Estee Lauder Advanced Night Repair For 15 Days — And These Are Our Honest Thoughts</Text>
-                </Box>
+            <Flex width={{base : '100%', md : '90%', lg : '70%'}}  direction={{base : 'column-reverse', md : 'row'}} m='auto' mt={{base : '15px'}} padding='20px'>
+                    <Box  width={{base : '100%', md: '85%'}} margin='auto' textAlign='center' bg={{base : 'white', md : 'RGBA(0, 0, 0, 0.24)'}} padding='20px'>
+                        <Box w={{base : '100%', md: '80%'}} m='auto' fontSize={{base :'14px', md :'16px', lg : '25px'}} >
+                                <Text fontWeight='550' mt={{base : '10px'}} color='#2C5282'>We Tried The Estee Lauder Advanced Night Repair For 15 Days — And These Are Our Honest Thoughts</Text>
+                        </Box>
 
-                <Box width={{base : '100%', md : '65%'}} m='auto'>
-                <Text fontSize={{base : '12px', md : '14px', lg : '17px'}} mt={{base : '15px'}}>  
-                        In order to understand what this wonder product is all about, our BB team decided to go ahead and try the
-                        Estee Lauder ANR for 15 days straight as part of their night-time regimen
-                </Text>
-                </Box> 
+                        <Box width={{base : '100%', md : '65%'}} m='auto'>
+                                <Text fontSize={{base : '12px', md : '14px', lg : '17px'}} mt={{base : '15px'}}>  
+                                        In order to understand what this wonder product is all about, our BB team decided to go ahead and try the
+                                        Estee Lauder ANR for 15 days straight as part of their night-time regimen
+                                </Text>
+                        </Box> 
+                    </Box>
+                    
+                    <Box>
+                            <Image width={{base : '250px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/WE_TRIED_THE_ESTEE_LAUDER_ADVANCED_NIGHT_REPAIR_FOR_15_DAYS_AND_THESE_ARE_OUR_HONEST_THOUGHTS_CB.jpg" alt="EsteeLAuder"/>
+                    </Box>
+            </Flex>
+
+            <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products ({count})</Text>
+            {isLoading && <ProgressCompo/>}
+            <Text>{isError && <ProgressCompo/>} </Text>
+            <Text textAlign='center'>{isError && 'Something Went Wrong !!!!!'} </Text>
+            <Box mt='2%'>
+                    <ProductsListing data={EsteeProducts} direct='/skinEsteeLauder'/>
             </Box>
-            
-            <Box>
-                <Image width={{base : '250px', md : '265px', lg : '320px'}} h='100%' m='auto' src="https://www.nykaa.com/media/categoryInfo/art_banner_image/WE_TRIED_THE_ESTEE_LAUDER_ADVANCED_NIGHT_REPAIR_FOR_15_DAYS_AND_THESE_ARE_OUR_HONEST_THOUGHTS_CB.jpg" alt="EsteeLAuder"/>
-            </Box>
-        </Flex>
 
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}}>All Products ({count})</Text>
-        {isLoading && <ProgressCompo/>}
-        <Text>{isError && <ProgressCompo/>} </Text>
-        <Text textAlign='center'>{isError && 'Something Went Wrong !!!!!'} </Text>
-        <Box mt='2%'>
-        <ProductsListing data={EsteeProducts} direct='/skinEsteeLauder'/>
-        </Box>
-
-        <Pagination current={page}  onChange={(page)=> setPage(page)} totalPage={totalPage} limit={6}/>
+            <Pagination current={page}  onChange={(page)=> setPage(page)} totalPage={totalPage} limit={6}/>
         </Box>
         </>
     )

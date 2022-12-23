@@ -76,7 +76,6 @@ export default function MensShopByConcern ( ) {
                     </Box>
                 })}
             </SimpleGrid>
-
         </>
     )
 }

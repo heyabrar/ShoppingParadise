@@ -33,7 +33,7 @@ export default function MensGarnierSinglePage ( ) {
     return (
         <> 
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-            <SingleProductComponent data={MensGarnierSingleProduct} isLoading={isLoading} isError={isError}/>
+                <SingleProductComponent data={MensGarnierSingleProduct} isLoading={isLoading} isError={isError}/>
         </Box>
         </>
     )
