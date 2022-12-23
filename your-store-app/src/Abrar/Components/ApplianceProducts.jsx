@@ -44,10 +44,9 @@ export default function ApplianceProducts ( ) {
     return (
         <>
           <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt={{base : '10px', md :'15px', lg :'20px'}}>All Products ({count})</Text>
-          {isLoading && <ProgressCompo/>}
-       <Box mt='2%'><ProductsListing data={ApplianceAllProducts} direct='/appliance'/></Box>
-
-       <Pagination current={page} onChange={(page)=> setPage(page)} limit={6} totalPage={totalPage}/>
+            {isLoading && <ProgressCompo/>}
+           <Box mt='2%'><ProductsListing data={ApplianceAllProducts} direct='/appliance'/></Box>
+           <Pagination current={page} onChange={(page)=> setPage(page)} limit={6} totalPage={totalPage}/>
         </>
     )
 }
