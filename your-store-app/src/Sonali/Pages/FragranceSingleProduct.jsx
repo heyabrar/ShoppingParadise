@@ -5,31 +5,30 @@ import SingleProductComponent from "../../Abrar/CustomComponents/SingleProductCo
 import { FetchSingleFregranceData } from "../../Abrar/Fetch/Fetch";
 import { FregranceProductsDataSuccess, FregranceSingalProductsDataSuccess } from "../../Redux/AppReducer/Action";
 
-export default function FragranceSingleProduct (){
+export default function FragranceSingleProduct() {
     const params = useParams();
-    const {GetFsingle, isLoading, isError} = useSelector((s)=>{
-        return{
-            GetFsingle:s.MyReducer.GetFsingle,
-            isLoading:s.MyReducer.isLoading,
-            isError:s.MyReducer.isError
+    const { GetFsingle, isLoading, isError } = useSelector((s) => {
+        return {
+            GetFsingle: s.MyReducer.GetFsingle,
+            isLoading: s.MyReducer.isLoading,
+            isError: s.MyReducer.isError
         }
     })
-    console.log(FragranceSingleProduct)
+
     const dispatch = useDispatch();
 
-    const handleSingleData = () =>{
+    const handleSingleData = () => {
         FetchSingleFregranceData(params.id)
-        .then((res) => {
-            console.log(res.data)
-            dispatch(FregranceSingalProductsDataSuccess(res.data))
-        })
+            .then((res) => {
+                dispatch(FregranceSingalProductsDataSuccess(res.data))
+            })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         handleSingleData()
-    },[params.id])
-    return(<>
+    }, [params.id])
+    return (<>
 
-<SingleProductComponent data={GetFsingle} />
+        <SingleProductComponent data={GetFsingle} />
     </>)
 }
