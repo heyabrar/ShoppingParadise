@@ -47,7 +47,14 @@ const SignUp = () => {
       <Box bg='white' p={6} rounded='md'>
         <form onSubmit={formik.handleSubmit}>
           <VStack spacing={4} align='flex-start' maxW={"300px"}>
-            <Heading size={"xl"}>Sign Up</Heading>
+            <Heading
+              size={"xl"}
+              display={"flex"}
+              animation={"none"}
+              color='black'
+            >
+              Sign Up
+            </Heading>
             <Text
               pb={"15px"}
               mb={"15px"}
