@@ -2,7 +2,7 @@
 
 ShoppingParadise is an E-Commerce Indian based web application which sells products related to Makeup, Skin Care, Hair, Mom & Baby Care, Fragrance, Appliances and much more. We Collaborate with the top quality brands to give our users best online purchace services ever. 
 
-## [Deployed URL](https://your-store-app.vercel.app)
+## [Deployed URL](https://your-store-app-heyabrar.vercel.app/)
 
 ## Landing Page 
 
