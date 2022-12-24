@@ -34,7 +34,7 @@ export default function ApplianceSinglePage ( ) {
     return (
         <>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <SingleProductComponent data={ApplianceSingleProducts} isLoading={isLoading}/>
+                <SingleProductComponent data={ApplianceSingleProducts} isLoading={isLoading}/>
         </Box>
         </>
     )

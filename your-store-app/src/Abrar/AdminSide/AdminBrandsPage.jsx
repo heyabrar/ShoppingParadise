@@ -57,7 +57,7 @@ export default function AdminBrandsPage ( ) {
         </SimpleGrid>
 
         <Flex width={{base  : '40%'}} m='auto'  justifyContent='center' mt='30px'>
-        <Link to='/adminside'><Button size='sm' color='white' bg='#fc2779' colorScheme='#fc2779'>Admin Panel</Button></Link>
+            <Link to='/adminside'><Button size='sm' color='white' bg='#fc2779' colorScheme='#fc2779'>Admin Panel</Button></Link>
         </Flex>
         </>
     )

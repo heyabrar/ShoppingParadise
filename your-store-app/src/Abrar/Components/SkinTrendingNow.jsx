@@ -32,7 +32,7 @@ export default function SkinTrendingNow ( ) {
         </SimpleGrid>
 
         <Box width={{base : '90%', md : '75%', lg : '75%'}} m='auto' mt={{base : '20px', md : '30px', lg : '45px'}}>
-          <Image src="https://images-static.nykaa.com/uploads/95ea0697-646b-43a6-8690-2a4d9546d452.png?tr=w-1200,cm-pad_resize"/>
+            <Image src="https://images-static.nykaa.com/uploads/95ea0697-646b-43a6-8690-2a4d9546d452.png?tr=w-1200,cm-pad_resize"/>
         </Box>
         </>
     )

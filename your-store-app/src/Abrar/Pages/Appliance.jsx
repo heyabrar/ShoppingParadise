@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import ApplianceProducts from "../Components/ApplianceProducts";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
@@ -26,6 +27,7 @@ export default function AppliancePage ( ) {
     return (
         <>
         <Navbar/>
+        <Box mt={{base :'125px', md :'0'}}></Box>
         <Slideshow data={data}/>
         <ApplianceProducts/>
         <Footer/>

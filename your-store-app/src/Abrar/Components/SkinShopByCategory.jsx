@@ -39,14 +39,14 @@ export default function SkinShopByCategory ( ) {
     return (
         <>
         <Box mt={{base : '10px' ,md : '25px'}}>
-            <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '5px', md : '30px', lg: '7%'}}>SHOP BY CATEGORY</Text>
-            <SimpleGrid columns={[2,2,3,4]} width={{base : '95%', lg: '90%'}} m='auto' rowGap={{base : '20px', md :'30px', lg: '35px'}}mt={{base : '10px' ,md : '25px'}}>
-                {ShopByCatData.length > 0 && ShopByCatData.map((elem)=>{
-                    return <Box key={elem.id}  width={{base : '95%', md : '90%'}} m='auto' >
-                      <Link to={elem.id === 1 ? '/skindotkey' : elem.id === 2 ? '/skinras' : elem.id === 3 ? '/skinEstee' : elem.id === 6 ? '/skinRas' : '/skinloreal'}><Image width={{base : '160px', md : '170px', lg: '300px'}} src={elem.image} m='auto'/></Link>
-                    </Box>
-                })} 
-            </SimpleGrid>
+                <Text textAlign='center' fontSize={{base : '16px', md : '24px', lg : '26px'}} fontWeight='650' letterSpacing={{base  : '2px'}} mt={{base : '5px', md : '30px', lg: '7%'}}>SHOP BY CATEGORY</Text>
+                <SimpleGrid columns={[2,2,3,4]} width={{base : '95%', lg: '90%'}} m='auto' rowGap={{base : '20px', md :'30px', lg: '35px'}}mt={{base : '10px' ,md : '25px'}}>
+                        {ShopByCatData.length > 0 && ShopByCatData.map((elem)=>{
+                            return <Box key={elem.id}  width={{base : '95%', md : '90%'}} m='auto' >
+                            <Link to={elem.id === 1 ? '/skindotkey' : elem.id === 2 ? '/skinras' : elem.id === 3 ? '/skinEstee' : elem.id === 6 ? '/skinRas' : '/skinloreal'}><Image width={{base : '160px', md : '170px', lg: '300px'}} src={elem.image} m='auto'/></Link>
+                            </Box>
+                        })} 
+                </SimpleGrid>
         </Box>
         </>
     )

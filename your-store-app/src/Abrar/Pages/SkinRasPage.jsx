@@ -64,22 +64,17 @@ export default function SkinRasPage ( ) {
         <>
         <Navbar/>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}} >Skin Ras</Text>
-
-        <Slideshow data={Images}/>
-
-        <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt='20px'>All Products ({count})</Text>
-
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && <ProgressCompo/>}</Text>
-        <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && 'Something Went Wrong'}</Text>
-        <Box mt='2%'>
-        <ProductsListing data={RasProducts} direct='/skinras'/>
+                <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '24px'}} >Skin Ras</Text>
+                <Slideshow data={Images}/>
+                <Text textAlign='center' fontWeight='600' fontSize={{base : '16px', md : '18px' ,lg : '25px'}} mt='20px'>All Products ({count})</Text>
+                <Text textAlign='center' fontSize='35px' fontWeight='700'>{isLoading && <ProgressCompo/>}</Text>
+                <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && <ProgressCompo/>}</Text>
+                <Text textAlign='center' fontSize='35px' fontWeight='700'>{isError && 'Something Went Wrong'}</Text>
+                <Box mt='2%'>
+                        <ProductsListing data={RasProducts} direct='/skinras'/>
+                </Box>
+                <Pagination current={page} onChange={(page)=>setPage(page)} totalPage={totalPage} limit={5}/>
         </Box>
-
-        <Pagination current={page} onChange={(page)=>setPage(page)} totalPage={totalPage} limit={5}/>
-        </Box>
-
         <Footer/>
         </>
     )

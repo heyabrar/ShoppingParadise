@@ -34,7 +34,7 @@ export default function DotKeySingleProductPage ( ) {
     return (
         <>
         <Box bg='RGBA(0, 0, 0, 0.06)'>
-        <SingleProductComponent data={DotKeySingleProduct} isLoading={isLoading}/>
+                <SingleProductComponent data={DotKeySingleProduct} isLoading={isLoading}/>
         </Box>
         </>
     )
