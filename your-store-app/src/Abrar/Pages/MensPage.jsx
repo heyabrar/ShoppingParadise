@@ -3,6 +3,7 @@ import MensTopBrand from "../Components/MensTopBrand";
 import Navbar from "../Components/Navbar";
 import SlideShow from '../CustomComponents/SlideShow'
 import Footer from '../Components/Footer'
+import { Box } from "@chakra-ui/react";
 export default function MensPage ( ) {
     const Images =  [
         {
@@ -33,6 +34,7 @@ export default function MensPage ( ) {
     return (
         <>
         <Navbar/>
+        <Box mt={{base :'125px', md :'0'}}></Box>
         <SlideShow data={Images}/>
         <MensTopBrand/>
         <MensShopByConcern/>
