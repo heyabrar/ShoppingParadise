@@ -23,6 +23,7 @@ import Login from "../Apurba/Pages/Login";
 import Profile from "../Apurba/Pages/Profile";
 import SignUp from "../Apurba/Pages/SignUp";
 import { PrivateRoute } from "../Apurba/routes/PrivateRoute";
+import Luxe from "../Dibyanshu/Components/Navbar/NavComponent/Luxe";
 import Fragrance from "../Sonali/Pages/Fragrance";
 import FragranceSingleProduct from "../Sonali/Pages/FragranceSingleProduct";
 import HairPage from "../Sonali/Pages/Hair";
@@ -48,6 +49,7 @@ export default function AllRoutes() {
             </PrivateRoute>
           }
         />
+         <Route path='/luxe' element={<Luxe />} />
         <Route path='/hair' element={<HairPage />} />
         <Route path='/hairproducts' element={<PrivateRoute><HairProducts /></PrivateRoute>} />
         <Route path="/hairproducts/:id" element={<PrivateRoute><HairSinglePage/></PrivateRoute>}/>
