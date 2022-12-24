@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Footer from "../../Abrar/Components/Footer";
 import Navbar from "../../Abrar/Components/Navbar";
 import MomBaby from "../../Dibyanshu/Components/Navbar/NavComponent/MomBaby";
@@ -12,6 +13,7 @@ export default function MomAndBabyPage() {
     return (
         <>
             <Navbar />
+            <Box mt={{base :'125px', md :'0'}}></Box>
             <MomBabayTop />
             {/* <MomBaby/> */}
             <MomBabyTrending />
