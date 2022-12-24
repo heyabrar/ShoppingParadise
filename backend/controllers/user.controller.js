@@ -28,6 +28,7 @@ const regUser = asyncHandler(async (req, res, next) => {
 
 const loginUser = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
+  console.log(email, password);
   const user = await User.findOne({ email });
   const hashedPassword = await user.matchPassword(password);
   if (user && hashedPassword) {
