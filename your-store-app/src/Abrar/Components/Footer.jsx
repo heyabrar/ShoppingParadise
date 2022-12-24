@@ -1,29 +1,30 @@
 import  {Box, Flex, GridItem, Image, List, SimpleGrid, Text, UnorderedList} from '@chakra-ui/react'
 import {GrMail} from 'react-icons/gr'
 import {BsPhone,BsFillTelephoneFill,BsInstagram,BsFacebook,BsTwitter,BsYoutube,BsPinterest,BsSnapchat} from 'react-icons/bs'
+import "../Components/Footer.css"
 export default function Footer ( ) {
     return (
         <>
-        <Box bg='#2D3748' color='white' padding='20px' mt='10px' fontWeight='550'>
+        <Box bg='#2D3748' color='white' padding='20px' mt='10px' fontWeight='550' >
             <SimpleGrid columns={[1,2,3,3]} w={{base : '95%', md: '100%'}} m='auto' rowGap={'10px'}>
                 <Box fontSize={{base : '12px', lg : '15px'}}>
                     <Flex alignItems='center'  justifyContent='center' gap='10px'>
-                        <GrMail/>
-                        <Text>Get special discount on your inbox</Text>
+                        <GrMail  />
+                        <Text fontSize="17px"><h1>Get special discount on your inbox</h1></Text>
                     </Flex>
                 </Box>
 
                 <Box fontSize={{base : '12px', lg : '15px'}}>
                     <Flex alignItems='center'  justifyContent='center' gap='10px'>
                         <BsPhone/>
-                        <Text>EXPERIENCE THE YOUR STORE MOBILE APP</Text>
+                        <Text fontSize="13px" >EXPERIENCE THE YOUR STORE MOBILE APP</Text>
                     </Flex>
                 </Box>
 
                 <Box fontSize={{base : '12px', lg : '15px'}} >
                     <Flex alignItems='center'  justifyContent='center' gap='10px'>
                         <BsFillTelephoneFill/>
-                        <Text>FOR ANY HELP, YOU MAY CALL US <br /> AT 1800-267-4444</Text>
+                        <Text fontSize="13px" >FOR ANY HELP, YOU MAY CALL US AT 1800-267-4444 <br /> </Text>
                     </Flex>
                 </Box>
             </SimpleGrid>

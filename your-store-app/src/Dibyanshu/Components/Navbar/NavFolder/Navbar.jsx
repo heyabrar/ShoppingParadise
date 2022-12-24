@@ -20,20 +20,25 @@ export default function Navbar() {
    
 
       <Box className={style.ChackraNavBar} top={"0px"} >
-        <Box bg='#fc2779'>
+        <Box bg='#fc2779' height="35px" fontWeight='600'>
           <Flex width={{ base: '80%', md: '100%', lg: '70%' }} m='auto' justifyContent='space-around' bg='#fc2779' fontSize={{ base: '14px', md: '16px' }} padding='5px'>
-            <Text display={{ base: 'none', md: 'flex' }} fontWeight='530'>BEAUTY BONANZA Get Your Daily Dose of Amazing Offers</Text>
-            <Flex justifyContent='center' align='center' gap='5px'>
+            
+            <Text display={{ base: 'none', md: 'flex' }}fontWeight='700'><h2>BEAUTY BONANZA Get Your Daily Dose of Amazing Offers</h2></Text>
+             
 
-              <SmartphoneIcon style={{ fontSize: "20px" }} />
+            <Flex justifyContent='center' align='center' gap='5px' >
+
+              <SmartphoneIcon style={{ fontSize: "22px" }} />
               <a href="https://www.nykaa.com/installApp"><Text>Get App</Text></a>
             </Flex>
+            |
             <Flex justifyContent='center' align='center' gap='5px'>
-              <MdLocationOn style={{ fontSize: "22px" }} />
+              <MdLocationOn style={{ fontSize: "23px" }} />
               <a href="https://www.nykaa.com/stores-n-events-desktop"><Text>Store & Event</Text></a>
             </Flex>
-            <Flex justifyContent='center' align='center' gap='5px'>
-              <BiHelpCircle style={{ fontSize: "22px" }} />
+            |
+            <Flex justifyContent='center' align='center' gap='5px' >
+              <BiHelpCircle style={{ fontSize: "23px" }} />
               <a href="https://www.nykaa.com/gateway-api/omsApis/helpCenter?domain=NYKAA"><Text>Help</Text></a>
             </Flex>
           </Flex>
@@ -51,7 +56,7 @@ export default function Navbar() {
                 <Link to='/skin'><Text>Categories</Text></Link>
                 <Link to="/appliance"><Text>Brands</Text></Link>
                 <Link to='/fragrance'><Text>Paradise Fashion</Text></Link>
-                <Link to='/men'><Text>Luxe</Text></Link>
+                <Link to='/luxe'><Text>Luxe</Text></Link>
                 <Link to='/fragrance'><Text>Beauty Advice</Text></Link>
 
 

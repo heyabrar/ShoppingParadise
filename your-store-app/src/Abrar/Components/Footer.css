@@ -1,0 +1,16 @@
+h1{
+  
+    color: white;
+    font-size:15px;
+    cursor: pointer;
+    animation-name: notification;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes notification {
+    from {color: rgb(234,204,144);}
+    
+    to {color:white;}
+  }
+  
